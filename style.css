@@ -267,13 +267,13 @@ html, body {
 }
 .score-display {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--bianco);
   letter-spacing: .08em;
 }
 .score-display span {
   color: var(--oro);
-  font-size: 1.8rem;
+  font-size: 4.5rem;
   text-shadow: var(--shadow-oro);
 }
 
