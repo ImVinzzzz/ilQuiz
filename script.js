@@ -38,6 +38,14 @@ function suona(id) {
   el.play().catch(() => {});
 }
 
+/** Ferma un suono */
+function fermaSuono(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.pause();
+  el.currentTime = 0;
+}
+
 /** Aggiungi classe fade-in con ritardo opzionale */
 function fadeIn(el, delay = 0) {
   if (!el) return;
@@ -519,6 +527,8 @@ function iniziaTimerM4() {
   m4State.secondiRimasti = 60;
   aggiornaTimerDisplay();
 
+  suona('snd-suspence');
+
   m4Timer = setInterval(() => {
     m4State.secondiRimasti--;
     aggiornaTimerDisplay();
@@ -540,6 +550,7 @@ function aggiornaTimerDisplay() {
 }
 
 function tempoScaduto() {
+  fermaSuono('snd-suspence');
   suona('snd-gong');
   mostraFaseM3Ghigliottina();
 }
