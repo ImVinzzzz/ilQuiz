@@ -510,6 +510,11 @@ html, body {
   transform: none;
   filter: grayscale(100%);
 }
+.btn-subject:disabled i,
+.btn-subject:disabled .subj-name,
+.btn-subject:disabled .subj-pts {
+  color: #888;
+}
 
 /* MODALE M3 */
 .modal-overlay {
