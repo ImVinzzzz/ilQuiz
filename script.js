@@ -510,13 +510,13 @@ function iniziaTimerM4() {
   m4State.paroleScelte.forEach((p, i) => {
     const chip = document.createElement('div');
     chip.className = 'm4-indizio-chip fade-in-el';
-    chip.style.animationDelay = (i * 120) + 'ms';
+    chip.style.animationDelay = (i * 60) + 'ms';
     chip.textContent = p;
     indiziWrap.appendChild(chip);
   });
 
   mostraFaseM4(2);
-  m4State.secondiRimasti = 120;
+  m4State.secondiRimasti = 60;
   aggiornaTimerDisplay();
 
   m4Timer = setInterval(() => {
