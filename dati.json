@@ -126,7 +126,7 @@
       {
         "nome": "Storia",
         "icona": "fa-landmark",
-        "punti": 5000,
+        "punti": 1000,
         "immagine": "assets/images/storia.jpg",
         "domanda": "Nel 1789 la Rivoluzione Francese iniziò con la presa di quale simbolo del dispotismo reale?",
         "risposte": [
