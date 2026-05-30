@@ -82,7 +82,7 @@ const introMeta = {
   3: {
     num:   'MANCHE 3',
     title: 'Quante ne Sai?',
-    desc:  'Sei materie, sei domande. Scegli e accumula più punti possibile!',
+    desc:  'Sei materie, sei domande. <br/>Accumula più punti possibile!',
     avvia: initM3
   },
   4: {
