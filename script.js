@@ -417,7 +417,7 @@ function initM4() {
     soluzione:     dati.manche4.soluzione,
     coppiaNdx:     0,
     paroleScelte:  [],
-    secondiRimasti: 120
+    secondiRimasti: 60
   };
   aggiornaPunteggio(punteggioTotale);
   mostraSchermata('screen-m4');
