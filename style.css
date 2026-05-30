@@ -508,7 +508,7 @@ html, body {
   opacity: .45;
   cursor: not-allowed;
   transform: none;
-  filter: grayscale(100%);
+  filter: grayscale(75%);
 }
 .btn-subject:disabled i,
 .btn-subject:disabled .subj-name,
