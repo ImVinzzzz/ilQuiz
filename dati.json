@@ -141,12 +141,12 @@
         "icona": "fa-flask",
         "punti": 4000,
         "immagine": "assets/images/scienza.jpg",
-        "domanda": "Quale elemento chimico ha il simbolo 'Au' sulla tavola periodica degli elementi?",
+        "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
         "risposte": [
           { "testo": "A. Argento", "corretta": false },
           { "testo": "B. Alluminio", "corretta": false },
-          { "testo": "C. Oro", "corretta": true },
-          { "testo": "D. Rame", "corretta": false }
+          { "testo": "C. Oro", "corretta": false },
+          { "testo": "D. Rame", "corretta": true }
         ]
       },
       {
