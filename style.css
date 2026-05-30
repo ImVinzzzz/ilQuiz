@@ -1,0 +1,829 @@
+/* ====================================================
+   IL QUIZ — Foglio di Stile
+   Ispirato a L'Eredità / game-show TV italiano
+   Palette: Blu notte, oro, bianco, rosso cremisi
+   Font: Bebas Neue (titoli) + Nunito (corpo)
+   ==================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap');
+
+/* ---- VARIABILI ---- */
+:root {
+  --blu-notte:   #0a0f2e;
+  --blu-medio:   #0d1a5c;
+  --blu-chiaro:  #1a3a8f;
+  --oro:         #f5c518;
+  --oro-scuro:   #c9a000;
+  --bianco:      #f0f4ff;
+  --rosso:       #c0392b;
+  --verde:       #27ae60;
+  --grigio-card: #111b4a;
+  --shadow-oro:  0 0 24px rgba(245,197,24,.5);
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   28px;
+  --transition:  .35s cubic-bezier(.4,0,.2,1);
+}
+
+/* ---- RESET & BASE ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  background: var(--blu-notte);
+  color: var(--bianco);
+  overflow: hidden;
+}
+
+/* ---- SCREEN SYSTEM ---- */
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .45s ease;
+  overflow: hidden;
+}
+.screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ---- FADE-IN UTILITY ---- */
+.fade-in-el {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp .5s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-el:nth-child(2) { animation-delay: .1s; }
+.fade-in-el:nth-child(3) { animation-delay: .2s; }
+.fade-in-el:nth-child(4) { animation-delay: .3s; }
+
+/* ================================================
+   HOME PAGE
+   ================================================ */
+#screen-home {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(245,197,24,.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(26,58,143,.6) 0%, transparent 50%),
+    linear-gradient(160deg, #04071a 0%, #0a0f2e 50%, #071040 100%);
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.home-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(245,197,24,.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridPulse 4s ease-in-out infinite alternate;
+}
+@keyframes gridPulse {
+  from { opacity: .4; }
+  to   { opacity: 1; }
+}
+
+.home-content {
+  position: relative;
+  text-align: center;
+  animation: fadeInUp .8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: .1em;
+}
+.logo-il {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  color: var(--bianco);
+  letter-spacing: .15em;
+}
+.logo-quiz {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(6rem, 22vw, 18rem);
+  color: var(--oro);
+  letter-spacing: .08em;
+  text-shadow: var(--shadow-oro), 0 8px 40px rgba(0,0,0,.6);
+  line-height: .85;
+}
+.home-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(240,244,255,.55);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.home-stars { color: var(--oro); font-size: 1.4rem; gap: .6rem; display: flex; }
+.home-stars i { animation: starPop .6s ease forwards; opacity: 0; }
+.home-stars i:nth-child(1) { animation-delay: .6s; }
+.home-stars i:nth-child(2) { animation-delay: .9s; }
+.home-stars i:nth-child(3) { animation-delay: 1.2s; }
+@keyframes starPop {
+  from { opacity: 0; transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ================================================
+   INTRO MANCHE
+   ================================================ */
+#screen-intro {
+  background: linear-gradient(160deg, #04071a 0%, #0a1545 100%);
+  justify-content: center;
+  align-items: center;
+}
+.intro-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  max-width: 600px;
+  padding: 2rem;
+  animation: fadeInUp .6s ease forwards;
+}
+.intro-manche-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .3em;
+  color: var(--oro);
+  background: rgba(245,197,24,.1);
+  border: 1px solid rgba(245,197,24,.3);
+  padding: .4em 1.6em;
+  border-radius: 100px;
+}
+.intro-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--bianco);
+  letter-spacing: .04em;
+  line-height: 1;
+  text-shadow: 0 4px 24px rgba(0,0,0,.5);
+}
+.intro-desc {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,.65);
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* ================================================
+   BOTTONI GLOBALI
+   ================================================ */
+.btn-primary {
+  background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
+  color: var(--blu-notte);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: .1em;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: .7em 2.4em;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(245,197,24,.3);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--shadow-oro);
+}
+.btn-primary:active { transform: scale(.97); }
+
+.btn-next {
+  background: transparent;
+  color: var(--oro);
+  border: 1px solid var(--oro);
+  border-radius: var(--radius-sm);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .5em 1.6em;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  align-self: flex-end;
+}
+.btn-next:hover { background: rgba(245,197,24,.12); }
+
+.btn-next-manche {
+  background: linear-gradient(135deg, var(--blu-chiaro), var(--blu-medio));
+  color: var(--oro);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: .08em;
+  border: 1px solid var(--oro);
+  border-radius: var(--radius-md);
+  padding: .6em 2em;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.btn-next-manche:hover {
+  background: linear-gradient(135deg, #1e4aad, #162e78);
+  box-shadow: var(--shadow-oro);
+  transform: translateY(-2px);
+}
+
+.hidden { display: none !important; }
+
+/* ================================================
+   GAME SCREEN — HEADER COMUNE
+   ================================================ */
+.game-screen {
+  display: flex;
+  flex-direction: column;
+}
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 2rem;
+  background: rgba(10, 15, 46, .9);
+  border-bottom: 2px solid rgba(245,197,24,.25);
+  flex-shrink: 0;
+}
+.game-manche-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: .12em;
+  color: var(--oro);
+}
+.score-display {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--bianco);
+  letter-spacing: .08em;
+}
+.score-display span {
+  color: var(--oro);
+  font-size: 1.8rem;
+  text-shadow: var(--shadow-oro);
+}
+
+/* NEXT MANCHE BAR */
+.next-manche-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 100;
+  animation: fadeInUp .5s ease forwards;
+}
+
+/* ================================================
+   MANCHE 1 — CORREVA L'ANNO
+   ================================================ */
+.m1-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.question-counter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .2em;
+  color: rgba(245,197,24,.7);
+}
+.question-box {
+  background: var(--grigio-card);
+  border: 1px solid rgba(245,197,24,.2);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 3rem;
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 600;
+  box-shadow: 0 8px 40px rgba(0,0,0,.4);
+}
+
+.m1-footer {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.year-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn-year {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .06em;
+  background: var(--blu-medio);
+  color: var(--bianco);
+  border: 2px solid rgba(245,197,24,.3);
+  border-radius: var(--radius-md);
+  padding: .5em 1.5em;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 130px;
+  text-align: center;
+  animation: fadeInUp .5s ease both;
+}
+.btn-year:nth-child(1) { animation-delay: .1s; }
+.btn-year:nth-child(2) { animation-delay: .2s; }
+.btn-year:nth-child(3) { animation-delay: .3s; }
+.btn-year:nth-child(4) { animation-delay: .4s; }
+
+.btn-year:hover:not(:disabled) {
+  background: var(--blu-chiaro);
+  border-color: var(--oro);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+.btn-year:disabled { cursor: not-allowed; opacity: .6; }
+.btn-year.correct { background: var(--verde) !important; border-color: var(--verde) !important; color: #fff; }
+.btn-year.wrong   { background: var(--rosso) !important; border-color: var(--rosso) !important; color: #fff; }
+
+/* ================================================
+   MANCHE 2 — SCOSSA
+   ================================================ */
+.m2-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+}
+.m2-col-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .15em;
+  color: var(--oro);
+  margin-bottom: .8rem;
+}
+.m2-person-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  overflow-y: auto;
+}
+.btn-person {
+  background: var(--grigio-card);
+  color: var(--bianco);
+  border: 1px solid rgba(245,197,24,.2);
+  border-radius: var(--radius-sm);
+  padding: .65em 1.2em;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  animation: fadeInUp .4s ease both;
+}
+.btn-person:hover:not(:disabled) {
+  background: var(--blu-chiaro);
+  border-color: var(--oro);
+  transform: translateX(4px);
+}
+.btn-person:disabled { cursor: not-allowed; opacity: .7; }
+.btn-person.correct { background: var(--verde); border-color: var(--verde); }
+.btn-person.wrong   { background: var(--rosso); border-color: var(--rosso); }
+
+.m2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+.m2-rule-box {
+  background: var(--grigio-card);
+  border: 1px solid rgba(245,197,24,.3);
+  border-left: 4px solid var(--oro);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+.m2-rule-box i { color: var(--oro); font-size: 1.4rem; flex-shrink: 0; margin-top: .1rem; }
+.m2-bio-box {
+  background: var(--grigio-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp .4s ease forwards;
+}
+.m2-bio-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.m2-bio-text {
+  padding: 1rem 1.2rem;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: rgba(240,244,255,.8);
+}
+
+/* ================================================
+   MANCHE 3 — QUANTE NE SAI
+   ================================================ */
+.m3-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.m3-instruction {
+  font-size: 1.1rem;
+  color: rgba(240,244,255,.65);
+  text-align: center;
+}
+.m3-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 680px;
+  width: 100%;
+}
+.btn-subject {
+  background: var(--grigio-card);
+  border: 2px solid rgba(245,197,24,.25);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  animation: fadeInUp .5s ease both;
+  color: var(--bianco);
+}
+.btn-subject i { font-size: 1.8rem; color: var(--oro); }
+.btn-subject .subj-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .08em;
+}
+.btn-subject .subj-pts {
+  font-size: .8rem;
+  color: var(--oro);
+  font-weight: 700;
+}
+.btn-subject:hover:not(:disabled) {
+  border-color: var(--oro);
+  background: var(--blu-chiaro);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+.btn-subject:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+/* MODALE M3 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4,7,26,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeInUp .3s ease forwards;
+}
+.modal-card {
+  background: var(--grigio-card);
+  border: 1px solid rgba(245,197,24,.3);
+  border-radius: var(--radius-lg);
+  max-width: 580px;
+  width: 92%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 0 0 2rem;
+  box-shadow: 0 24px 80px rgba(0,0,0,.7);
+}
+.modal-subject-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.8rem;
+  border-bottom: 1px solid rgba(245,197,24,.15);
+}
+.modal-subject-header span:first-child {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .08em;
+  color: var(--oro);
+}
+.modal-points-badge {
+  background: rgba(245,197,24,.15);
+  border: 1px solid var(--oro);
+  color: var(--oro) !important;
+  font-size: .9rem !important;
+  font-weight: 700;
+  padding: .3em .9em;
+  border-radius: 100px;
+}
+.modal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.modal-question {
+  padding: 1.2rem 1.8rem .5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.modal-answers {
+  padding: .5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+.btn-answer {
+  background: var(--blu-medio);
+  color: var(--bianco);
+  border: 1px solid rgba(245,197,24,.2);
+  border-radius: var(--radius-sm);
+  padding: .9em 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: var(--transition);
+  animation: fadeInUp .4s ease both;
+}
+.btn-answer:nth-child(1) { animation-delay: .05s; }
+.btn-answer:nth-child(2) { animation-delay: .1s; }
+.btn-answer:nth-child(3) { animation-delay: .15s; }
+.btn-answer:nth-child(4) { animation-delay: .2s; }
+.btn-answer:hover:not(:disabled) {
+  background: var(--blu-chiaro);
+  border-color: var(--oro);
+}
+.btn-answer:disabled { cursor: not-allowed; }
+.btn-answer.correct { background: var(--verde) !important; border-color: var(--verde) !important; }
+.btn-answer.wrong   { background: var(--rosso) !important; border-color: var(--rosso) !important; }
+
+.modal-feedback {
+  margin: .5rem 1.8rem 0;
+  padding: .8rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+.modal-feedback.ok   { background: rgba(39,174,96,.2); border: 1px solid var(--verde); color: #6dffa0; }
+.modal-feedback.fail { background: rgba(192,57,43,.2); border: 1px solid var(--rosso); color: #ff9d9d; }
+
+/* ================================================
+   MANCHE 4 — GHIGLIOTTINA
+   ================================================ */
+.m4-phase {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.m4-instruction {
+  font-size: 1.1rem;
+  color: rgba(240,244,255,.7);
+  text-align: center;
+  line-height: 1.6;
+}
+.m4-pair-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn-parola {
+  background: var(--grigio-card);
+  color: var(--bianco);
+  border: 2px solid rgba(245,197,24,.3);
+  border-radius: var(--radius-md);
+  padding: 1.2em 2.5em;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: var(--transition);
+  animation: fadeInUp .5s ease both;
+}
+.btn-parola:hover:not(:disabled) {
+  border-color: var(--oro);
+  background: var(--blu-chiaro);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-oro);
+}
+.btn-parola.correct { background: var(--verde); border-color: var(--verde); }
+.btn-parola.wrong   { background: var(--rosso); border-color: var(--rosso); }
+
+.m4-pair-counter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .15em;
+  color: rgba(245,197,24,.6);
+}
+.m4-chosen-words {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 3rem;
+}
+.m4-word-chip {
+  background: rgba(245,197,24,.12);
+  border: 1px solid var(--oro);
+  color: var(--oro);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .1em;
+  padding: .4em 1.2em;
+  border-radius: 100px;
+  animation: fadeInUp .3s ease forwards;
+}
+
+/* INDIZI + TIMER */
+.m4-indizi-wrap {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.m4-indizio-chip {
+  background: var(--grigio-card);
+  border: 2px solid rgba(245,197,24,.35);
+  border-radius: var(--radius-md);
+  padding: .9em 1.8em;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: .08em;
+  color: var(--oro);
+  text-shadow: var(--shadow-oro);
+  animation: fadeInUp .5s ease both;
+}
+
+.m4-timer {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  letter-spacing: .1em;
+  color: var(--bianco);
+  text-shadow: 0 0 40px rgba(245,197,24,.4);
+  transition: color .3s;
+}
+.m4-timer.danger { color: var(--rosso); animation: timerPulse .5s ease infinite; }
+@keyframes timerPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .5; }
+}
+
+.m4-solution-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--oro);
+  letter-spacing: .1em;
+  text-shadow: var(--shadow-oro);
+  background: var(--grigio-card);
+  padding: .4em 1.2em;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--oro);
+  animation: fadeInUp .6s ease forwards;
+}
+
+.m4-regia-buttons {
+  display: flex;
+  gap: 1.5rem;
+  animation: fadeInUp .4s ease forwards;
+}
+.btn-ok-regia, .btn-no-regia {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .1em;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: .6em 2.5em;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.btn-ok-regia { background: var(--verde); color: #fff; }
+.btn-no-regia { background: var(--rosso); color: #fff; }
+.btn-ok-regia:hover { filter: brightness(1.15); transform: scale(1.04); }
+.btn-no-regia:hover { filter: brightness(1.15); transform: scale(1.04); }
+
+/* ================================================
+   SCHERMATE FINALI
+   ================================================ */
+#screen-win, #screen-lose {
+  justify-content: center;
+  align-items: center;
+}
+#screen-win {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(245,197,24,.3) 0%, transparent 55%),
+    linear-gradient(160deg, #04071a 0%, #0a0f2e 100%);
+}
+#screen-lose {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(192,57,43,.25) 0%, transparent 55%),
+    linear-gradient(160deg, #04071a 0%, #0a0f2e 100%);
+}
+
+.finale-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  animation: fadeInUp .7s ease forwards;
+}
+.finale-trophy { font-size: clamp(5rem, 12vw, 9rem); color: var(--oro); filter: drop-shadow(0 0 30px rgba(245,197,24,.6)); }
+.finale-icon   { font-size: clamp(4rem, 10vw, 7rem); color: var(--rosso); }
+.finale-title  {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 9vw, 7rem);
+  letter-spacing: .06em;
+}
+.win .finale-title  { color: var(--oro); text-shadow: var(--shadow-oro); }
+.lose .finale-title { color: var(--bianco); }
+
+.finale-msg {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,.7);
+  max-width: 420px;
+  line-height: 1.6;
+}
+.finale-score-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.finale-score-label {
+  font-size: .85rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(240,244,255,.5);
+}
+.finale-score-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--oro);
+  text-shadow: var(--shadow-oro);
+}
+
+/* ================================================
+   SCROLLBAR PERSONALIZZATA
+   ================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--blu-notte); }
+::-webkit-scrollbar-thumb { background: rgba(245,197,24,.3); border-radius: 3px; }
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+@media (max-width: 700px) {
+  .m2-main { grid-template-columns: 1fr; overflow-y: auto; }
+  .m2-left { max-height: 240px; overflow-y: auto; }
+  .m3-subject-grid { grid-template-columns: repeat(2, 1fr); }
+  .modal-answers { grid-template-columns: 1fr; }
+  .m4-pair-container { flex-direction: column; align-items: center; }
+  .m4-indizi-wrap { gap: .6rem; }
+  .m4-indizio-chip { font-size: 1.2rem; padding: .6em 1em; }
+  .year-buttons { gap: .6rem; }
+  .btn-year { min-width: 100px; font-size: 1.5rem; }
+}
