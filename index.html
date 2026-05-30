@@ -35,14 +35,14 @@
     </div>
   </section>
 
-  <!-- ===================== SCHERMATA INTRO MANCHE ===================== -->
+  <!-- ===================== SCHERMATA INTRO MANCHE 1 ===================== -->
   <section id="screen-intro" class="screen">
     <div class="intro-content">
       <div class="intro-manche-num" id="intro-manche-num">MANCHE 1</div>
       <h1 class="intro-title" id="intro-title">Correva l'Anno</h1>
       <p class="intro-desc" id="intro-desc">Quattro anni, dieci domande. Scegli l'anno giusto!</p>
       <button class="btn-primary" id="btn-avvia">
-        <i class="fa-solid fa-play"></i> Avvia Gioco
+        <i class="fa-solid fa-play"></i> Innizia!
       </button>
     </div>
   </section>
@@ -50,7 +50,7 @@
   <!-- ===================== MANCHE 1: CORREVA L'ANNO ===================== -->
   <section id="screen-m1" class="screen game-screen">
     <header class="game-header">
-      <div class="game-manche-label">MANCHE 1 — Correva l'Anno</div>
+      <div class="game-manche-label">1. Correva l'Anno</div>
       <div class="score-display">PUNTEGGIO: <span id="m1-score-display">0</span></div>
     </header>
 
@@ -75,7 +75,7 @@
 
     <div class="next-manche-bar hidden" id="m1-next-bar">
       <button class="btn-next-manche" id="m1-btn-manche2">
-        Passa alla Manche 2 <i class="fa-solid fa-chevron-right"></i>
+        Manche 2 <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </section>
@@ -83,7 +83,7 @@
   <!-- ===================== MANCHE 2: SCOSSA ===================== -->
   <section id="screen-m2" class="screen game-screen">
     <header class="game-header">
-      <div class="game-manche-label">MANCHE 2 — Scossa!</div>
+      <div class="game-manche-label">2. Scossa!</div>
       <div class="score-display">PUNTEGGIO: <span id="m2-score-display">0</span></div>
     </header>
 
@@ -106,7 +106,7 @@
 
     <div class="next-manche-bar hidden" id="m2-next-bar">
       <button class="btn-next-manche" id="m2-btn-manche3">
-        Passa alla Manche 3 <i class="fa-solid fa-chevron-right"></i>
+        Manche 3 <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </section>
@@ -114,7 +114,7 @@
   <!-- ===================== MANCHE 3: QUANTE NE SAI ===================== -->
   <section id="screen-m3" class="screen game-screen">
     <header class="game-header">
-      <div class="game-manche-label">MANCHE 3 — Quante ne Sai?</div>
+      <div class="game-manche-label">3. Quante ne Sai?</div>
       <div class="score-display">PUNTEGGIO: <span id="m3-score-display">0</span></div>
     </header>
 
@@ -125,7 +125,7 @@
 
     <div class="next-manche-bar hidden" id="m3-next-bar">
       <button class="btn-next-manche" id="m3-btn-manche4">
-        Passa alla Manche Finale <i class="fa-solid fa-chevron-right"></i>
+        Manche Finale <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </section>
@@ -147,7 +147,7 @@
   <!-- ===================== MANCHE 4: GHIGLIOTTINA ===================== -->
   <section id="screen-m4" class="screen game-screen">
     <header class="game-header">
-      <div class="game-manche-label">MANCHE FINALE — La Ghigliottina</div>
+      <div class="game-manche-label">La Ghigliottina</div>
       <div class="score-display">PUNTEGGIO: <span id="m4-score-display">0</span></div>
     </header>
 
@@ -161,9 +161,9 @@
 
     <!-- FASE 2: timer -->
     <div id="m4-phase2" class="m4-phase hidden">
-      <p class="m4-instruction">Hai <strong>2 minuti</strong> per trovare la parola che lega tutti gli indizi!</p>
+      <p class="m4-instruction">Hai <strong>1 minuto</strong> per trovare la parola che lega tutti gli indizi!</p>
       <div id="m4-indizi" class="m4-indizi-wrap"></div>
-      <div id="m4-timer" class="m4-timer">2:00</div>
+      <div id="m4-timer" class="m4-timer">1:00</div>
     </div>
 
     <!-- FASE 3: soluzione -->
@@ -171,7 +171,7 @@
       <div id="m4-solution-word" class="m4-solution-word hidden"></div>
       <div id="m4-indizi-final" class="m4-indizi-wrap"></div>
       <button class="btn-primary" id="m4-btn-solution">
-        <i class="fa-solid fa-key"></i> Mostra Soluzione
+        <i class="fa-solid fa-key"></i> La Soluzione
       </button>
       <div id="m4-regia-buttons" class="m4-regia-buttons hidden">
         <button class="btn-ok-regia" id="m4-btn-ok"><i class="fa-solid fa-check"></i> OK</button>
@@ -190,9 +190,9 @@
         <span class="finale-score-label">Punteggio Finale</span>
         <span class="finale-score-num" id="win-score">0</span>
       </div>
-      <button class="btn-primary" onclick="location.reload()">
+      <!-- button class="btn-primary" onclick="location.reload()">
         <i class="fa-solid fa-rotate-right"></i> Gioca ancora
-      </button>
+    </button -->
     </div>
   </section>
 
@@ -206,9 +206,9 @@
         <span class="finale-score-label">Punteggio Finale</span>
         <span class="finale-score-num" id="lose-score">0</span>
       </div>
-      <button class="btn-primary" onclick="location.reload()">
+      <!-- button class="btn-primary" onclick="location.reload()">
         <i class="fa-solid fa-rotate-right"></i> Riprova
-      </button>
+    </button -->
     </div>
   </section>
 
