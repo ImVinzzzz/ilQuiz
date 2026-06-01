@@ -21,38 +21,38 @@
       "testo": "La capitale della Francia è Parigi?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
-        },
-        {
           "testo": "No",
           "corretta": false
+        },
+        {
+          "testo": "Sì",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Quale animale miagola?",
+      "testo": "Quale di questi animale bramisce?",
       "risposte": [
         {
-          "testo": "Gatto",
-          "corretta": true
+          "testo": "Coniglio",
+          "corretta": false
         },
         {
-          "testo": "Cane",
-          "corretta": false
+          "testo": "Alce",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Il Po è un fiume italiano?",
+      "testo": "Qual è il fiume più lungo d'Europa?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
+          "testo": "Danubio",
+          "corretta": false
         },
         {
-          "testo": "No",
-          "corretta": false
+          "testo": "Volga",
+          "corretta": true
         }
       ]
     },
@@ -64,20 +64,20 @@
           "corretta": true
         },
         {
-          "testo": "Viola",
+          "testo": "Arancione",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quanti lati ha un triangolo?",
+      "testo": "Quanti lati ha un ennagono?",
       "risposte": [
         {
-          "testo": "3",
+          "testo": "9",
           "corretta": true
         },
         {
-          "testo": "4",
+          "testo": "11",
           "corretta": false
         }
       ]
@@ -86,37 +86,37 @@
       "testo": "Quale continente ospita l'Egitto?",
       "risposte": [
         {
-          "testo": "Africa",
-          "corretta": true
+          "testo": "Asia",
+          "corretta": false
         },
         {
-          "testo": "Europa",
-          "corretta": false
+          "testo": "Africa",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "L'acqua bolle a 100 °C al livello del mare?",
+      "testo": "Al livello del mare l'acqua bolle a 90°C?",
       "risposte": [
         {
           "testo": "Sì",
-          "corretta": true
+          "corretta": false
         },
         {
           "testo": "No",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Chi scrisse la Divina Commedia?",
+      "testo": "Chi scrisse l'Eneide?",
       "risposte": [
         {
-          "testo": "Dante Alighieri",
+          "testo": "Virgilio",
           "corretta": true
         },
         {
-          "testo": "Giovanni Boccaccio",
+          "testo": "Omero",
           "corretta": false
         }
       ]
@@ -135,15 +135,15 @@
       ]
     },
     {
-      "testo": "La Terra ruota attorno al Sole?",
+      "testo": "Qual è il quarto pianeta del sistema solare?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
+          "testo": "Terra",
+          "corretta": false
         },
         {
-          "testo": "No",
-          "corretta": false
+          "testo": "Marte",
+          "corretta": true
         }
       ]
     },
@@ -161,27 +161,27 @@
       ]
     },
     {
-      "testo": "Roma è la capitale d'Italia?",
+      "testo": "Qual è la capitale dell'Australia?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
+          "testo": "Adelaide",
+          "corretta": false
         },
         {
-          "testo": "No",
-          "corretta": false
+          "testo": "Canberra",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Quale metallo ha simbolo chimico Fe?",
+      "testo": "Quale metallo ha simbolo chimico Hg?",
       "risposte": [
         {
-          "testo": "Ferro",
+          "testo": "Mercurio",
           "corretta": true
         },
         {
-          "testo": "Oro",
+          "testo": "Argento",
           "corretta": false
         }
       ]
@@ -213,15 +213,15 @@
       ]
     },
     {
-      "testo": "Il Monte Bianco supera i 4.000 metri?",
+      "testo": "Il Monte Bianco supera i 5.000 metri?",
       "risposte": [
         {
           "testo": "Sì",
-          "corretta": true
+          "corretta": false
         },
         {
           "testo": "No",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
@@ -252,41 +252,41 @@
       ]
     },
     {
-      "testo": "La Gioconda è esposta al Louvre?",
+      "testo": "La Gioconda è esposta agli Uffizi?",
       "risposte": [
         {
           "testo": "Sì",
-          "corretta": true
+          "corretta": false
         },
         {
           "testo": "No",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Quanti giorni ha una settimana?",
+      "testo": "Quanti giorni ha ottobre?",
       "risposte": [
         {
-          "testo": "7",
+          "testo": "31",
           "corretta": true
         },
         {
-          "testo": "10",
+          "testo": "30",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale gas respiriamo per vivere?",
+      "testo": "Quale gas è il più diffuso nell'atmosfera?",
       "risposte": [
         {
           "testo": "Ossigeno",
-          "corretta": true
+          "corretta": false
         },
         {
-          "testo": "Elio",
-          "corretta": false
+          "testo": "Azoto",
+          "corretta": true
         }
       ]
     },
@@ -304,23 +304,23 @@
       ]
     },
     {
-      "testo": "Quale città è famosa per la Torre pendente?",
+      "testo": "Quale città è famosa per la Torre Pendente?",
       "risposte": [
+        {
+          "testo": "Livorno",
+          "corretta": false
+        },
         {
           "testo": "Pisa",
           "corretta": true
-        },
-        {
-          "testo": "Torino",
-          "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale animale è il più grande mammifero vivente?",
+      "testo": "Qual è il più grande mammifero vivente?",
       "risposte": [
         {
-          "testo": "Balena azzurra",
+          "testo": "Balenottera azzurra",
           "corretta": true
         },
         {
@@ -330,15 +330,15 @@
       ]
     },
     {
-      "testo": "Il numero 2 è pari?",
+      "testo": "Il 7 è un numnero primo?",
       "risposte": [
-        {
-          "testo": "Sì",
-          "corretta": true
-        },
         {
           "testo": "No",
           "corretta": false
+        },
+        {
+          "testo": "Sì",
+          "corretta": true
         }
       ]
     },
@@ -369,33 +369,33 @@
       ]
     },
     {
-      "testo": "Il Sahara è un deserto?",
+      "testo": "Qual è il deserto più esteso?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
+          "testo": "Gobi",
+          "corretta": false
         },
         {
-          "testo": "No",
-          "corretta": false
+          "testo": "Sahara",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Quale unità misura la temperatura nel sistema più usato in Italia?",
+      "testo": "Quale unità misura la temperatura nel sistema metrico decimale?",
       "risposte": [
         {
           "testo": "Gradi Celsius",
           "corretta": true
         },
         {
-          "testo": "Chilogrammi",
+          "testo": "Gradi Fahrenheit ",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale squadra nazionale vinse i Mondiali di calcio 2006?",
+      "testo": "Quale nazionale vinse i Mondiali di calcio 2006?",
       "risposte": [
         {
           "testo": "Italia",
@@ -424,12 +424,12 @@
       "testo": "Quale alimento è alla base del pesto genovese?",
       "risposte": [
         {
-          "testo": "Basilico",
-          "corretta": true
-        },
-        {
           "testo": "Prezzemolo",
           "corretta": false
+        },
+        {
+          "testo": "Basilico",
+          "corretta": true
         }
       ]
     },
@@ -447,15 +447,15 @@
       ]
     },
     {
-      "testo": "Quale paese ha Tokyo come capitale?",
+      "testo": "Qual è la capitale del Giappone?",
       "risposte": [
         {
-          "testo": "Giappone",
-          "corretta": true
+          "testo": "Kioto",
+          "corretta": false
         },
         {
-          "testo": "Cina",
-          "corretta": false
+          "testo": "Tokio",
+          "corretta": true
         }
       ]
     },
@@ -473,15 +473,15 @@
       ]
     },
     {
-      "testo": "Quale compositore scrisse la Nona Sinfonia?",
+      "testo": "Quale compositore scrisse le Quattro Stagioni?",
       "risposte": [
         {
-          "testo": "Beethoven",
-          "corretta": true
+          "testo": "Mozart",
+          "corretta": false
         },
         {
           "testo": "Vivaldi",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
@@ -489,12 +489,12 @@
       "testo": "Il Colosseo si trova a Roma?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
-        },
-        {
           "testo": "No",
           "corretta": false
+        },
+        {
+          "testo": "Sì",
+          "corretta": true
         }
       ]
     },
@@ -502,25 +502,25 @@
       "testo": "Quale continente è il più esteso?",
       "risposte": [
         {
-          "testo": "Asia",
-          "corretta": true
-        },
-        {
           "testo": "Oceania",
           "corretta": false
+        },
+        {
+          "testo": "Asia",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Un anno bisestile ha 366 giorni?",
+      "testo": "Un anno bisestile ha 364 giorni?",
       "risposte": [
         {
           "testo": "Sì",
-          "corretta": true
+          "corretta": false
         },
         {
           "testo": "No",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
@@ -532,7 +532,7 @@
           "corretta": true
         },
         {
-          "testo": "Orecchio",
+          "testo": "Naso",
           "corretta": false
         }
       ]
@@ -541,25 +541,25 @@
       "testo": "Quale città è detta la Serenissima?",
       "risposte": [
         {
-          "testo": "Venezia",
-          "corretta": true
-        },
-        {
           "testo": "Milano",
           "corretta": false
+        },
+        {
+          "testo": "Venezia",
+          "corretta": true
         }
       ]
     },
     {
-      "testo": "Il Tevere attraversa Roma?",
+      "testo": "Quale città è attraversata dal Tamigi?",
       "risposte": [
         {
-          "testo": "Sì",
-          "corretta": true
+          "testo": "Parigi",
+          "corretta": false
         },
         {
-          "testo": "No",
-          "corretta": false
+          "testo": "Londra",
+          "corretta": true
         }
       ]
     },
@@ -571,7 +571,7 @@
           "corretta": true
         },
         {
-          "testo": "Mercurio",
+          "testo": "Urano",
           "corretta": false
         }
       ]
@@ -593,12 +593,12 @@
       "testo": "Quale pittore è associato ai girasoli?",
       "risposte": [
         {
-          "testo": "Van Gogh",
-          "corretta": true
+          "testo": "Dalì",
+          "corretta": false
         },
         {
-          "testo": "Monet",
-          "corretta": false
+          "testo": "Van Gogh",
+          "corretta": true
         }
       ]
     },
@@ -616,15 +616,15 @@
       ]
     },
     {
-      "testo": "Quale materiale si ricava dagli alberi per fare i fogli?",
+      "testo": "Nell'Iliade, Ettore da chi è ucciso?",
       "risposte": [
         {
-          "testo": "Carta",
-          "corretta": true
+          "testo": "Patroclo",
+          "corretta": false
         },
         {
-          "testo": "Vetro",
-          "corretta": false
+          "testo": "Achille",
+          "corretta": true
         }
       ]
     },
@@ -642,7 +642,7 @@
       ]
     },
     {
-      "testo": "Il Vesuvio è un vulcano?",
+      "testo": "Lo Stromboli è un vulcano?",
       "risposte": [
         {
           "testo": "Sì",
