@@ -93,25 +93,25 @@ const introMeta = {
   1: {
     num:   'MANCHE 1',
     title: 'Correva l\'Anno',
-    desc:  'Quattro anni, dieci domande. Scegli l\'anno giusto!',
+    desc:  'Quattro anni, dieci domande. \n Scegli l\'anno giusto!',
     avvia: initM1
   },
   2: {
     num:   'MANCHE 2',
     title: 'Scossa!',
-    desc:  'Hanno tutti vinto il Nobel… tranne uno. Riesci a trovarlo senza dirlo?',
+    desc:  'Hanno tutti vinto il Nobel… tranne uno. \n Riesci a trovarlo senza dirlo?',
     avvia: initM2
   },
   3: {
     num:   'MANCHE 3',
     title: 'Quante ne Sai?',
-    desc:  'Due round, dodici domande. <br/>Accumula più punti possibile!',
+    desc:  'Due round, dodici domande. \n Accumula più punti possibile!',
     avvia: initM3
   },
   4: {
     num:   'MANCHE 4',
     title: 'Domande a Raffica',
-    desc:  'Hai 120 secondi per rispondere a più domande possibile.<br/>Ogni risposta corretta vale 2.000 punti!',
+    desc:  'Hai 120 secondi per rispondere a più domande possibile. \n Ogni risposta corretta vale 2.000 punti!',
     avvia: initM4
   },
   5: {
