@@ -93,7 +93,7 @@ const introMeta = {
   1: {
     num:   'MANCHE 1',
     title: 'Correva l\'Anno',
-    desc:  'Quattro anni, dieci domande. <br> Scegli l\'anno giusto!',
+    desc:  'Quattro anni, dieci domande. <br> Scegli l\'anno giusto! <br><strong>1946 1966 1986 2006',
     avvia: initM1
   },
   2: {
