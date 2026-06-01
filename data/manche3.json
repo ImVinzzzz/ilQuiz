@@ -165,7 +165,7 @@
           "icona": "fa-fingerprint",
           "punti": 1000,
           "immagine": "assets/images/criminologia.jpg",
-          "domanda": "Qual è il nome del composto chimico utilizzato dalla polizia scientifica per rilevare tracce di sangue invisibili a occhio nudo sulla scena del crimine?",
+          "domanda": "Quale composto chimico è utilizzato dalla polizia scientifica per rilevare tracce biologiche invisibili a occhio nudo?",
           "risposte": [
             {
               "testo": "A. Ninhidrina",
