@@ -111,7 +111,7 @@ const introMeta = {
   4: {
     num:   'MANCHE 4',
     title: 'Domande a Raffica',
-    desc:  'Hai 120 secondi per rispondere <br> a 50 domande. <br> Ogni risposta corretta vale 2.000 punti!',
+    desc:  'Hai 180 secondi per rispondere <br> a 50 domande. <br> Ogni risposta corretta vale 2.000 punti!',
     avvia: initM4
   },
   5: {
