@@ -165,22 +165,22 @@
           "icona": "fa-fingerprint",
           "punti": 1000,
           "immagine": "assets/images/criminologia.jpg",
-          "domanda": "In criminologia, come si chiama l'analisi degli indizi e dei comportamenti usata per delineare le caratteristiche probabili di un autore di reato?",
+          "domanda": "Qual è il nome del composto chimico utilizzato dalla polizia scientifica per rilevare tracce di sangue invisibili a occhio nudo sulla scena del crimine?",
           "risposte": [
             {
-              "testo": "A. Profilazione criminale",
+              "testo": "A. Ninhidrina",
+              "corretta": false
+            },
+            {
+              "testo": "B. Cianocrilato",
+              "corretta": false
+            },
+            {
+              "testo": "C. Luminol",
               "corretta": true
             },
             {
-              "testo": "B. Perizia calligrafica",
-              "corretta": false
-            },
-            {
-              "testo": "C. Mediazione penale",
-              "corretta": false
-            },
-            {
-              "testo": "D. Diritto comparato",
+              "testo": "D. Fenolftaleina",
               "corretta": false
             }
           ]
