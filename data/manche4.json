@@ -70,20 +70,20 @@
       ]
     },
     {
-      "testo": "Quanti lati ha un ennagono?",
+      "testo": "Quante facce ha un tetraedro?",
       "risposte": [
         {
-          "testo": "9",
+          "testo": "4",
           "corretta": true
         },
         {
-          "testo": "11",
+          "testo": "6",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale continente ospita l'Egitto?",
+      "testo": "Dove si trova l'Egitto?",
       "risposte": [
         {
           "testo": "Asia",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "testo": "Chi scrisse l'Eneide?",
+      "testo": "Chi ha scritto l'Eneide?",
       "risposte": [
         {
           "testo": "Virgilio",
@@ -382,7 +382,7 @@
       ]
     },
     {
-      "testo": "Quale unità misura la temperatura nel sistema metrico decimale?",
+      "testo": "Qual è l'unità di misura della temperatura nel sistema metrico decimale?",
       "risposte": [
         {
           "testo": "Gradi Celsius",
@@ -395,7 +395,7 @@
       ]
     },
     {
-      "testo": "Quale nazionale vinse i Mondiali di calcio 2006?",
+      "testo": "Quale nazionale vinse i Mondiali di calcio nel 2006?",
       "risposte": [
         {
           "testo": "Italia",
@@ -421,7 +421,7 @@
       ]
     },
     {
-      "testo": "Quale alimento è alla base del pesto genovese?",
+      "testo": "Quale erba aromatica è alla base del pesto genovese?",
       "risposte": [
         {
           "testo": "Prezzemolo",
