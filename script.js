@@ -485,7 +485,7 @@ function initM4() {
     domande: dati.manche4.domande,
     indice: 0,
     corrette: 0,
-    secondiRimasti: dati.manche4.durata_secondi || 120,
+    secondiRimasti: dati.manche4.durata_secondi || 180,
     puntiPerRisposta: dati.manche4.punti_per_risposta || 2000,
     terminata: false
   };

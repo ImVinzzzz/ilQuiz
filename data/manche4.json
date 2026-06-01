@@ -1,7 +1,7 @@
 {
   "titolo": "Domande a Raffica",
-  "descrizione": "120 secondi, 50 domande, due opzioni. Guadagni 2.000 punti per ogni risposta corretta.",
-  "durata_secondi": 120,
+  "descrizione": "180 secondi, 50 domande, due opzioni. Guadagni 2.000 punti per ogni risposta corretta.",
+  "durata_secondi": 180,
   "punti_per_risposta": 2000,
   "domande": [
     {
