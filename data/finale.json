@@ -1,0 +1,32 @@
+{
+  "titolo": "La Ghigliottina",
+  "soluzione": "LUCE",
+  "coppie": [
+    {
+      "parola_a": "SOLE",
+      "parola_b": "LUNA",
+      "corretta": "SOLE"
+    },
+    {
+      "parola_a": "PRIMA",
+      "parola_b": "VELOCE",
+      "corretta": "VELOCE"
+    },
+    {
+      "parola_a": "CHIARA",
+      "parola_b": "SCURA",
+      "corretta": "CHIARA"
+    },
+    {
+      "parola_a": "GIORNO",
+      "parola_b": "NOTTE",
+      "corretta": "GIORNO"
+    },
+    {
+      "parola_a": "ROSSA",
+      "parola_b": "BIANCA",
+      "corretta": "BIANCA"
+    }
+  ],
+  "indizi_note": "Le 5 parole vincenti (SOLE, VELOCE, CHIARA, GIORNO, BIANCA) sono tutte collegate alla parola LUCE: luce del sole, velocità della luce, luce chiara, luce del giorno, luce bianca."
+}
