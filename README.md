@@ -27,21 +27,27 @@ il-quiz/
 │   │   └── winner.mp3      ← Fanfara vittoria finale
 │   │
 │   └── images/
-│       ├── marquez.jpg     ← Foto Gabriel García Márquez (M2)
-│       ├── morrison.jpg    ← Foto Toni Morrison (M2)
-│       ├── eco.jpg         ← Foto Umberto Eco (M2) ← IL PERSONAGGIO DA NON DIRE
-│       ├── neruda.jpg      ← Foto Pablo Neruda (M2)
-│       ├── lessing.jpg     ← Foto Doris Lessing (M2)
-│       ├── pamuk.jpg       ← Foto Orhan Pamuk (M2)
-│       ├── jelinek.jpg     ← Foto Elfriede Jelinek (M2)
-│       ├── muller.jpg      ← Foto Herta Müller (M2)
-│       ├── soyinka.jpg     ← Foto Wole Soyinka (M2)
-│       ├── storia.jpg      ← Immagine materia Storia (M3)
-│       ├── scienza.jpg     ← Immagine materia Scienza (M3)
-│       ├── arte.jpg        ← Immagine materia Arte (M3)
-│       ├── letteratura.jpg ← Immagine materia Letteratura (M3)
-│       ├── musica.jpg      ← Immagine materia Musica (M3)
-│       └── geografia.jpg   ← Immagine materia Geografia (M3)
+│       ├── marquez.jpg       ← Foto Gabriel García Márquez (M2)
+│       ├── morrison.jpg      ← Foto Toni Morrison (M2)
+│       ├── eco.jpg           ← Foto Umberto Eco (M2) ← IL PERSONAGGIO DA NON DIRE
+│       ├── neruda.jpg        ← Foto Pablo Neruda (M2)
+│       ├── lessing.jpg       ← Foto Doris Lessing (M2)
+│       ├── pamuk.jpg         ← Foto Orhan Pamuk (M2)
+│       ├── jelinek.jpg       ← Foto Elfriede Jelinek (M2)
+│       ├── muller.jpg        ← Foto Herta Müller (M2)
+│       ├── soyinka.jpg       ← Foto Wole Soyinka (M2)
+│       ├── storia.jpg        ← Immagine materia Storia (M3 round 1)
+│       ├── scienza.jpg       ← Immagine materia Scienza (M3 round 1)
+│       ├── arte.jpg          ← Immagine materia Arte (M3 round 1)
+│       ├── letteratura.jpg   ← Immagine materia Letteratura (M3 round 1)
+│       ├── musica.jpg        ← Immagine materia Musica (M3)
+│       ├── geografia.jpg     ← Immagine materia Geografia (M3)
+│       ├── criminologia.jpg  ← Immagine materia Criminologia (M3 round 2)
+│       ├── mitologia.jpg     ← Immagine materia Mitologia (M3 round 2)
+│       ├── cucina.jpg        ← Immagine materia Cucina (M3 round 2)
+│       ├── animali.jpg       ← Immagine materia Animali (M3 round 2)
+│       ├── cinema.jpg        ← Immagine materia Cinema (M3 round 2)
+│       └── italiano.jpg      ← Immagine materia Italiano (M3 round 2)
 └── README.md
 ```
 
