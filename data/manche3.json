@@ -135,22 +135,22 @@
           "icona": "fa-globe-europe",
           "punti": 2000,
           "immagine": "assets/images/geografia.jpg",
-          "domanda": "Qual è il fiume più lungo d'Italia, che attraversa la Pianura Padana sfociando nel Mare Adriatico?",
+          "domanda": "Dopo la Città del Vaticano, qual è il secondo Stato indipendente più piccolo del mondo per estensione territoriale?",
           "risposte": [
             {
-              "testo": "A. Tevere",
+              "testo": "A. Nauru",
               "corretta": false
             },
             {
-              "testo": "B. Adige",
+              "testo": "B. San Marino",
               "corretta": false
             },
             {
-              "testo": "C. Arno",
+              "testo": "C. Liechtenstein",
               "corretta": false
             },
             {
-              "testo": "D. Po",
+              "testo": "D. Principato di Monaco",
               "corretta": true
             }
           ]
