@@ -93,7 +93,7 @@ const introMeta = {
   1: {
     num:   'MANCHE 1',
     title: 'Correva l\'Anno',
-    desc:  'Quattro anni, dieci domande. <br> Scegli l\'anno giusto! <br><strong>1946 1966 1986 2006',
+    desc:  'Quattro anni, dieci domande. <br> Scegli l\'anno giusto!',
     avvia: initM1
   },
   2: {
@@ -116,7 +116,7 @@ const introMeta = {
   },
   5: {
     num:   'MANCHE FINALE',
-    title: 'La Ghigliottina',
+    title: 'Ghigliottina',
     desc:  'Il momento della verità. <br> Scegli gli indizi giusti <br> e indovina la parola che li lega!',
     avvia: initM5
   }
