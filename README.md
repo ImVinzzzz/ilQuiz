@@ -11,7 +11,12 @@ il-quiz/
 ├── index.html              ← Struttura HTML (SPA, tutti gli schermi)
 ├── style.css               ← Stili, palette, animazioni
 ├── script.js               ← Logica di gioco completa
-├── dati.json               ← Tutti i dati (domande, personaggi, materie)
+├── data/                   ← Dati JSON separati per manche
+│   ├── manche1.json        ← Domande Correva l'Anno
+│   ├── manche2.json        ← Personaggi Scossa!
+│   ├── manche3.json        ← Materie Quante ne Sai?
+│   ├── manche4.json        ← 50 domande Domande a Raffica
+│   └── finale.json         ← Dati della Ghigliottina
 │
 ├── assets/
 │   ├── sounds/
@@ -44,7 +49,7 @@ il-quiz/
 
 ## 🚀 Come eseguire il gioco
 
-Il gioco **non può essere aperto direttamente** come file HTML doppio-clic (il browser blocca il `fetch` di `dati.json` da file locali).
+Il gioco **non può essere aperto direttamente** come file HTML doppio-clic (il browser blocca il `fetch` dei file JSON in `data/` da file locali).
 
 ### Opzione A — Live Server (VS Code)
 1. Apri la cartella `il-quiz/` in VS Code
@@ -74,29 +79,37 @@ npx serve .
 | 1 | M1 — Correva l'Anno | 10 domande, 4 anni fissi, +5.000 pt/risposta giusta |
 | 2 | M2 — Scossa! | 9 personaggi, 1 impostore Nobel, +2.000 pt/eliminazione |
 | 3 | M3 — Quante ne Sai? | 6 materie, valori da 2.000 a 5.000 pt |
-| 4 | M4 — Ghigliottina | 5 coppie di parole + 2 min timer + soluzione |
-| 5 | Finale Vittoria / Sconfitta | Punteggio finale |
+| 4 | M4 — Domande a Raffica | 50 domande, 120 secondi, 2 opzioni, +2.000 pt/risposta giusta |
+| 5 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione |
+| 6 | Finale Vittoria / Sconfitta | Punteggio finale |
 
 ---
 
 ## ✏️ Personalizzazione
 
 ### Cambiare le domande (M1)
-Nel file `dati.json`, sezione `manche1.domande`, ogni oggetto ha:
+Nel file `data/manche1.json`, array `domande`, ogni oggetto ha:
 - `testo` — testo della domanda
 - `risposta_corretta_tra_anni` — quale dei 4 anni (1946/1966/1986/2006) è la risposta
 
 ### Cambiare la Scossa (M2)
-Nella sezione `manche2.personaggi`:
+Nel file `data/manche2.json`, array `personaggi`:
 - Il personaggio con `"ha_vinto_nobel": false` è quello da non dire
 - Attualmente è **Umberto Eco** (unico senza Nobel reale)
 
-### Cambiare la parola della Ghigliottina (M4)
-- `manche4.soluzione` — la parola target
-- `manche4.coppie` — le 5 coppie; `corretta` è la parola-indizio che porta alla soluzione
+### Cambiare le domande a raffica (M4)
+Nel file `data/manche4.json`:
+- `durata_secondi` — tempo disponibile, attualmente 120 secondi
+- `punti_per_risposta` — punti assegnati a ogni risposta corretta
+- `domande` — elenco delle 50 domande, ciascuna con due risposte
+
+### Cambiare la parola della Ghigliottina (finale)
+Nel file `data/finale.json`:
+- `soluzione` — la parola target
+- `coppie` — le 5 coppie; `corretta` è la parola-indizio che porta alla soluzione
 
 ### Aggiungere la domanda personale (M1, ultima domanda)
-Nell'ultima domanda di `manche1.domande`, sostituisci il testo segnaposto con una domanda sull'amica festeggiata e imposta `risposta_corretta_tra_anni` sull'anno di nascita corretto.
+Nell'ultima domanda di `data/manche1.json`, sostituisci il testo segnaposto con una domanda sull'amica festeggiata e imposta `risposta_corretta_tra_anni` sull'anno di nascita corretto.
 
 ---
 

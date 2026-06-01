@@ -126,7 +126,7 @@
 
     <div class="next-manche-bar hidden" id="m3-next-bar">
       <button class="btn-next-manche" id="m3-btn-manche4">
-        Manche Finale <i class="fa-solid fa-chevron-right"></i>
+        Manche 4 <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </section>
@@ -145,38 +145,65 @@
     </div>
   </div>
 
-  <!-- ===================== MANCHE 4: GHIGLIOTTINA ===================== -->
+  <!-- ===================== MANCHE 4: DOMANDE A RAFFICA ===================== -->
   <section id="screen-m4" class="screen game-screen">
     <header class="game-header">
-      <div class="game-manche-label">La Ghigliottina</div>
+      <div class="game-manche-label">4. Domande a Raffica</div>
       <div class="score-display">PT: <span id="m4-score-display">0</span></div>
     </header>
 
+    <main class="m4-main">
+      <div class="m4-raffica-top">
+        <div id="m4-question-counter" class="question-counter">Domanda 1 / 50</div>
+        <div id="m4-timer" class="m4-raffica-timer">2:00</div>
+        <div class="m4-correct-wrap">Corrette: <span id="m4-correct-counter">0</span></div>
+      </div>
+      <div id="m4-question-box" class="question-box fade-in-el">
+        <p id="m4-question-text">Le domande appariranno qui…</p>
+      </div>
+      <div id="m4-answers" class="m4-raffica-answers"></div>
+      <div id="m4-feedback" class="m4-feedback hidden"></div>
+    </main>
+
+    <div class="next-manche-bar hidden" id="m4-next-bar">
+      <button class="btn-next-manche" id="m4-btn-finale">
+        Manche Finale <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== MANCHE FINALE: GHIGLIOTTINA ===================== -->
+  <section id="screen-m5" class="screen game-screen">
+    <header class="game-header">
+      <div class="game-manche-label">La Ghigliottina</div>
+      <div class="score-display">PT: <span id="m5-score-display">0</span></div>
+    </header>
+
     <!-- FASE 1: scelta parole -->
-    <div id="m4-phase1" class="m4-phase">
+    <div id="m5-phase1" class="m5-phase">
       <p class="m4-instruction">Scegli una parola per ogni coppia.<br>Se sbagli, il punteggio si <strong>dimezza</strong>!</p>
-      <div id="m4-pair-container" class="m4-pair-container"></div>
-      <div id="m4-chosen-words" class="m4-chosen-words"></div>
-      <div id="m4-pair-counter" class="m4-pair-counter">Coppia 1 / 5</div>
+      <div id="m5-pair-container" class="m4-pair-container"></div>
+      <div id="m5-chosen-words" class="m4-chosen-words"></div>
+      <div id="m5-pair-counter" class="m4-pair-counter">Coppia 1 / 5</div>
     </div>
 
     <!-- FASE 2: timer -->
-    <div id="m4-phase2" class="m4-phase hidden">
+    <div id="m5-phase2" class="m5-phase hidden">
       <p class="m4-instruction">Hai <strong>1 minuto</strong> per trovare la parola che lega tutti gli indizi!</p>
-      <div id="m4-indizi" class="m4-indizi-wrap"></div>
-      <div id="m4-timer" class="m4-timer">1:00</div>
+      <div id="m5-indizi" class="m4-indizi-wrap"></div>
+      <div id="m5-timer" class="m4-timer">1:00</div>
     </div>
 
     <!-- FASE 3: soluzione -->
-    <div id="m4-phase3" class="m4-phase hidden">
-      <div id="m4-solution-word" class="m4-solution-word hidden"></div>
-      <div id="m4-indizi-final" class="m4-indizi-wrap"></div>
-      <button class="btn-primary" id="m4-btn-solution">
+    <div id="m5-phase3" class="m5-phase hidden">
+      <div id="m5-solution-word" class="m4-solution-word hidden"></div>
+      <div id="m5-indizi-final" class="m4-indizi-wrap"></div>
+      <button class="btn-primary" id="m5-btn-solution">
         <i class="fa-solid fa-key"></i> La Soluzione
       </button>
-      <div id="m4-regia-buttons" class="m4-regia-buttons hidden">
-        <button class="btn-ok-regia" id="m4-btn-ok"><i class="fa-solid fa-check"></i> OK</button>
-        <button class="btn-no-regia" id="m4-btn-no"><i class="fa-solid fa-xmark"></i> NO</button>
+      <div id="m5-regia-buttons" class="m4-regia-buttons hidden">
+        <button class="btn-ok-regia" id="m5-btn-ok"><i class="fa-solid fa-check"></i> OK</button>
+        <button class="btn-no-regia" id="m5-btn-no"><i class="fa-solid fa-xmark"></i> NO</button>
       </div>
     </div>
   </section>

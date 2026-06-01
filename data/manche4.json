@@ -1,0 +1,658 @@
+{
+  "titolo": "Domande a Raffica",
+  "descrizione": "120 secondi, 50 domande, due opzioni. Guadagni 2.000 punti per ogni risposta corretta.",
+  "durata_secondi": 120,
+  "punti_per_risposta": 2000,
+  "domande": [
+    {
+      "testo": "Quale pianeta è conosciuto come il Pianeta Rosso?",
+      "risposte": [
+        {
+          "testo": "Marte",
+          "corretta": true
+        },
+        {
+          "testo": "Venere",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La capitale della Francia è Parigi?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale miagola?",
+      "risposte": [
+        {
+          "testo": "Gatto",
+          "corretta": true
+        },
+        {
+          "testo": "Cane",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Po è un fiume italiano?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale colore si ottiene mescolando blu e giallo?",
+      "risposte": [
+        {
+          "testo": "Verde",
+          "corretta": true
+        },
+        {
+          "testo": "Viola",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti lati ha un triangolo?",
+      "risposte": [
+        {
+          "testo": "3",
+          "corretta": true
+        },
+        {
+          "testo": "4",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale continente ospita l'Egitto?",
+      "risposte": [
+        {
+          "testo": "Africa",
+          "corretta": true
+        },
+        {
+          "testo": "Europa",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "L'acqua bolle a 100 °C al livello del mare?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Chi scrisse la Divina Commedia?",
+      "risposte": [
+        {
+          "testo": "Dante Alighieri",
+          "corretta": true
+        },
+        {
+          "testo": "Giovanni Boccaccio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale sport usa il pallone ovale nel Sei Nazioni?",
+      "risposte": [
+        {
+          "testo": "Rugby",
+          "corretta": true
+        },
+        {
+          "testo": "Basket",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La Terra ruota attorno al Sole?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale strumento ha tasti bianchi e neri?",
+      "risposte": [
+        {
+          "testo": "Pianoforte",
+          "corretta": true
+        },
+        {
+          "testo": "Violino",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Roma è la capitale d'Italia?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale metallo ha simbolo chimico Fe?",
+      "risposte": [
+        {
+          "testo": "Ferro",
+          "corretta": true
+        },
+        {
+          "testo": "Oro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "In quale mare si trova la Sardegna?",
+      "risposte": [
+        {
+          "testo": "Mediterraneo",
+          "corretta": true
+        },
+        {
+          "testo": "Baltico",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale organo pompa il sangue?",
+      "risposte": [
+        {
+          "testo": "Cuore",
+          "corretta": true
+        },
+        {
+          "testo": "Polmone",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Monte Bianco supera i 4.000 metri?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale mese viene dopo aprile?",
+      "risposte": [
+        {
+          "testo": "Maggio",
+          "corretta": true
+        },
+        {
+          "testo": "Marzo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale lingua si parla principalmente in Brasile?",
+      "risposte": [
+        {
+          "testo": "Portoghese",
+          "corretta": true
+        },
+        {
+          "testo": "Spagnolo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La Gioconda è esposta al Louvre?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti giorni ha una settimana?",
+      "risposte": [
+        {
+          "testo": "7",
+          "corretta": true
+        },
+        {
+          "testo": "10",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale gas respiriamo per vivere?",
+      "risposte": [
+        {
+          "testo": "Ossigeno",
+          "corretta": true
+        },
+        {
+          "testo": "Elio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Sole è una stella?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale città è famosa per la Torre pendente?",
+      "risposte": [
+        {
+          "testo": "Pisa",
+          "corretta": true
+        },
+        {
+          "testo": "Torino",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale è il più grande mammifero vivente?",
+      "risposte": [
+        {
+          "testo": "Balena azzurra",
+          "corretta": true
+        },
+        {
+          "testo": "Elefante africano",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il numero 2 è pari?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale oceano bagna la costa orientale degli Stati Uniti?",
+      "risposte": [
+        {
+          "testo": "Atlantico",
+          "corretta": true
+        },
+        {
+          "testo": "Pacifico",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Chi dipinse la Cappella Sistina?",
+      "risposte": [
+        {
+          "testo": "Michelangelo",
+          "corretta": true
+        },
+        {
+          "testo": "Raffaello",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Sahara è un deserto?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale unità misura la temperatura nel sistema più usato in Italia?",
+      "risposte": [
+        {
+          "testo": "Gradi Celsius",
+          "corretta": true
+        },
+        {
+          "testo": "Chilogrammi",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale squadra nazionale vinse i Mondiali di calcio 2006?",
+      "risposte": [
+        {
+          "testo": "Italia",
+          "corretta": true
+        },
+        {
+          "testo": "Francia",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La Luna è un satellite naturale della Terra?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale alimento è alla base del pesto genovese?",
+      "risposte": [
+        {
+          "testo": "Basilico",
+          "corretta": true
+        },
+        {
+          "testo": "Prezzemolo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quante vocali ha l'alfabeto italiano tradizionale?",
+      "risposte": [
+        {
+          "testo": "5",
+          "corretta": true
+        },
+        {
+          "testo": "7",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale paese ha Tokyo come capitale?",
+      "risposte": [
+        {
+          "testo": "Giappone",
+          "corretta": true
+        },
+        {
+          "testo": "Cina",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La fotosintesi riguarda principalmente le piante?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale compositore scrisse la Nona Sinfonia?",
+      "risposte": [
+        {
+          "testo": "Beethoven",
+          "corretta": true
+        },
+        {
+          "testo": "Vivaldi",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Colosseo si trova a Roma?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale continente è il più esteso?",
+      "risposte": [
+        {
+          "testo": "Asia",
+          "corretta": true
+        },
+        {
+          "testo": "Oceania",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Un anno bisestile ha 366 giorni?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale organo usiamo principalmente per vedere?",
+      "risposte": [
+        {
+          "testo": "Occhio",
+          "corretta": true
+        },
+        {
+          "testo": "Orecchio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale città è detta la Serenissima?",
+      "risposte": [
+        {
+          "testo": "Venezia",
+          "corretta": true
+        },
+        {
+          "testo": "Milano",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Tevere attraversa Roma?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale pianeta è il più grande del Sistema Solare?",
+      "risposte": [
+        {
+          "testo": "Giove",
+          "corretta": true
+        },
+        {
+          "testo": "Mercurio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "La parola 'cane' indica un animale domestico?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale pittore è associato ai girasoli?",
+      "risposte": [
+        {
+          "testo": "Van Gogh",
+          "corretta": true
+        },
+        {
+          "testo": "Monet",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il calcio si gioca normalmente con 11 giocatori per squadra?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale materiale si ricava dagli alberi per fare i fogli?",
+      "risposte": [
+        {
+          "testo": "Carta",
+          "corretta": true
+        },
+        {
+          "testo": "Vetro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale numero viene dopo 99?",
+      "risposte": [
+        {
+          "testo": "100",
+          "corretta": true
+        },
+        {
+          "testo": "90",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Vesuvio è un vulcano?",
+      "risposte": [
+        {
+          "testo": "Sì",
+          "corretta": true
+        },
+        {
+          "testo": "No",
+          "corretta": false
+        }
+      ]
+    }
+  ]
+}

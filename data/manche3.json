@@ -1,0 +1,156 @@
+{
+  "titolo": "Quante ne Sai?",
+  "descrizione": "Scegli una materia, rispondi alla domanda e accumula punti!",
+  "materie": [
+    {
+      "nome": "Storia",
+      "icona": "fa-landmark",
+      "punti": 1000,
+      "immagine": "assets/images/storia.jpg",
+      "domanda": "Nel 1789 la Rivoluzione Francese iniziò con la presa di quale simbolo del dispotismo reale?",
+      "risposte": [
+        {
+          "testo": "A. Il Palazzo di Versailles",
+          "corretta": false
+        },
+        {
+          "testo": "B. La Bastiglia",
+          "corretta": true
+        },
+        {
+          "testo": "C. Notre Dame de Paris",
+          "corretta": false
+        },
+        {
+          "testo": "D. Les Invalides",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "nome": "Scienza",
+      "icona": "fa-flask",
+      "punti": 4000,
+      "immagine": "assets/images/scienza.jpg",
+      "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
+      "risposte": [
+        {
+          "testo": "A. Argento",
+          "corretta": false
+        },
+        {
+          "testo": "B. Alluminio",
+          "corretta": false
+        },
+        {
+          "testo": "C. Oro",
+          "corretta": false
+        },
+        {
+          "testo": "D. Rame",
+          "corretta": true
+        }
+      ]
+    },
+    {
+      "nome": "Arte",
+      "icona": "fa-palette",
+      "punti": 3000,
+      "immagine": "assets/images/arte.jpg",
+      "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
+      "risposte": [
+        {
+          "testo": "A. Leonardo da Vinci",
+          "corretta": false
+        },
+        {
+          "testo": "B. Raffaello Sanzio",
+          "corretta": false
+        },
+        {
+          "testo": "C. Michelangelo Buonarroti",
+          "corretta": true
+        },
+        {
+          "testo": "D. Caravaggio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "nome": "Letteratura",
+      "icona": "fa-book-open",
+      "punti": 3000,
+      "immagine": "assets/images/letteratura.jpg",
+      "domanda": "Chi è l'autore de 'I Promessi Sposi', il romanzo considerato il capolavoro della letteratura italiana dell'Ottocento?",
+      "risposte": [
+        {
+          "testo": "A. Giacomo Leopardi",
+          "corretta": false
+        },
+        {
+          "testo": "B. Alessandro Manzoni",
+          "corretta": true
+        },
+        {
+          "testo": "C. Giovanni Verga",
+          "corretta": false
+        },
+        {
+          "testo": "D. Ugo Foscolo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "nome": "Musica",
+      "icona": "fa-music",
+      "punti": 2000,
+      "immagine": "assets/images/musica.jpg",
+      "domanda": "Quale compositore tedesco scrisse le celebri Sinfonie n. 5 e n. 9 pur essendo completamente sordo?",
+      "risposte": [
+        {
+          "testo": "A. Johann Sebastian Bach",
+          "corretta": false
+        },
+        {
+          "testo": "B. Wolfgang Amadeus Mozart",
+          "corretta": false
+        },
+        {
+          "testo": "C. Ludwig van Beethoven",
+          "corretta": true
+        },
+        {
+          "testo": "D. Franz Schubert",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "nome": "Geografia",
+      "icona": "fa-globe-europe",
+      "punti": 2000,
+      "immagine": "assets/images/geografia.jpg",
+      "domanda": "Qual è il fiume più lungo d'Italia, che attraversa la Pianura Padana sfociando nel Mare Adriatico?",
+      "risposte": [
+        {
+          "testo": "A. Tevere",
+          "corretta": false
+        },
+        {
+          "testo": "B. Adige",
+          "corretta": false
+        },
+        {
+          "testo": "C. Arno",
+          "corretta": false
+        },
+        {
+          "testo": "D. Po",
+          "corretta": true
+        }
+      ]
+    }
+  ]
+}
