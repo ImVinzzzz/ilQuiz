@@ -14,7 +14,7 @@ il-quiz/
 ├── data/                   ← Dati JSON separati per manche
 │   ├── manche1.json        ← Domande Correva l'Anno
 │   ├── manche2.json        ← Personaggi Scossa!
-│   ├── manche3.json        ← Materie Quante ne Sai?
+│   ├── manche3.json        ← Due round di materie Quante ne Sai?
 │   ├── manche4.json        ← 50 domande Domande a Raffica
 │   └── finale.json         ← Dati della Ghigliottina
 │
@@ -78,7 +78,7 @@ npx serve .
 | 0 | Home      | Logo gigante — clicca ovunque |
 | 1 | M1 — Correva l'Anno | 10 domande, 4 anni fissi, +5.000 pt/risposta giusta |
 | 2 | M2 — Scossa! | 9 personaggi, 1 impostore Nobel, +2.000 pt/eliminazione |
-| 3 | M3 — Quante ne Sai? | 6 materie, valori da 2.000 a 5.000 pt |
+| 3 | M3 — Quante ne Sai? | 2 round da 6 materie, valori da 1.000 a 5.000 pt |
 | 4 | M4 — Domande a Raffica | 50 domande, 120 secondi, 2 opzioni, +2.000 pt/risposta giusta |
 | 5 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione |
 | 6 | Finale Vittoria / Sconfitta | Punteggio finale |
@@ -96,6 +96,12 @@ Nel file `data/manche1.json`, array `domande`, ogni oggetto ha:
 Nel file `data/manche2.json`, array `personaggi`:
 - Il personaggio con `"ha_vinto_nobel": false` è quello da non dire
 - Attualmente è **Umberto Eco** (unico senza Nobel reale)
+
+### Cambiare le materie (M3)
+Nel file `data/manche3.json`, array `rounds`:
+- Ogni round contiene un `titolo` e un array `materie`
+- Ogni materia ha `nome`, `icona`, `punti`, `immagine`, `domanda` e quattro `risposte`
+- Attualmente ci sono 2 round da 6 materie ciascuno
 
 ### Cambiare le domande a raffica (M4)
 Nel file `data/manche4.json`:
