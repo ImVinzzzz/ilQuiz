@@ -93,31 +93,31 @@ const introMeta = {
   1: {
     num:   'MANCHE 1',
     title: 'Correva l\'Anno',
-    desc:  'Quattro anni, <br> dieci\ndomande. \n Scegli l\'anno giusto!',
+    desc:  'Quattro anni, dieci domande. <br> Scegli l\'anno giusto!',
     avvia: initM1
   },
   2: {
     num:   'MANCHE 2',
     title: 'Scossa!',
-    desc:  'Hanno tutti vinto il Nobel… tranne uno. \n Riesci a trovarlo senza dirlo?',
+    desc:  'Hanno tutti vinto il Nobel… tranne uno. <br> Riesci a trovarlo senza dirlo?',
     avvia: initM2
   },
   3: {
     num:   'MANCHE 3',
     title: 'Quante ne Sai?',
-    desc:  'Due round, dodici domande. \n Accumula più punti possibile!',
+    desc:  'Due round, dodici domande. <br> Accumula più punti possibile!',
     avvia: initM3
   },
   4: {
     num:   'MANCHE 4',
     title: 'Domande a Raffica',
-    desc:  'Hai 120 secondi per rispondere a più domande possibile. \n Ogni risposta corretta vale 2.000 punti!',
+    desc:  'Hai 120 secondi per rispondere <br> a 50 domande. <br> Ogni risposta corretta vale 2.000 punti!',
     avvia: initM4
   },
   5: {
     num:   'MANCHE FINALE',
     title: 'La Ghigliottina',
-    desc:  'Il momento della verità. Scegli le parole giuste e indovina la soluzione!',
+    desc:  'Il momento della verità. <br> Scegli gli indizi giusti <br> e indovina la parola che li lega!',
     avvia: initM5
   }
 };
