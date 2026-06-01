@@ -16,6 +16,12 @@
       "bio": "Scrittrice americana (1931–2019). Prima donna afroamericana a vincere il Nobel (1993). La sua opera esplora l'eredità della schiavitù e l'identità afroamericana con potenza poetica incomparabile."
     },
     {
+      "nome": "Bob Dylan",
+      "ha_vinto_nobel": true,
+      "immagine": "assets/images/dylan.jpg",
+      "bio": "Cantautore e musicista statunitense, vincitore del premio Nobel per la letteratura nel 2016 con la seguente motivazione: per aver creato nuove espressioni poetiche all'interno della grande tradizione della canzone americana."
+    },
+    {
       "nome": "Umberto Eco",
       "ha_vinto_nobel": false,
       "immagine": "assets/images/eco.jpg",
