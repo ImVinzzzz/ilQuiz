@@ -85,22 +85,22 @@
           "icona": "fa-book-open",
           "punti": 3000,
           "immagine": "assets/images/letteratura.jpg",
-          "domanda": "Chi è l'autore de 'I Promessi Sposi', il romanzo considerato il capolavoro della letteratura italiana dell'Ottocento?",
+          "domanda": "In quale città è ambientato il romanzo capolavoro 'Il Maestro e Margherita' dello scrittore russo Michail Bulgakov?",
           "risposte": [
             {
-              "testo": "A. Giacomo Leopardi",
+              "testo": "A. San Pietroburgo",
               "corretta": false
             },
             {
-              "testo": "B. Alessandro Manzoni",
+              "testo": "B. Mosca",
               "corretta": true
             },
             {
-              "testo": "C. Giovanni Verga",
+              "testo": "C. Kiev",
               "corretta": false
             },
             {
-              "testo": "D. Ugo Foscolo",
+              "testo": "D. Volgograd",
               "corretta": false
             }
           ]
