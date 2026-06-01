@@ -1,154 +1,314 @@
 {
   "titolo": "Quante ne Sai?",
-  "descrizione": "Scegli una materia, rispondi alla domanda e accumula punti!",
-  "materie": [
+  "descrizione": "Scegli una materia, supera due round di domande e accumula punti!",
+  "rounds": [
     {
-      "nome": "Storia",
-      "icona": "fa-landmark",
-      "punti": 1000,
-      "immagine": "assets/images/storia.jpg",
-      "domanda": "Nel 1789 la Rivoluzione Francese iniziò con la presa di quale simbolo del dispotismo reale?",
-      "risposte": [
+      "titolo": "Round 1",
+      "materie": [
         {
-          "testo": "A. Il Palazzo di Versailles",
-          "corretta": false
+          "nome": "Storia",
+          "icona": "fa-landmark",
+          "punti": 1000,
+          "immagine": "assets/images/storia.jpg",
+          "domanda": "Nel 1789 la Rivoluzione Francese iniziò con la presa di quale simbolo del dispotismo reale?",
+          "risposte": [
+            {
+              "testo": "A. Il Palazzo di Versailles",
+              "corretta": false
+            },
+            {
+              "testo": "B. La Bastiglia",
+              "corretta": true
+            },
+            {
+              "testo": "C. Notre Dame de Paris",
+              "corretta": false
+            },
+            {
+              "testo": "D. Les Invalides",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "B. La Bastiglia",
-          "corretta": true
+          "nome": "Scienza",
+          "icona": "fa-flask",
+          "punti": 4000,
+          "immagine": "assets/images/scienza.jpg",
+          "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
+          "risposte": [
+            {
+              "testo": "A. Argento",
+              "corretta": false
+            },
+            {
+              "testo": "B. Alluminio",
+              "corretta": false
+            },
+            {
+              "testo": "C. Oro",
+              "corretta": false
+            },
+            {
+              "testo": "D. Rame",
+              "corretta": true
+            }
+          ]
         },
         {
-          "testo": "C. Notre Dame de Paris",
-          "corretta": false
+          "nome": "Arte",
+          "icona": "fa-palette",
+          "punti": 3000,
+          "immagine": "assets/images/arte.jpg",
+          "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
+          "risposte": [
+            {
+              "testo": "A. Leonardo da Vinci",
+              "corretta": false
+            },
+            {
+              "testo": "B. Raffaello Sanzio",
+              "corretta": false
+            },
+            {
+              "testo": "C. Michelangelo Buonarroti",
+              "corretta": true
+            },
+            {
+              "testo": "D. Caravaggio",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "D. Les Invalides",
-          "corretta": false
+          "nome": "Letteratura",
+          "icona": "fa-book-open",
+          "punti": 3000,
+          "immagine": "assets/images/letteratura.jpg",
+          "domanda": "Chi è l'autore de 'I Promessi Sposi', il romanzo considerato il capolavoro della letteratura italiana dell'Ottocento?",
+          "risposte": [
+            {
+              "testo": "A. Giacomo Leopardi",
+              "corretta": false
+            },
+            {
+              "testo": "B. Alessandro Manzoni",
+              "corretta": true
+            },
+            {
+              "testo": "C. Giovanni Verga",
+              "corretta": false
+            },
+            {
+              "testo": "D. Ugo Foscolo",
+              "corretta": false
+            }
+          ]
+        },
+        {
+          "nome": "Musica",
+          "icona": "fa-music",
+          "punti": 2000,
+          "immagine": "assets/images/musica.jpg",
+          "domanda": "Quale compositore tedesco scrisse le celebri Sinfonie n. 5 e n. 9 pur essendo completamente sordo?",
+          "risposte": [
+            {
+              "testo": "A. Johann Sebastian Bach",
+              "corretta": false
+            },
+            {
+              "testo": "B. Wolfgang Amadeus Mozart",
+              "corretta": false
+            },
+            {
+              "testo": "C. Ludwig van Beethoven",
+              "corretta": true
+            },
+            {
+              "testo": "D. Franz Schubert",
+              "corretta": false
+            }
+          ]
+        },
+        {
+          "nome": "Geografia",
+          "icona": "fa-globe-europe",
+          "punti": 2000,
+          "immagine": "assets/images/geografia.jpg",
+          "domanda": "Qual è il fiume più lungo d'Italia, che attraversa la Pianura Padana sfociando nel Mare Adriatico?",
+          "risposte": [
+            {
+              "testo": "A. Tevere",
+              "corretta": false
+            },
+            {
+              "testo": "B. Adige",
+              "corretta": false
+            },
+            {
+              "testo": "C. Arno",
+              "corretta": false
+            },
+            {
+              "testo": "D. Po",
+              "corretta": true
+            }
+          ]
         }
       ]
     },
     {
-      "nome": "Scienza",
-      "icona": "fa-flask",
-      "punti": 4000,
-      "immagine": "assets/images/scienza.jpg",
-      "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
-      "risposte": [
+      "titolo": "Round 2",
+      "materie": [
         {
-          "testo": "A. Argento",
-          "corretta": false
+          "nome": "Criminologia",
+          "icona": "fa-fingerprint",
+          "punti": 5000,
+          "immagine": "assets/images/scienza.jpg",
+          "domanda": "In criminologia, come si chiama l'analisi degli indizi e dei comportamenti usata per delineare le caratteristiche probabili di un autore di reato?",
+          "risposte": [
+            {
+              "testo": "A. Profilazione criminale",
+              "corretta": true
+            },
+            {
+              "testo": "B. Perizia calligrafica",
+              "corretta": false
+            },
+            {
+              "testo": "C. Mediazione penale",
+              "corretta": false
+            },
+            {
+              "testo": "D. Diritto comparato",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "B. Alluminio",
-          "corretta": false
+          "nome": "Mitologia",
+          "icona": "fa-dragon",
+          "punti": 4000,
+          "immagine": "assets/images/arte.jpg",
+          "domanda": "Nella mitologia greca, quale eroe uccise il Minotauro nel labirinto di Creta?",
+          "risposte": [
+            {
+              "testo": "A. Eracle",
+              "corretta": false
+            },
+            {
+              "testo": "B. Perseo",
+              "corretta": false
+            },
+            {
+              "testo": "C. Teseo",
+              "corretta": true
+            },
+            {
+              "testo": "D. Achille",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "C. Oro",
-          "corretta": false
+          "nome": "Cucina",
+          "icona": "fa-utensils",
+          "punti": 3000,
+          "immagine": "assets/images/geografia.jpg",
+          "domanda": "Quale frutta secca si usa tradizionalmente nel pesto alla genovese?",
+          "risposte": [
+            {
+              "testo": "A. Mandorle",
+              "corretta": false
+            },
+            {
+              "testo": "B. Nocciole",
+              "corretta": false
+            },
+            {
+              "testo": "C. Pinoli",
+              "corretta": true
+            },
+            {
+              "testo": "D. Pistacchi",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "D. Rame",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "nome": "Arte",
-      "icona": "fa-palette",
-      "punti": 3000,
-      "immagine": "assets/images/arte.jpg",
-      "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
-      "risposte": [
-        {
-          "testo": "A. Leonardo da Vinci",
-          "corretta": false
+          "nome": "Animali",
+          "icona": "fa-paw",
+          "punti": 3000,
+          "immagine": "assets/images/scienza.jpg",
+          "domanda": "Quale mammifero marino è noto per avere il canto più complesso e melodioso durante le migrazioni e l'accoppiamento?",
+          "risposte": [
+            {
+              "testo": "A. Megattera",
+              "corretta": true
+            },
+            {
+              "testo": "B. Foca monaca",
+              "corretta": false
+            },
+            {
+              "testo": "C. Tricheco",
+              "corretta": false
+            },
+            {
+              "testo": "D. Lontra marina",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "B. Raffaello Sanzio",
-          "corretta": false
+          "nome": "Cinema",
+          "icona": "fa-film",
+          "punti": 2000,
+          "immagine": "assets/images/musica.jpg",
+          "domanda": "Quale film italiano vinse l'Oscar al miglior film straniero nel 1999, grazie anche alla celebre frase 'Buongiorno, principessa!'?",
+          "risposte": [
+            {
+              "testo": "A. Nuovo Cinema Paradiso",
+              "corretta": false
+            },
+            {
+              "testo": "B. Mediterraneo",
+              "corretta": false
+            },
+            {
+              "testo": "C. La vita è bella",
+              "corretta": true
+            },
+            {
+              "testo": "D. Il postino",
+              "corretta": false
+            }
+          ]
         },
         {
-          "testo": "C. Michelangelo Buonarroti",
-          "corretta": true
-        },
-        {
-          "testo": "D. Caravaggio",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "nome": "Letteratura",
-      "icona": "fa-book-open",
-      "punti": 3000,
-      "immagine": "assets/images/letteratura.jpg",
-      "domanda": "Chi è l'autore de 'I Promessi Sposi', il romanzo considerato il capolavoro della letteratura italiana dell'Ottocento?",
-      "risposte": [
-        {
-          "testo": "A. Giacomo Leopardi",
-          "corretta": false
-        },
-        {
-          "testo": "B. Alessandro Manzoni",
-          "corretta": true
-        },
-        {
-          "testo": "C. Giovanni Verga",
-          "corretta": false
-        },
-        {
-          "testo": "D. Ugo Foscolo",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "nome": "Musica",
-      "icona": "fa-music",
-      "punti": 2000,
-      "immagine": "assets/images/musica.jpg",
-      "domanda": "Quale compositore tedesco scrisse le celebri Sinfonie n. 5 e n. 9 pur essendo completamente sordo?",
-      "risposte": [
-        {
-          "testo": "A. Johann Sebastian Bach",
-          "corretta": false
-        },
-        {
-          "testo": "B. Wolfgang Amadeus Mozart",
-          "corretta": false
-        },
-        {
-          "testo": "C. Ludwig van Beethoven",
-          "corretta": true
-        },
-        {
-          "testo": "D. Franz Schubert",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "nome": "Geografia",
-      "icona": "fa-globe-europe",
-      "punti": 2000,
-      "immagine": "assets/images/geografia.jpg",
-      "domanda": "Qual è il fiume più lungo d'Italia, che attraversa la Pianura Padana sfociando nel Mare Adriatico?",
-      "risposte": [
-        {
-          "testo": "A. Tevere",
-          "corretta": false
-        },
-        {
-          "testo": "B. Adige",
-          "corretta": false
-        },
-        {
-          "testo": "C. Arno",
-          "corretta": false
-        },
-        {
-          "testo": "D. Po",
-          "corretta": true
+          "nome": "Italiano",
+          "icona": "fa-pen-nib",
+          "punti": 2000,
+          "immagine": "assets/images/letteratura.jpg",
+          "domanda": "Nella frase 'Marco legge un libro', quale funzione logica svolge 'un libro'?",
+          "risposte": [
+            {
+              "testo": "A. Complemento di termine",
+              "corretta": false
+            },
+            {
+              "testo": "B. Complemento oggetto",
+              "corretta": true
+            },
+            {
+              "testo": "C. Complemento di specificazione",
+              "corretta": false
+            },
+            {
+              "testo": "D. Predicato nominale",
+              "corretta": false
+            }
+          ]
         }
       ]
     }

@@ -105,7 +105,7 @@ const introMeta = {
   3: {
     num:   'MANCHE 3',
     title: 'Quante ne Sai?',
-    desc:  'Sei materie, sei domande. <br/>Accumula più punti possibile!',
+    desc:  'Due round, dodici domande. <br/>Accumula più punti possibile!',
     avvia: initM3
   },
   4: {
@@ -328,21 +328,30 @@ function abilitaPassaggioM2() {
 let m3State = {};
 
 function initM3() {
+  const rounds = dati.manche3.rounds || [{ titolo: 'Round 1', materie: dati.manche3.materie }];
   m3State = {
-    materie:      dati.manche3.materie,
+    rounds,
+    roundCorrente: 0,
+    materie:      rounds[0].materie,
     risposte:     0,
-    totMaterie:   dati.manche3.materie.length,
+    totMaterie:   rounds[0].materie.length,
     materiaAttiva: null
   };
   aggiornaPunteggio(punteggioTotale);
   mostraSchermata('screen-m3');
   document.getElementById('m3-next-bar').classList.add('hidden');
 
+  aggiornaInfoM3();
   costruisciGrigliaM3();
 
-  document.getElementById('m3-btn-manche4').addEventListener('click', () => {
-    mostraIntroManche(4);
-  });
+  document.getElementById('m3-btn-manche4').onclick = onAvanzaM3;
+}
+
+function aggiornaInfoM3() {
+  const round = m3State.rounds[m3State.roundCorrente];
+  document.getElementById('m3-round-title').textContent = round.titolo;
+  document.getElementById('m3-round-counter').textContent = `Round ${m3State.roundCorrente + 1} / ${m3State.rounds.length}`;
+  document.getElementById('m3-instruction').textContent = 'Scegli una materia per rispondere alla domanda';
 }
 
 function costruisciGrigliaM3() {
@@ -361,6 +370,36 @@ function costruisciGrigliaM3() {
     btn.addEventListener('click', () => apriModaleM3(i, btn));
     grid.appendChild(btn);
   });
+}
+
+function onAvanzaM3() {
+  const prossimoRound = m3State.roundCorrente + 1;
+
+  if (prossimoRound < m3State.rounds.length) {
+    m3State.roundCorrente = prossimoRound;
+    m3State.materie = m3State.rounds[prossimoRound].materie;
+    m3State.risposte = 0;
+    m3State.totMaterie = m3State.materie.length;
+    m3State.materiaAttiva = null;
+
+    document.getElementById('m3-next-bar').classList.add('hidden');
+    aggiornaInfoM3();
+    costruisciGrigliaM3();
+    return;
+  }
+
+  mostraIntroManche(4);
+}
+
+function aggiornaBottoneAvanzamentoM3() {
+  const prossimoRound = m3State.roundCorrente + 1;
+  const btn = document.getElementById('m3-btn-manche4');
+
+  if (prossimoRound < m3State.rounds.length) {
+    btn.innerHTML = `${m3State.rounds[prossimoRound].titolo} <i class="fa-solid fa-chevron-right"></i>`;
+  } else {
+    btn.innerHTML = 'Manche 4 <i class="fa-solid fa-chevron-right"></i>';
+  }
 }
 
 function apriModaleM3(idx, btnMateria) {
@@ -429,6 +468,7 @@ function onRispostaM3(corretta, btnCliccato, punti) {
   setTimeout(() => {
     document.getElementById('modal-m3').classList.add('hidden');
     if (m3State.risposte >= m3State.totMaterie) {
+      aggiornaBottoneAvanzamentoM3();
       document.getElementById('m3-next-bar').classList.remove('hidden');
     }
   }, 3000);

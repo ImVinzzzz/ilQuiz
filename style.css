@@ -465,6 +465,24 @@ html, body {
   color: rgba(240,244,255,.65);
   text-align: center;
 }
+.m3-round-info {
+  text-align: center;
+}
+.m3-round-counter {
+  color: var(--oro);
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.m3-round-title {
+  color: var(--bianco);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: .08em;
+  line-height: 1;
+  margin-top: .25rem;
+}
 .m3-subject-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
