@@ -356,15 +356,15 @@
       ]
     },
     {
-      "testo": "Chi dipinse la Cappella Sistina?",
+      "testo": "Chi è Michelangelo Merisi?",
       "risposte": [
         {
-          "testo": "Michelangelo",
-          "corretta": true
+          "testo": "Giotto",
+          "corretta": false
         },
         {
-          "testo": "Raffaello",
-          "corretta": false
+          "testo": "Caravaggio",
+          "corretta": true
         }
       ]
     },
@@ -421,14 +421,14 @@
       ]
     },
     {
-      "testo": "Quale erba aromatica è alla base del pesto genovese?",
+      "testo": "Quale strumento suonava Paganini?",
       "risposte": [
         {
-          "testo": "Prezzemolo",
+          "testo": "Arpa",
           "corretta": false
         },
         {
-          "testo": "Basilico",
+          "testo": "Violino",
           "corretta": true
         }
       ]
@@ -473,7 +473,7 @@
       ]
     },
     {
-      "testo": "Quale compositore scrisse le Quattro Stagioni?",
+      "testo": "Quale compositore scrisse le 'Quattro Stagioni'?",
       "risposte": [
         {
           "testo": "Mozart",
@@ -486,14 +486,14 @@
       ]
     },
     {
-      "testo": "Il Colosseo si trova a Roma?",
+      "testo": "Dove si trova il Museo del Prado?",
       "risposte": [
         {
-          "testo": "No",
+          "testo": "Lisbona",
           "corretta": false
         },
         {
-          "testo": "Sì",
+          "testo": "Madrid",
           "corretta": true
         }
       ]
@@ -502,7 +502,7 @@
       "testo": "Quale continente è il più esteso?",
       "risposte": [
         {
-          "testo": "Oceania",
+          "testo": "Africa",
           "corretta": false
         },
         {
@@ -525,14 +525,14 @@
       ]
     },
     {
-      "testo": "Quale organo usiamo principalmente per vedere?",
+      "testo": "Chi ha inventato la dinamite?",
       "risposte": [
         {
-          "testo": "Occhio",
+          "testo": "Alfred Nobel",
           "corretta": true
         },
         {
-          "testo": "Naso",
+          "testo": "Enrico Fermi",
           "corretta": false
         }
       ]
@@ -551,7 +551,7 @@
       ]
     },
     {
-      "testo": "Quale città è attraversata dal Tamigi?",
+      "testo": "Quale città è attraversata dal fiume Tamigi?",
       "risposte": [
         {
           "testo": "Parigi",
@@ -577,14 +577,14 @@
       ]
     },
     {
-      "testo": "La parola 'cane' indica un animale domestico?",
+      "testo": "Quanto fa 7x8?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "56",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "48",
           "corretta": false
         }
       ]
@@ -603,20 +603,20 @@
       ]
     },
     {
-      "testo": "Il calcio si gioca normalmente con 11 giocatori per squadra?",
+      "testo": "Quanti giocatori ha in campo una squadra di calcio?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "11",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "10",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Nell'Iliade, Ettore da chi è ucciso?",
+      "testo": "Nell'Iliade, da chi viene ucciso Ettore?",
       "risposte": [
         {
           "testo": "Patroclo",
