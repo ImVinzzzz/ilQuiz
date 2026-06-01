@@ -164,7 +164,7 @@
           "nome": "Criminologia",
           "icona": "fa-fingerprint",
           "punti": 5000,
-          "immagine": "assets/images/scienza.jpg",
+          "immagine": "assets/images/criminologia.jpg",
           "domanda": "In criminologia, come si chiama l'analisi degli indizi e dei comportamenti usata per delineare le caratteristiche probabili di un autore di reato?",
           "risposte": [
             {
@@ -189,7 +189,7 @@
           "nome": "Mitologia",
           "icona": "fa-dragon",
           "punti": 4000,
-          "immagine": "assets/images/arte.jpg",
+          "immagine": "assets/images/mitologia.jpg",
           "domanda": "Nella mitologia greca, quale eroe uccise il Minotauro nel labirinto di Creta?",
           "risposte": [
             {
@@ -214,7 +214,7 @@
           "nome": "Cucina",
           "icona": "fa-utensils",
           "punti": 3000,
-          "immagine": "assets/images/geografia.jpg",
+          "immagine": "assets/images/cucina.jpg",
           "domanda": "Quale frutta secca si usa tradizionalmente nel pesto alla genovese?",
           "risposte": [
             {
@@ -239,7 +239,7 @@
           "nome": "Animali",
           "icona": "fa-paw",
           "punti": 3000,
-          "immagine": "assets/images/scienza.jpg",
+          "immagine": "assets/images/animali.jpg",
           "domanda": "Quale mammifero marino è noto per avere il canto più complesso e melodioso durante le migrazioni e l'accoppiamento?",
           "risposte": [
             {
@@ -264,7 +264,7 @@
           "nome": "Cinema",
           "icona": "fa-film",
           "punti": 2000,
-          "immagine": "assets/images/musica.jpg",
+          "immagine": "assets/images/cinema.jpg",
           "domanda": "Quale film italiano vinse l'Oscar al miglior film straniero nel 1999, grazie anche alla celebre frase 'Buongiorno, principessa!'?",
           "risposte": [
             {
@@ -289,7 +289,7 @@
           "nome": "Italiano",
           "icona": "fa-pen-nib",
           "punti": 2000,
-          "immagine": "assets/images/letteratura.jpg",
+          "immagine": "assets/images/italiano.jpg",
           "domanda": "Nella frase 'Marco legge un libro', quale funzione logica svolge 'un libro'?",
           "risposte": [
             {
