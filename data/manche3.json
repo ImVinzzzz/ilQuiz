@@ -190,23 +190,23 @@
           "icona": "fa-dragon",
           "punti": 4000,
           "immagine": "assets/images/mitologia.jpg",
-          "domanda": "Nella mitologia greca, quale eroe uccise il Minotauro nel labirinto di Creta?",
+          "domanda": "Nella mitologia greca, chi era la divinità del focolare domestico, la primogenita tra i figli dei Titani Crono e Rea?",
           "risposte": [
             {
-              "testo": "A. Eracle",
+              "testo": "A. Demetra",
               "corretta": false
             },
             {
-              "testo": "B. Perseo",
+              "testo": "B. Persefone",
               "corretta": false
             },
             {
-              "testo": "C. Teseo",
+              "testo": "C. Era",
+              "corretta": false
+            },
+            {
+              "testo": "D. Estia",
               "corretta": true
-            },
-            {
-              "testo": "D. Achille",
-              "corretta": false
             }
           ]
         },
