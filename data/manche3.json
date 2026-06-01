@@ -163,7 +163,7 @@
         {
           "nome": "Criminologia",
           "icona": "fa-fingerprint",
-          "punti": 5000,
+          "punti": 1000,
           "immagine": "assets/images/criminologia.jpg",
           "domanda": "In criminologia, come si chiama l'analisi degli indizi e dei comportamenti usata per delineare le caratteristiche probabili di un autore di reato?",
           "risposte": [
