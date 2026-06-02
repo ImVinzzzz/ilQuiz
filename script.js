@@ -21,13 +21,53 @@ function mostraSchermata(id) {
 }
 
 /** Aggiorna tutti i display del punteggio visibili */
-function aggiornaPunteggio(nuovoPunteggio) {
+function aggiornaPunteggio(nuovoPunteggio, animato = false) {
+  const vecchioPunteggio = punteggioTotale;
   punteggioTotale = nuovoPunteggio;
   ['m1-score-display','m2-score-display','m3-score-display','m4-score-display','m5-score-display']
     .forEach(id => {
       const el = document.getElementById(id);
       if (el) el.textContent = punteggioTotale.toLocaleString('it-IT');
     });
+
+  // Aggiorna anche il punteggio gigante della ghigliottina
+  const m5BigScoreEl = document.getElementById('m5-big-score');
+  const m5BigScoreContainer = document.querySelector('.m5-big-score-container');
+  if (m5BigScoreEl) {
+    if (animato && m5BigScoreContainer) {
+      // Anima il contenitore (taglio rosso + shake)
+      m5BigScoreContainer.classList.remove('halve-animation');
+      void m5BigScoreContainer.offsetWidth; // trigger reflow
+      m5BigScoreContainer.classList.add('halve-animation');
+
+      // Anima i numeri (conto alla rovescia veloce)
+      let currentVal = vecchioPunteggio;
+      const targetVal = nuovoPunteggio;
+      const duration = 600; // ms
+      const startTime = performance.now();
+
+      function updateScoreCounter(time) {
+        const elapsed = time - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function (easeOutExpo)
+        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+        const currentDisplayVal = Math.round(currentVal - (currentVal - targetVal) * easeProgress);
+        m5BigScoreEl.textContent = currentDisplayVal.toLocaleString('it-IT');
+
+        if (progress < 1) {
+          requestAnimationFrame(updateScoreCounter);
+        } else {
+          m5BigScoreEl.textContent = targetVal.toLocaleString('it-IT');
+        }
+      }
+
+      requestAnimationFrame(updateScoreCounter);
+    } else {
+      m5BigScoreEl.textContent = punteggioTotale.toLocaleString('it-IT');
+    }
+  }
 }
 
 /** Riproduci un suono (ignora errori se il file manca) */
@@ -674,8 +714,8 @@ function onSceltaParola(parola, btn) {
     document.querySelectorAll('.btn-parola').forEach(b => {
       if (b.dataset.parola === corretta) b.classList.add('correct');
     });
-    // DIMEZZA il punteggio
-    aggiornaPunteggio(Math.floor(punteggioTotale / 2));
+    // DIMEZZA il punteggio (con animazione)
+    aggiornaPunteggio(Math.floor(punteggioTotale / 2), true);
     m5State.paroleScelte.push(corretta);
     aggiungiChip(corretta);
   }
