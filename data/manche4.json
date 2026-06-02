@@ -450,11 +450,11 @@
       "testo": "Qual è la capitale del Giappone?",
       "risposte": [
         {
-          "testo": "Kioto",
+          "testo": "Kyoto",
           "corretta": false
         },
         {
-          "testo": "Tokio",
+          "testo": "Tokyo",
           "corretta": true
         }
       ]
