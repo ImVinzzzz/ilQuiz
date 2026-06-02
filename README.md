@@ -81,15 +81,15 @@ npx serve .
 
 ## 🎮 Flusso di Gioco
 
-| # | Schermata | Descrizione |
-|---|-----------|-------------|
-| 0 | Home      | Logo gigante — clicca ovunque |
-| 1 | M1 — Correva l'Anno | 10 domande, 4 anni fissi, +5.000 pt/risposta giusta |
-| 2 | M2 — Scossa! | 9 personaggi, 1 impostore Nobel, +2.000 pt/eliminazione |
-| 3 | M3 — Quante ne Sai? | 2 round da 6 materie, valori da 1.000 a 5.000 pt |
-| 4 | M4 — Domande a Raffica | 50 domande, 120 secondi, 2 opzioni, +2.000 pt/risposta giusta |
-| 5 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione |
-| 6 | Finale Vittoria / Sconfitta | Punteggio finale |
+| # | Schermata | Descrizione | Punti MAX |
+|---|-----------|-------------|-----------|
+| 0 | Home      | Logo gigante — clicca ovunque | |
+| 1 | M1 — Correva l'Anno | 10 domande, 4 anni fissi, +5.000 pt/risposta giusta | 50.000 |
+| 2 | M2 — Scossa! | 11 personaggi, 1 impostore Nobel, +2.000 pt/risposta giusta | 20.000 |
+| 3 | M3 — Quante ne Sai? | 2 round da 6 materie, valori da 1.000 a 5.000 pt | 30.000 |
+| 4 | M4 — Domande a Raffica | 50 domande, 120 secondi, 2 opzioni, +2.000 pt/risposta giusta | 100.000 |
+| 5 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione | |
+| 6 | Finale Vittoria / Sconfitta | Punteggio finale | |
 
 ---
 
