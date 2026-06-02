@@ -709,7 +709,7 @@ function onSceltaParola(parola, btn) {
     aggiungiChip(parola);
   } else {
     btn.classList.add('wrong');
-    suona('snd-ko');
+    suona('snd-cut');
     // Mostra quella corretta
     document.querySelectorAll('.btn-parola').forEach(b => {
       if (b.dataset.parola === corretta) b.classList.add('correct');
