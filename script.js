@@ -634,7 +634,7 @@ function terminaM4(messaggio) {
   clearInterval(m4Timer);
   document.getElementById('m4-question-counter').textContent = messaggio;
   document.getElementById('m4-question-text').textContent =
-    `Hai risposto correttamente a ${m4State.corrette} domande. <br>Totale manche: ${(m4State.corrette * m4State.puntiPerRisposta).toLocaleString('it-IT')} punti.`;
+    `Hai risposto correttamente a ${m4State.corrette} domande. <br/>Totale manche: ${(m4State.corrette * m4State.puntiPerRisposta).toLocaleString('it-IT')} punti.`;
   document.getElementById('m4-answers').innerHTML = '';
   document.getElementById('m4-feedback').className = 'm4-feedback hidden';
   document.getElementById('m4-next-bar').classList.remove('hidden');
