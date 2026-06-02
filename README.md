@@ -48,12 +48,13 @@ il-quiz/
 │       ├── animali.jpg       ← Immagine materia Animali (M3 round 2)
 │       ├── cinema.jpg        ← Immagine materia Cinema (M3 round 2)
 │       └── italiano.jpg      ← Immagine materia Italiano (M3 round 2)
+│
 └── README.md
 ```
 
 ---
 
-## 🚀 Come eseguire il gioco
+<!-- ## 🚀 Come eseguire il gioco
 
 Il gioco **non può essere aperto direttamente** come file HTML doppio-clic (il browser blocca il `fetch` dei file JSON in `data/` da file locali).
 
@@ -73,7 +74,7 @@ python -m http.server 8000
 ```bash
 cd il-quiz
 npx serve .
-```
+``` -->
 
 ---
 
