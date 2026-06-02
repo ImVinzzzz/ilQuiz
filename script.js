@@ -564,14 +564,14 @@ function onRispostaM4(corretta, btnCliccato) {
 
   if (corretta) {
     btnCliccato.classList.add('correct');
-    suona('snd-ok');
+    // suona('snd-ok'); // Disabilitato nella quarta manche
     m4State.corrette++;
     aggiornaPunteggio(punteggioTotale + m4State.puntiPerRisposta);
     fb.textContent = `✓ Esatto! +${m4State.puntiPerRisposta.toLocaleString('it-IT')} punti`;
     fb.className = 'm4-feedback ok';
   } else {
     btnCliccato.classList.add('wrong');
-    suona('snd-ko');
+    // suona('snd-ko'); // Disabilitato nella quarta manche
     document.querySelectorAll('.btn-raffica-answer').forEach((b, idx) => {
       if (m4State.domande[m4State.indice].risposte[idx]?.corretta) b.classList.add('correct');
     });
