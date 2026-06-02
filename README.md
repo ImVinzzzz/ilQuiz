@@ -23,6 +23,7 @@ il-quiz/
 │   │   ├── ok.mp3          ← Suono risposta corretta
 │   │   ├── ko.mp3          ← Suono risposta errata
 │   │   ├── scossa.mp3      ← Suono per la "scossa" (M2)
+│   │   ├── cut.mp3         ← Suono per risposta errata / ghigliottina (M4)
 │   │   ├── gong.mp3        ← Gong fine timer (M4)
 │   │   └── winner.mp3      ← Fanfara vittoria finale
 │   │
