@@ -237,7 +237,7 @@
         },
         {
           "nome": "Animali",
-          "icona": "fa-paw",
+          "icona": "fa-frog",
           "punti": 3000,
           "immagine": "assets/images/animali.jpg",
           "domanda": "Quale mammifero marino è noto per avere il canto più complesso e melodioso durante le migrazioni e l'accoppiamento?",
