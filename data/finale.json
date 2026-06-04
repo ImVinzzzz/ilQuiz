@@ -1,32 +1,32 @@
 {
   "titolo": "La Ghigliottina",
-  "soluzione": "ROMANO",
+  "soluzione": "DIVISIONE",
   "coppie": [
     {
-      "parola_a": "INDOLE",
-      "parola_b": "CARATTERE",
-      "corretta": "CARATTERE"
+      "parola_a": "GENERALE",
+      "parola_b": "CAPITANO",
+      "corretta": "GENERALE"
     },
     {
-      "parola_a": "RISTORANTE",
-      "parola_b": "OSTERIA",
-      "corretta": "RISTORANTE"
+      "parola_a": "DOVERI",
+      "parola_b": "POTERI",
+      "corretta": "POTERI"
     },
     {
-      "parola_a": "GUERRA",
-      "parola_b": "BATTAGLIA",
-      "corretta": "BATTAGLIA"
+      "parola_a": "OZIO",
+      "parola_b": "LAVORO",
+      "corretta": "LAVORO"
     },
     {
-      "parola_a": "TEATRO",
-      "parola_b": "CINEMA",
-      "corretta": "TEATRO"
+      "parola_a": "COLONNA",
+      "parola_b": "PILASTRO",
+      "corretta": "COLONNA"
     },
     {
-      "parola_a": "TRIANGOLO",
-      "parola_b": "QUADRILATERO",
-      "corretta": "QUADRILATERO"
+      "parola_a": "CAPITOLI",
+      "parola_b": "PARAGRAFI",
+      "corretta": "CAPITOLI"
     }
   ],
-  "indizi_note": "Le 5 parole vincenti (SOLE, VELOCE, CHIARA, GIORNO, BIANCA) sono tutte collegate alla parola LUCE: luce del sole, velocità della luce, luce chiara, luce del giorno, luce bianca."
+  "indizi_note": ""
 }
