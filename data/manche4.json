@@ -18,20 +18,20 @@
       ]
     },
     {
-      "testo": "La capitale della Francia è Parigi?",
+      "testo": "Qual è capitale della Francia?",
       "risposte": [
         {
-          "testo": "No",
+          "testo": "Madrid",
           "corretta": false
         },
         {
-          "testo": "Sì",
+          "testo": "Parigi",
           "corretta": true
         }
       ]
     },
     {
-      "testo": "Quale di questi animale bramisce?",
+      "testo": "Quale di questi mammiferi bramisce?",
       "risposte": [
         {
           "testo": "Coniglio",
@@ -96,14 +96,14 @@
       ]
     },
     {
-      "testo": "Al livello del mare l'acqua bolle a 90°C?",
+      "testo": "Al livello del mare: a che temperatura bolle l'acqua?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "90° C",
           "corretta": false
         },
         {
-          "testo": "No",
+          "testo": "100° C",
           "corretta": true
         }
       ]
@@ -213,28 +213,28 @@
       ]
     },
     {
-      "testo": "Il Monte Bianco supera i 5.000 metri?",
+      "testo": "Quanto è alto il Gran Sasso?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "3.218 metri,",
           "corretta": false
         },
         {
-          "testo": "No",
+          "testo": "2.912 metri,",
           "corretta": true
         }
       ]
     },
     {
-      "testo": "Quale mese viene dopo aprile?",
+      "testo": "Quale mese viene prima di aprile?",
       "risposte": [
         {
           "testo": "Maggio",
-          "corretta": true
+          "corretta": false
         },
         {
           "testo": "Marzo",
-          "corretta": false
+          "corretta": true
         }
       ]
     },
@@ -291,27 +291,27 @@
       ]
     },
     {
-      "testo": "Il Sole è una stella?",
+      "testo": "Che tipo di stella è il Sole?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "Nana gialla",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "Pulsar",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale città è famosa per la Torre Pendente?",
+      "testo": "Quale città è nota per la Torre degli Asinelli?",
       "risposte": [
         {
-          "testo": "Livorno",
+          "testo": "Ferrara",
           "corretta": false
         },
         {
-          "testo": "Pisa",
+          "testo": "Bologna",
           "corretta": true
         }
       ]
@@ -330,14 +330,14 @@
       ]
     },
     {
-      "testo": "Il 7 è un numnero primo?",
+      "testo": "Quale tra questi è un numnero primo?",
       "risposte": [
         {
-          "testo": "No",
+          "testo": "15",
           "corretta": false
         },
         {
-          "testo": "Sì",
+          "testo": "7",
           "corretta": true
         }
       ]
@@ -408,14 +408,14 @@
       ]
     },
     {
-      "testo": "La Luna è un satellite naturale della Terra?",
+      "testo": "Quanti satellite natural*i ha la Terra?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "1",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "2",
           "corretta": false
         }
       ]
@@ -460,14 +460,14 @@
       ]
     },
     {
-      "testo": "La fotosintesi riguarda principalmente le piante?",
+      "testo": "Dove avviene la fotosintesi?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "Nelle foglie",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "Nei fiori",
           "corretta": false
         }
       ]
@@ -512,14 +512,14 @@
       ]
     },
     {
-      "testo": "Un anno bisestile ha 364 giorni?",
+      "testo": "Quanti giorni ha un anno bisestile?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "364",
           "corretta": false
         },
         {
-          "testo": "No",
+          "testo": "366",
           "corretta": true
         }
       ]
@@ -642,14 +642,14 @@
       ]
     },
     {
-      "testo": "Lo Stromboli è un vulcano?",
+      "testo": "Quale di questi è un vulcano?",
       "risposte": [
         {
-          "testo": "Sì",
+          "testo": "Stromboli",
           "corretta": true
         },
         {
-          "testo": "No",
+          "testo": "Monviso",
           "corretta": false
         }
       ]
