@@ -26,7 +26,7 @@
       ]
     },
     {
-      "testo": "Il Sole è una stella.",
+      "testo": "I pipistrelli non sono uccelli.",
       "risposte": [
         {"testo": "VERO", "corretta": true},
         {"testo": "FALSO", "corretta": false}
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "testo": "La capitale dell'Australia è Sydney.",
+      "testo": "Il Monte Bianco supera i 5.000 metri.",
       "risposte": [
         {"testo": "VERO", "corretta": false},
         {"testo": "FALSO", "corretta": true}
@@ -159,14 +159,14 @@
       ]
     },
     {
-      "testo": "Un anno bisestile ha 366 giorni.",
+      "testo": "Agatha Christie ha scritto anche romanzi rosa.",
       "risposte": [
         {"testo": "VERO", "corretta": true},
         {"testo": "FALSO", "corretta": false}
       ]
     },
     {
-      "testo": "L'ossigeno è il gas più abbondante nell'atmosfera terrestre.",
+      "testo": "Il bergamotto è un cereale.",
       "risposte": [
         {"testo": "VERO", "corretta": false},
         {"testo": "FALSO", "corretta": true}
