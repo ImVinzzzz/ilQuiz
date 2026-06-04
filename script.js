@@ -24,21 +24,21 @@ function mostraSchermata(id) {
 function aggiornaPunteggio(nuovoPunteggio, animato = false) {
   const vecchioPunteggio = punteggioTotale;
   punteggioTotale = nuovoPunteggio;
-  ['m1-score-display','m2-score-display','m3-score-display','m4-score-display','m5-score-display']
+  ['m1-score-display','m2-score-display','m3-score-display','m4-score-display','m5-score-display','m6-score-display']
     .forEach(id => {
       const el = document.getElementById(id);
       if (el) el.textContent = punteggioTotale.toLocaleString('it-IT');
     });
 
   // Aggiorna anche il punteggio gigante della ghigliottina
-  const m5BigScoreEl = document.getElementById('m5-big-score');
-  const m5BigScoreContainer = document.querySelector('.m5-big-score-container');
-  if (m5BigScoreEl) {
-    if (animato && m5BigScoreContainer) {
+  const m6BigScoreEl = document.getElementById('m6-big-score');
+  const m6BigScoreContainer = document.querySelector('.m6-big-score-container');
+  if (m6BigScoreEl) {
+    if (animato && m6BigScoreContainer) {
       // Anima il contenitore (taglio rosso + shake)
-      m5BigScoreContainer.classList.remove('halve-animation');
-      void m5BigScoreContainer.offsetWidth; // trigger reflow
-      m5BigScoreContainer.classList.add('halve-animation');
+      m6BigScoreContainer.classList.remove('halve-animation');
+      void m6BigScoreContainer.offsetWidth; // trigger reflow
+      m6BigScoreContainer.classList.add('halve-animation');
 
       // Anima i numeri (conto alla rovescia veloce)
       let currentVal = vecchioPunteggio;
@@ -54,18 +54,18 @@ function aggiornaPunteggio(nuovoPunteggio, animato = false) {
         const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
 
         const currentDisplayVal = Math.round(currentVal - (currentVal - targetVal) * easeProgress);
-        m5BigScoreEl.textContent = currentDisplayVal.toLocaleString('it-IT');
+        m6BigScoreEl.textContent = currentDisplayVal.toLocaleString('it-IT');
 
         if (progress < 1) {
           requestAnimationFrame(updateScoreCounter);
         } else {
-          m5BigScoreEl.textContent = targetVal.toLocaleString('it-IT');
+          m6BigScoreEl.textContent = targetVal.toLocaleString('it-IT');
         }
       }
 
       requestAnimationFrame(updateScoreCounter);
     } else {
-      m5BigScoreEl.textContent = punteggioTotale.toLocaleString('it-IT');
+      m6BigScoreEl.textContent = punteggioTotale.toLocaleString('it-IT');
     }
   }
 }
@@ -102,6 +102,7 @@ async function caricaDati() {
     manche2: 'data/manche2.json',
     manche3: 'data/manche3.json',
     manche4: 'data/manche4.json',
+    manche5: 'data/manche5.json',
     finale: 'data/finale.json'
   };
 
@@ -155,10 +156,16 @@ const introMeta = {
     avvia: initM4
   },
   5: {
+    num:   'MANCHE 5',
+    title: 'Vero o Falso?',
+    desc:  '90 secondi per rispondere <br> a 25 domande Vero o Falso. <br> Ogni risposta corretta vale 2.000 punti!',
+    avvia: initM5
+  },
+  6: {
     num:   'MANCHE FINALE',
     title: 'Ghigliottina',
     desc:  'Il momento della verità. <br> Scegli gli indizi giusti <br> e indovina la parola che li lega!',
-    avvia: initM5
+    avvia: initM6
   }
 };
 
@@ -547,7 +554,8 @@ function initM4() {
     }
   }, 1000);
 
-  document.getElementById('m4-btn-finale').addEventListener('click', () => {
+  // document.getElementById('m4-btn-finale') è stato rinominato in m4-btn-manche5 in HTML, l'evento è agganciato sotto o si può agganciare qui
+  document.getElementById('m4-btn-manche5').addEventListener('click', () => {
     mostraIntroManche(5);
   });
 }
@@ -642,13 +650,140 @@ function terminaM4(messaggio) {
 }
 
 /* ====================================================
-   MANCHE FINALE — GHIGLIOTTINA
+   MANCHE 5 — VERO O FALSO
    ==================================================== */
 let m5State = {};
 let m5Timer = null;
 
 function initM5() {
   m5State = {
+    domande: dati.manche5.domande,
+    indice: 0,
+    corrette: 0,
+    secondiRimasti: dati.manche5.durata_secondi || 90,
+    puntiPerRisposta: dati.manche5.punti_per_risposta || 2000,
+    terminata: false
+  };
+
+  aggiornaPunteggio(punteggioTotale);
+  mostraSchermata('screen-m5');
+  document.getElementById('m5-next-bar').classList.add('hidden');
+  document.getElementById('m5-feedback').className = 'm5-feedback hidden';
+  aggiornaTimerM5();
+  aggiornaStatisticheM5();
+  mostraDomandaM5();
+
+  clearInterval(m5Timer);
+  m5Timer = setInterval(() => {
+    m5State.secondiRimasti--;
+    aggiornaTimerM5();
+    if (m5State.secondiRimasti <= 0) {
+      terminaM5('Tempo scaduto!');
+    }
+  }, 1000);
+
+  document.getElementById('m5-btn-finale').addEventListener('click', () => {
+    mostraIntroManche(6);
+  });
+}
+
+function aggiornaTimerM5() {
+  const el = document.getElementById('m5-timer');
+  const min = Math.floor(m5State.secondiRimasti / 60);
+  const sec = m5State.secondiRimasti % 60;
+  el.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
+  el.classList.toggle('danger', m5State.secondiRimasti <= 20);
+}
+
+function aggiornaStatisticheM5() {
+  document.getElementById('m5-question-counter').textContent =
+    `Domanda ${Math.min(m5State.indice + 1, m5State.domande.length)} / ${m5State.domande.length}`;
+  document.getElementById('m5-correct-counter').textContent = m5State.corrette;
+}
+
+function mostraDomandaM5() {
+  if (m5State.terminata) return;
+
+  if (m5State.indice >= m5State.domande.length) {
+    terminaM5('Domande finite!');
+    return;
+  }
+
+  const domanda = m5State.domande[m5State.indice];
+  const box = document.getElementById('m5-question-box');
+  const risposte = document.getElementById('m5-answers');
+
+  box.classList.remove('fade-in-el');
+  void box.offsetWidth;
+  box.classList.add('fade-in-el');
+  document.getElementById('m5-question-text').textContent = domanda.testo;
+  risposte.innerHTML = '';
+
+  domanda.risposte.forEach((risposta, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'btn-raffica-answer fade-in-el';
+    btn.style.animationDelay = (i * 60) + 'ms';
+    btn.textContent = risposta.testo;
+    btn.addEventListener('click', () => onRispostaM5(risposta.corretta, btn));
+    risposte.appendChild(btn);
+  });
+
+  aggiornaStatisticheM5();
+}
+
+function onRispostaM5(corretta, btnCliccato) {
+  if (m5State.terminata) return;
+
+  document.querySelectorAll('#m5-answers .btn-raffica-answer').forEach(b => b.disabled = true);
+  const fb = document.getElementById('m5-feedback');
+
+  if (corretta) {
+    btnCliccato.classList.add('correct');
+    // Nessun suono come richiesto
+    m5State.corrette++;
+    aggiornaPunteggio(punteggioTotale + m5State.puntiPerRisposta);
+    fb.textContent = `✓ Esatto! +${m5State.puntiPerRisposta.toLocaleString('it-IT')} punti`;
+    fb.className = 'm5-feedback ok';
+  } else {
+    btnCliccato.classList.add('wrong');
+    // Nessun suono come richiesto
+    document.querySelectorAll('#m5-answers .btn-raffica-answer').forEach((b, idx) => {
+      if (m5State.domande[m5State.indice].risposte[idx]?.corretta) b.classList.add('correct');
+    });
+    fb.textContent = '✗ Risposta errata';
+    fb.className = 'm5-feedback fail';
+  }
+
+  m5State.indice++;
+  aggiornaStatisticheM5();
+  setTimeout(() => {
+    if (m5State.terminata) return;
+    fb.className = 'm5-feedback hidden';
+    mostraDomandaM5();
+  }, 650);
+}
+
+function terminaM5(messaggio) {
+  if (m5State.terminata) return;
+  m5State.terminata = true;
+  clearInterval(m5Timer);
+  document.getElementById('m5-question-counter').textContent = messaggio;
+  document.getElementById('m5-question-text').textContent =
+    `Hai risposto correttamente a ${m5State.corrette} domande. \nTotale manche: ${(m5State.corrette * m5State.puntiPerRisposta).toLocaleString('it-IT')} punti.`;
+  document.getElementById('m5-answers').innerHTML = '';
+  document.getElementById('m5-feedback').className = 'm5-feedback hidden';
+  document.getElementById('m5-next-bar').classList.remove('hidden');
+  if (m5State.secondiRimasti <= 0) suona('snd-gong');
+}
+
+/* ====================================================
+   MANCHE FINALE — GHIGLIOTTINA
+   ==================================================== */
+let m6State = {};
+let m6Timer = null;
+
+function initM6() {
+  m6State = {
     coppie:        dati.finale.coppie,
     soluzione:     dati.finale.soluzione,
     coppiaNdx:     0,
@@ -656,29 +791,29 @@ function initM5() {
     secondiRimasti: 60
   };
   aggiornaPunteggio(punteggioTotale);
-  mostraSchermata('screen-m5');
+  mostraSchermata('screen-m6');
 
   // Mostra Fase 1
-  mostraFaseM5(1);
+  mostraFaseM6(1);
   mostraCoppia();
 
   // Bottone soluzione
-  document.getElementById('m5-btn-solution').addEventListener('click', mostraSoluzione);
+  document.getElementById('m6-btn-solution').addEventListener('click', mostraSoluzione);
 
   // Bottoni regia
-  document.getElementById('m5-btn-ok').addEventListener('click', () => fineGhigliottina(true));
-  document.getElementById('m5-btn-no').addEventListener('click', () => fineGhigliottina(false));
+  document.getElementById('m6-btn-ok').addEventListener('click', () => fineGhigliottina(true));
+  document.getElementById('m6-btn-no').addEventListener('click', () => fineGhigliottina(false));
 }
 
-function mostraFaseM5(n) {
-  document.querySelectorAll('.m5-phase').forEach(p => p.classList.add('hidden'));
-  document.getElementById(`m5-phase${n}`).classList.remove('hidden');
+function mostraFaseM6(n) {
+  document.querySelectorAll('.m6-phase').forEach(p => p.classList.add('hidden'));
+  document.getElementById(`m6-phase${n}`).classList.remove('hidden');
 }
 
 /* FASE 1: scelta parole */
 function mostraCoppia() {
-  const coppia    = m5State.coppie[m5State.coppiaNdx];
-  const container = document.getElementById('m5-pair-container');
+  const coppia    = m6State.coppie[m6State.coppiaNdx];
+  const container = document.getElementById('m6-pair-container');
   container.innerHTML = '';
 
   ['a', 'b'].forEach(lato => {
@@ -691,12 +826,12 @@ function mostraCoppia() {
     container.appendChild(btn);
   });
 
-  document.getElementById('m5-pair-counter').textContent =
-    `Coppia ${m5State.coppiaNdx + 1} / ${m5State.coppie.length}`;
+  document.getElementById('m6-pair-counter').textContent =
+    `Coppia ${m6State.coppiaNdx + 1} / ${m6State.coppie.length}`;
 }
 
 function onSceltaParola(parola, btn) {
-  const coppia    = m5State.coppie[m5State.coppiaNdx];
+  const coppia    = m6State.coppie[m6State.coppiaNdx];
   const corretta  = coppia.corretta;
 
   // Disabilita entrambi i bottoni
@@ -705,7 +840,7 @@ function onSceltaParola(parola, btn) {
   if (parola === corretta) {
     btn.classList.add('correct');
     suona('snd-ok');
-    m5State.paroleScelte.push(parola);
+    m6State.paroleScelte.push(parola);
     aggiungiChip(parola);
   } else {
     btn.classList.add('wrong');
@@ -716,22 +851,22 @@ function onSceltaParola(parola, btn) {
     });
     // DIMEZZA il punteggio (con animazione)
     aggiornaPunteggio(Math.floor(punteggioTotale / 2), true);
-    m5State.paroleScelte.push(corretta);
+    m6State.paroleScelte.push(corretta);
     aggiungiChip(corretta);
   }
 
-  m5State.coppiaNdx++;
+  m6State.coppiaNdx++;
 
-  if (m5State.coppiaNdx < m5State.coppie.length) {
+  if (m6State.coppiaNdx < m6State.coppie.length) {
     setTimeout(mostraCoppia, 1200);
   } else {
     // Tutte le coppie completate → Fase 2
-    setTimeout(iniziaTimerM5, 1400);
+    setTimeout(iniziaTimerM6, 1400);
   }
 }
 
 function aggiungiChip(parola) {
-  const wrap = document.getElementById('m5-chosen-words');
+  const wrap = document.getElementById('m6-chosen-words');
   const chip = document.createElement('span');
   chip.className   = 'm4-word-chip';
   chip.textContent = parola;
@@ -739,11 +874,11 @@ function aggiungiChip(parola) {
 }
 
 /* FASE 2: timer */
-function iniziaTimerM5() {
+function iniziaTimerM6() {
   // Popola indizi
-  const indiziWrap = document.getElementById('m5-indizi');
+  const indiziWrap = document.getElementById('m6-indizi');
   indiziWrap.innerHTML = '';
-  m5State.paroleScelte.forEach((p, i) => {
+  m6State.paroleScelte.forEach((p, i) => {
     const chip = document.createElement('div');
     chip.className = 'm4-indizio-chip fade-in-el';
     chip.style.animationDelay = (i * 60) + 'ms';
@@ -751,28 +886,28 @@ function iniziaTimerM5() {
     indiziWrap.appendChild(chip);
   });
 
-  mostraFaseM5(2);
-  m5State.secondiRimasti = 60;
-  aggiornaTimerDisplayM5();
+  mostraFaseM6(2);
+  m6State.secondiRimasti = 60;
+  aggiornaTimerDisplayM6();
 
   suona('snd-suspence');
 
-  m5Timer = setInterval(() => {
-    m5State.secondiRimasti--;
-    aggiornaTimerDisplayM5();
-    if (m5State.secondiRimasti <= 0) {
-      clearInterval(m5Timer);
+  m6Timer = setInterval(() => {
+    m6State.secondiRimasti--;
+    aggiornaTimerDisplayM6();
+    if (m6State.secondiRimasti <= 0) {
+      clearInterval(m6Timer);
       tempoScaduto();
     }
   }, 1000);
 }
 
-function aggiornaTimerDisplayM5() {
-  const el  = document.getElementById('m5-timer');
-  const min = Math.floor(m5State.secondiRimasti / 60);
-  const sec = m5State.secondiRimasti % 60;
+function aggiornaTimerDisplayM6() {
+  const el  = document.getElementById('m6-timer');
+  const min = Math.floor(m6State.secondiRimasti / 60);
+  const sec = m6State.secondiRimasti % 60;
   el.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
-  if (m5State.secondiRimasti <= 20) {
+  if (m6State.secondiRimasti <= 20) {
     el.classList.add('danger');
   }
 }
@@ -786,9 +921,9 @@ function tempoScaduto() {
 /* FASE 3: soluzione */
 function mostraFaseSoluzioneGhigliottina() {
   // Popola indizi nella fase 3
-  const indiziWrap = document.getElementById('m5-indizi-final');
+  const indiziWrap = document.getElementById('m6-indizi-final');
   indiziWrap.innerHTML = '';
-  m5State.paroleScelte.forEach((p, i) => {
+  m6State.paroleScelte.forEach((p, i) => {
     const chip = document.createElement('div');
     chip.className = 'm4-indizio-chip fade-in-el';
     chip.style.animationDelay = (i * 100) + 'ms';
@@ -796,22 +931,22 @@ function mostraFaseSoluzioneGhigliottina() {
     indiziWrap.appendChild(chip);
   });
 
-  document.getElementById('m5-solution-word').classList.add('hidden');
-  document.getElementById('m5-regia-buttons').classList.add('hidden');
-  document.getElementById('m5-btn-solution').classList.remove('hidden');
+  document.getElementById('m6-solution-word').classList.add('hidden');
+  document.getElementById('m6-regia-buttons').classList.add('hidden');
+  document.getElementById('m6-btn-solution').classList.remove('hidden');
 
-  mostraFaseM5(3);
+  mostraFaseM6(3);
 }
 
 function mostraSoluzione() {
-  const solEl = document.getElementById('m5-solution-word');
-  solEl.textContent = m5State.soluzione;
+  const solEl = document.getElementById('m6-solution-word');
+  solEl.textContent = m6State.soluzione;
   solEl.classList.remove('hidden');
-  document.getElementById('m5-btn-solution').classList.add('hidden');
+  document.getElementById('m6-btn-solution').classList.add('hidden');
 
   // Bottoni regia con fade
   setTimeout(() => {
-    document.getElementById('m5-regia-buttons').classList.remove('hidden');
+    document.getElementById('m6-regia-buttons').classList.remove('hidden');
   }, 600);
 }
 

@@ -842,9 +842,9 @@ html, body {
 ::-webkit-scrollbar-thumb { background: rgba(245,197,24,.3); border-radius: 3px; }
 
 /* ================================================
-   MANCHE 4 — DOMANDE A RAFFICA
+   MANCHE 4 E 5 — DOMANDE A RAFFICA E VERO/FALSO
    ================================================ */
-.m4-main {
+.m4-main, .m5-main {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -853,7 +853,7 @@ html, body {
   gap: 1.4rem;
   padding: 2rem;
 }
-.m4-raffica-top {
+.m4-raffica-top, .m5-raffica-top {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -861,7 +861,7 @@ html, body {
   max-width: 760px;
   width: 100%;
 }
-.m4-raffica-timer {
+.m4-raffica-timer, .m5-raffica-timer {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(3rem, 8vw, 5.5rem);
   color: var(--oro);
@@ -869,20 +869,20 @@ html, body {
   text-shadow: var(--shadow-oro);
   line-height: 1;
 }
-.m4-raffica-timer.danger {
+.m4-raffica-timer.danger, .m5-raffica-timer.danger {
   color: var(--rosso);
   animation: timerPulse .5s ease infinite;
   text-shadow: 0 0 30px rgba(192,57,43,.5);
 }
-.m4-correct-wrap {
+.m4-correct-wrap, .m5-correct-wrap {
   justify-self: end;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: .12em;
   color: rgba(240,244,255,.72);
 }
-.m4-correct-wrap span { color: var(--oro); font-size: 1.6rem; }
-.m4-raffica-answers {
+.m4-correct-wrap span, .m5-correct-wrap span { color: var(--oro); font-size: 1.6rem; }
+.m4-raffica-answers, .m5-raffica-answers {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
   gap: 1rem;
@@ -911,18 +911,18 @@ html, body {
 .btn-raffica-answer:disabled { cursor: not-allowed; opacity: .8; }
 .btn-raffica-answer.correct { background: var(--verde) !important; border-color: var(--verde) !important; }
 .btn-raffica-answer.wrong { background: var(--rosso) !important; border-color: var(--rosso) !important; }
-.m4-feedback {
+.m4-feedback, .m5-feedback {
   min-height: 3rem;
   padding: .8rem 1.4rem;
   border-radius: var(--radius-sm);
   font-weight: 800;
   text-align: center;
 }
-.m4-feedback.ok { background: rgba(39,174,96,.2); border: 1px solid var(--verde); color: #6dffa0; }
-.m4-feedback.fail { background: rgba(192,57,43,.2); border: 1px solid var(--rosso); color: #ff9d9d; }
+.m4-feedback.ok, .m5-feedback.ok { background: rgba(39,174,96,.2); border: 1px solid var(--verde); color: #6dffa0; }
+.m4-feedback.fail, .m5-feedback.fail { background: rgba(192,57,43,.2); border: 1px solid var(--rosso); color: #ff9d9d; }
 
 /* La manche finale riusa lo stile originale della Ghigliottina. */
-.m5-phase {
+.m6-phase {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -933,7 +933,7 @@ html, body {
   padding-bottom: 6rem; /* extra space for the big score */
 }
 
-.m5-big-score-container {
+.m6-big-score-container {
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
@@ -998,25 +998,29 @@ html, body {
 .m2-main,
 .m3-main,
 .m4-main,
-.m5-phase {
+.m5-main,
+.m6-phase {
   min-height: 0;
 }
 
 .m1-main,
 .m3-main,
 .m4-main,
-.m5-phase {
+.m5-main,
+.m6-phase {
   overflow-y: auto;
 }
 
 .m1-main,
 .m3-main,
 .m4-main,
-.m5-phase {
+.m5-main,
+.m6-phase {
   justify-content: safe center;
 }
 
 @media (max-width: 700px) {
+  .m6-big-score-container { font-size: 3rem; }
   .game-header {
     padding: .55rem .9rem;
     gap: .75rem;
@@ -1119,7 +1123,8 @@ html, body {
 
   .m3-main,
   .m4-main,
-  .m5-phase {
+  .m5-main,
+  .m6-phase {
     justify-content: flex-start;
     padding: 1rem;
     gap: 1rem;
@@ -1173,26 +1178,26 @@ html, body {
     font-size: .95rem;
   }
 
-  .m4-raffica-top {
+  .m4-raffica-top, .m5-raffica-top {
     grid-template-columns: 1fr auto 1fr;
     gap: .5rem;
   }
 
-  .m4-correct-wrap {
+  .m4-correct-wrap, .m5-correct-wrap {
     font-size: .9rem;
     letter-spacing: .08em;
   }
 
-  .m4-correct-wrap span {
+  .m4-correct-wrap span, .m5-correct-wrap span {
     font-size: 1.25rem;
   }
 
-  .m4-raffica-answers {
+  .m4-raffica-answers, .m5-raffica-answers {
     grid-template-columns: 1fr;
     gap: .7rem;
   }
 
-  .m4-feedback {
+  .m4-feedback, .m5-feedback {
     min-height: 0;
     padding: .65rem 1rem;
   }
@@ -1248,6 +1253,8 @@ html, body {
   .btn-year {
     font-size: 1.15rem;
   }
+
+  .m6-big-score-container { font-size: 2.2rem; }
 }
 
 @media (max-height: 640px) and (max-width: 700px) {
