@@ -54,9 +54,9 @@ il-quiz/
 └── README.md
 ```
 
----
+<!-- ---
 
-<!-- ## 🚀 Come eseguire il gioco
+## 🚀 Come eseguire il gioco
 
 Il gioco **non può essere aperto direttamente** come file HTML doppio-clic (il browser blocca il `fetch` dei file JSON in `data/` da file locali).
 
@@ -90,7 +90,7 @@ npx serve .
 | 3 | M3 — Quante ne Sai? | 2 round da 6 materie, valori da 1.000 a 5.000 pt | 30.000 |
 | 4 | M4 — Domande a Raffica | 50 domande, 180 secondi, 2 opzioni, +2.000 pt/risposta giusta | 100.000 |
 | 5 | M5 — Vero o Falso? | 25 domande, 90 secondi, 2 opzioni, +2.000 pt/risposta giusta | 50.000 |
-| 6 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione | |
+| 6 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione | 250.000 |
 | 7 | Finale Vittoria / Sconfitta | Punteggio finale | |
 
 ---
@@ -129,9 +129,6 @@ Nel file `data/manche5.json`:
 Nel file `data/finale.json`:
 - `soluzione` — la parola target
 - `coppie` — le 5 coppie; `corretta` è la parola-indizio che porta alla soluzione
-
-### Aggiungere la domanda personale (M1, ultima domanda)
-Nell'ultima domanda di `data/manche1.json`, sostituisci il testo segnaposto con una domanda sull'amica festeggiata e imposta `risposta_corretta_tra_anni` sull'anno di nascita corretto.
 
 ---
 
