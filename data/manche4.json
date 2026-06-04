@@ -96,7 +96,7 @@
       ]
     },
     {
-      "testo": "Al livello del mare: a che temperatura bolle l'acqua?",
+      "testo": "Al livello del mare, a che temperatura bolle l'acqua?",
       "risposte": [
         {
           "testo": "90° C",
@@ -207,7 +207,7 @@
           "corretta": true
         },
         {
-          "testo": "Polmone",
+          "testo": "Fegato",
           "corretta": false
         }
       ]
@@ -330,7 +330,7 @@
       ]
     },
     {
-      "testo": "Quale tra questi è un numnero primo?",
+      "testo": "Quale tra questi è un numero primo?",
       "risposte": [
         {
           "testo": "15",
@@ -408,7 +408,7 @@
       ]
     },
     {
-      "testo": "Quanti satellite natural*i ha la Terra?",
+      "testo": "Quanti satellite naturali ha la Terra?",
       "risposte": [
         {
           "testo": "1",
