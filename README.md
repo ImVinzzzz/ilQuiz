@@ -1,5 +1,5 @@
 # IL QUIZ 🎉
-**Un gioco quiz ispirato a L'Eredità — regalo di compleanno**
+**Un gioco quiz ispirato a L'Eredità**
 
 ---
 
