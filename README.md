@@ -16,6 +16,7 @@ il-quiz/
 │   ├── manche2.json        ← Personaggi Scossa!
 │   ├── manche3.json        ← Due round di materie Quante ne Sai?
 │   ├── manche4.json        ← 50 domande Domande a Raffica
+│   ├── manche5.json        ← 25 domande Vero o Falso?
 │   └── finale.json         ← Dati della Ghigliottina
 │
 ├── assets/
@@ -87,9 +88,10 @@ npx serve .
 | 1 | M1 — Correva l'Anno | 10 domande, 4 anni fissi, +5.000 pt/risposta giusta | 50.000 |
 | 2 | M2 — Scossa! | 11 personaggi, 1 impostore Nobel, +2.000 pt/risposta giusta | 20.000 |
 | 3 | M3 — Quante ne Sai? | 2 round da 6 materie, valori da 1.000 a 5.000 pt | 30.000 |
-| 4 | M4 — Domande a Raffica | 50 domande, 120 secondi, 2 opzioni, +2.000 pt/risposta giusta | 100.000 |
-| 5 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione | |
-| 6 | Finale Vittoria / Sconfitta | Punteggio finale | |
+| 4 | M4 — Domande a Raffica | 50 domande, 180 secondi, 2 opzioni, +2.000 pt/risposta giusta | 100.000 |
+| 5 | M5 — Vero o Falso? | 25 domande, 90 secondi, 2 opzioni, +2.000 pt/risposta giusta | 50.000 |
+| 6 | Manche Finale — Ghigliottina | 5 coppie di parole + 1 min timer + soluzione | |
+| 7 | Finale Vittoria / Sconfitta | Punteggio finale | |
 
 ---
 
@@ -113,9 +115,15 @@ Nel file `data/manche3.json`, array `rounds`:
 
 ### Cambiare le domande a raffica (M4)
 Nel file `data/manche4.json`:
-- `durata_secondi` — tempo disponibile, attualmente 120 secondi
+- `durata_secondi` — tempo disponibile, attualmente 180 secondi
 - `punti_per_risposta` — punti assegnati a ogni risposta corretta
 - `domande` — elenco delle 50 domande, ciascuna con due risposte
+
+### Cambiare le domande vero o falso (M5)
+Nel file `data/manche5.json`:
+- `durata_secondi` — tempo disponibile, attualmente 90 secondi
+- `punti_per_risposta` — punti assegnati a ogni risposta corretta
+- `domande` — elenco delle 25 domande, ciascuna con le due risposte
 
 ### Cambiare la parola della Ghigliottina (finale)
 Nel file `data/finale.json`:

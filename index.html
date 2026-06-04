@@ -177,50 +177,77 @@
     </main>
 
     <div class="next-manche-bar hidden" id="m4-next-bar">
-      <button class="btn-next-manche" id="m4-btn-finale">
+      <button class="btn-next-manche" id="m4-btn-manche5">
+        Manche 5 <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== MANCHE 5: VERO O FALSO ===================== -->
+  <section id="screen-m5" class="screen game-screen">
+    <header class="game-header">
+      <div class="game-manche-label">5. Vero o Falso?</div>
+      <div class="score-display">PT: <span id="m5-score-display">0</span></div>
+    </header>
+
+    <main class="m5-main">
+      <div class="m5-raffica-top">
+        <div id="m5-question-counter" class="question-counter">Domanda 1 / 25</div>
+        <div id="m5-timer" class="m5-raffica-timer">1:30</div>
+        <div class="m5-correct-wrap">Corrette: <span id="m5-correct-counter">0</span></div>
+      </div>
+      <div id="m5-question-box" class="question-box fade-in-el">
+        <p id="m5-question-text">Le domande appariranno qui…</p>
+      </div>
+      <div id="m5-answers" class="m5-raffica-answers"></div>
+      <div id="m5-feedback" class="m5-feedback hidden"></div>
+    </main>
+
+    <div class="next-manche-bar hidden" id="m5-next-bar">
+      <button class="btn-next-manche" id="m5-btn-finale">
         Manche Finale <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </section>
 
   <!-- ===================== MANCHE FINALE: GHIGLIOTTINA ===================== -->
-  <section id="screen-m5" class="screen game-screen">
+  <section id="screen-m6" class="screen game-screen">
     <header class="game-header">
       <div class="game-manche-label">Ghigliottina</div>
-      <div class="score-display">PT: <span id="m5-score-display">0</span></div>
+      <div class="score-display">PT: <span id="m6-score-display">0</span></div>
     </header>
 
     <!-- FASE 1: scelta parole -->
-    <div id="m5-phase1" class="m5-phase">
+    <div id="m6-phase1" class="m6-phase">
       <p class="m4-instruction">Scegli una parola per ogni coppia.<br>Se sbagli, il punteggio si <strong>dimezza</strong>!</p>
-      <div id="m5-pair-container" class="m4-pair-container"></div>
-      <div id="m5-chosen-words" class="m4-chosen-words"></div>
-      <div id="m5-pair-counter" class="m4-pair-counter">Coppia 1 / 5</div>
+      <div id="m6-pair-container" class="m4-pair-container"></div>
+      <div id="m6-chosen-words" class="m4-chosen-words"></div>
+      <div id="m6-pair-counter" class="m4-pair-counter">Coppia 1 / 5</div>
     </div>
 
     <!-- FASE 2: timer -->
-    <div id="m5-phase2" class="m5-phase hidden">
+    <div id="m6-phase2" class="m6-phase hidden">
       <p class="m4-instruction">Hai <strong>1 minuto</strong> per trovare la parola che lega tutti gli indizi!</p>
-      <div id="m5-indizi" class="m4-indizi-wrap"></div>
-      <div id="m5-timer" class="m4-timer">1:00</div>
+      <div id="m6-indizi" class="m4-indizi-wrap"></div>
+      <div id="m6-timer" class="m4-timer">1:00</div>
     </div>
 
     <!-- FASE 3: soluzione -->
-    <div id="m5-phase3" class="m5-phase hidden">
-      <div id="m5-solution-word" class="m4-solution-word hidden"></div>
-      <div id="m5-indizi-final" class="m4-indizi-wrap"></div>
-      <button class="btn-primary" id="m5-btn-solution">
+    <div id="m6-phase3" class="m6-phase hidden">
+      <div id="m6-solution-word" class="m4-solution-word hidden"></div>
+      <div id="m6-indizi-final" class="m4-indizi-wrap"></div>
+      <button class="btn-primary" id="m6-btn-solution">
         <i class="fa-solid fa-angles-right"></i> Soluzione <i class="fa-solid fa-angles-left"></i>
       </button>
-      <div id="m5-regia-buttons" class="m4-regia-buttons hidden">
-        <button class="btn-ok-regia" id="m5-btn-ok"><i class="fa-solid fa-check"></i> OK</button>
-        <button class="btn-no-regia" id="m5-btn-no"><i class="fa-solid fa-xmark"></i> NO</button>
+      <div id="m6-regia-buttons" class="m4-regia-buttons hidden">
+        <button class="btn-ok-regia" id="m6-btn-ok"><i class="fa-solid fa-check"></i> OK</button>
+        <button class="btn-no-regia" id="m6-btn-no"><i class="fa-solid fa-xmark"></i> NO</button>
       </div>
     </div>
 
     <!-- BIG SCORE GHIGLIOTTINA -->
-    <div class="m5-big-score-container">
-      <!--&euro; --><span id="m5-big-score">0</span>
+    <div class="m6-big-score-container">
+      <!--&euro; --><span id="m6-big-score">0</span>
     </div>
   </section>
 
