@@ -1,73 +1,73 @@
 {
   "titolo": "Scossa!",
-  "descrizione": "Hanno tutti vinto il premio Nobel per la letteratura… tranne uno. Non dirlo!",
-  "regola": "Non dire il nome dell'unico tra questi che non ha vinto il premio Nobel per la letteratura.",
+  "descrizione": "Hanno tutti vinto il premio Nobel per la Fisica… tranne uno. Non dirlo!",
+  "regola": "Non dire il nome dell'unico tra questi che non ha vinto il premio Nobel per la Fisica.",
   "personaggi": [
     {
-      "nome": "Gabriel García Márquez",
+      "nome": "Albert Einstein",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/marquez.jpg",
-      "bio": "Scrittore colombiano (1927–2014), padre del realismo magico. Vinse il Premio Nobel nel 1982 con motivazione: 'Per i suoi romanzi e racconti brevi, in cui il fantastico e il reale si combinano in un mondo riccamente composto di immaginazione.'"
+      "immagine": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500",
+      "bio": "Fisico teorico (1879–1955). Vinse il Premio Nobel nel 1921 per i suoi servizi alla fisica teorica, in particolare per la scoperta della legge dell'effetto fotoelettrico."
     },
     {
-      "nome": "Toni Morrison",
+      "nome": "Marie Curie",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/morrison.jpg",
-      "bio": "Scrittrice americana (1931–2019). Prima donna afroamericana a vincere il Nobel (1993). La sua opera esplora l'eredità della schiavitù e l'identità afroamericana con potenza poetica incomparabile."
+      "immagine": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500",
+      "bio": "Fisica e chimica (1867–1934). Vinse il Nobel per la Fisica nel 1903 (insieme al marito Pierre e ad Henri Becquerel) per le ricerche sui fenomeni di radiazione."
     },
     {
-      "nome": "Bob Dylan",
+      "nome": "Enrico Fermi",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/dylan.jpg",
-      "bio": "Cantautore e musicista statunitense, vincitore del premio Nobel per la letteratura nel 2016 con la seguente motivazione: per aver creato nuove espressioni poetiche all'interno della grande tradizione della canzone americana."
+      "immagine": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500",
+      "bio": "Fisico italiano (1901–1954). Vinse il Nobel nel 1938 per l'identificazione di nuovi elementi della radioattività e la scoperta delle reazioni nucleari mediante neutroni lenti."
     },
     {
-      "nome": "Doris Lessing",
+      "nome": "Richard Feynman",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/lessing.jpg",
-      "bio": "Scrittrice britannica di origini iraniane (1919–2013). Vinse il Nobel nel 2007. Nota per il romanzo 'Il Taccuino d'Oro', esplorazione radicale della vita delle donne e della politica."
+      "immagine": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500",
+      "bio": "Fisico statunitense (1918–1988). Nobel nel 1965 per il lavoro fondamentale sull'elettrodinamica quantistica, con profonde conseguenze per la fisica delle particelle elementari."
     },
     {
-      "nome": "Umberto Eco",
+      "nome": "Nikola Tesla",
       "ha_vinto_nobel": false,
-      "immagine": "assets/images/eco.jpg",
-      "bio": "Semiologo e scrittore italiano (1932–2016), autore di 'Il Nome della Rosa'. Nonostante la fama mondiale e candidature ricorrenti, non ricevette mai il Premio Nobel per la letteratura."
+      "immagine": "https://images.unsplash.com/photo-1580136608260-4eb11f4b24fe?w=500",
+      "bio": "Inventore, fisico e ingegnere (1856–1943). Nonostante le sue enormi e rivoluzionarie scoperte nel campo dell'elettromagnetismo, non vinse mai il Premio Nobel."
     },
     {
-      "nome": "Pablo Neruda",
+      "nome": "Niels Bohr",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/neruda.jpg",
-      "bio": "Poeta cileno (1904–1973), tra i più grandi del Novecento. Vinse il Nobel nel 1971 per una 'poesia che, con l'azione di una forza elementare, dà vita al destino e ai sogni di un continente.'"
+      "immagine": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=500",
+      "bio": "Fisico danese (1885–1962). Premio Nobel nel 1922 per i suoi servizi nell'indagine sulla struttura degli atomi e della radiazione che da essi emana."
     },
     {
-      "nome": "Rudyard Kipling",
+      "nome": "Max Planck",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/kipling.jpg",
-      "bio": "Scrittore, poeta e giornalista britannico (1865–1936), vincitore del Premio Nobel per la letteratura nel 1907, a 41 anni, il più giovane e il primo scrittore di lingua inglese, in considerazione del potere dell'osservazione, dell'originalità dell'immaginazione, la forza delle idee ed il notevole talento per la narrazione che caratterizzano le creazioni di questo autore famoso nel mondo."
+      "immagine": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500",
+      "bio": "Fisico tedesco (1858–1947). Iniziò la teoria dei quanti, e ricevette il Nobel per la Fisica nel 1918 per la scoperta dei quanti di energia."
     },
     {
-      "nome": "Orhan Pamuk",
+      "nome": "Guglielmo Marconi",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/pamuk.jpg",
-      "bio": "Scrittore turco (1952). Nobel nel 2006 per aver scoperto 'nuovi simboli per lo scontro e l'intreccio di culture' nella ricerca dell'anima malinconica della sua città natale, Istanbul."
+      "immagine": "https://images.unsplash.com/photo-1455218873509-8097305ee378?w=500",
+      "bio": "Inventore italiano (1874–1937). Vinse il Nobel nel 1909 (con Karl Ferdinand Braun) in riconoscimento del contributo allo sviluppo della telegrafia senza fili."
     },
     {
-      "nome": "Elfriede Jelinek",
+      "nome": "Paul Dirac",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/jelinek.jpg",
-      "bio": "Scrittrice austriaca (1946). Premio Nobel 2004, noto per il romanzo 'La Pianista'. Le sue opere analizzano con ironia feroce le strutture di potere e di genere nella società austriaca."
+      "immagine": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500",
+      "bio": "Fisico teorico britannico (1902–1984). Nobel nel 1933, con Schrödinger, per la scoperta di nuove e produttive forme di teoria atomica."
     },
     {
-      "nome": "Herta Müller",
+      "nome": "Erwin Schrödinger",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/muller.jpg",
-      "bio": "Scrittrice rumena di etnia tedesca (1953). Nobel nel 2009 per aver ritratto con 'concentrazione della poesia e franchezza della prosa' il paesaggio dei poveri."
+      "immagine": "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?w=500",
+      "bio": "Fisico austriaco (1887–1961). Nobel nel 1933 per aver formulato l'equazione d'onda che descrive il comportamento quantomeccanico degli elettroni."
     },
     {
-      "nome": "Wole Soyinka",
+      "nome": "Werner Heisenberg",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/soyinka.jpg",
-      "bio": "Drammaturgo e poeta nigeriano (1934). Primo africano a vincere il Nobel (1986). Le sue opere mescolano tradizione yoruba e teatro occidentale in un unicum di rara potenza."
+      "immagine": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500",
+      "bio": "Fisico tedesco (1901–1976). Nobel nel 1932 per la creazione della meccanica quantistica, la cui applicazione ha, tra l'altro, portato alla scoperta delle forme allotropiche dell'idrogeno."
     }
   ]
 }

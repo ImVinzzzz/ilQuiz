@@ -1,31 +1,31 @@
 {
   "titolo": "La Ghigliottina",
-  "soluzione": "DIVISIONE",
+  "soluzione": "LUCE",
   "coppie": [
     {
-      "parola_a": "GENERALE",
-      "parola_b": "CAPITANO",
-      "corretta": "GENERALE"
+      "parola_a": "OMBRA",
+      "parola_b": "SOLE",
+      "corretta": "SOLE"
     },
     {
-      "parola_a": "DOVERI",
-      "parola_b": "POTERI",
-      "corretta": "POTERI"
+      "parola_a": "CASA",
+      "parola_b": "VERDE",
+      "corretta": "VERDE"
     },
     {
-      "parola_a": "OZIO",
-      "parola_b": "LAVORO",
-      "corretta": "LAVORO"
+      "parola_a": "MOTO",
+      "parola_b": "VELOCITÀ",
+      "corretta": "VELOCITÀ"
     },
     {
-      "parola_a": "COLONNA",
-      "parola_b": "PILASTRO",
-      "corretta": "COLONNA"
+      "parola_a": "ANNI",
+      "parola_b": "MESI",
+      "corretta": "ANNI"
     },
     {
-      "parola_a": "CAPITOLI",
-      "parola_b": "CAPITELLI",
-      "corretta": "CAPITOLI"
+      "parola_a": "FONTE",
+      "parola_b": "SORGENTE",
+      "corretta": "FONTE"
     }
   ],
   "indizi_note": ""

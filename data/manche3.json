@@ -6,152 +6,152 @@
       "titolo": "Quante ne Sai? 1",
       "materie": [
         {
-          "nome": "Storia",
-          "icona": "fa-landmark",
+          "nome": "Informatica",
+          "icona": "fa-laptop-code",
           "punti": 1000,
-          "immagine": "assets/images/storia.jpg",
-          "domanda": "Nel 1789 la Rivoluzione Francese iniziò con l'occupazione di quale luogo simbolo del dispotismo reale?",
+          "immagine": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500",
+          "domanda": "Quale linguaggio di programmazione è stato creato da Brendan Eich nel 1995 in soli 10 giorni?",
           "risposte": [
             {
-              "testo": "A. Il Palazzo di Versailles",
+              "testo": "A. Python",
               "corretta": false
             },
             {
-              "testo": "B. La Bastiglia",
+              "testo": "B. Java",
+              "corretta": false
+            },
+            {
+              "testo": "C. JavaScript",
               "corretta": true
             },
             {
-              "testo": "C. Notre Dame de Paris",
-              "corretta": false
-            },
-            {
-              "testo": "D. Les Invalides",
+              "testo": "D. C++",
               "corretta": false
             }
           ]
         },
         {
-          "nome": "Scienza",
-          "icona": "fa-flask",
+          "nome": "Astronomia",
+          "icona": "fa-meteor",
           "punti": 4000,
-          "immagine": "assets/images/scienza.jpg",
-          "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
+          "immagine": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500",
+          "domanda": "Quale pianeta del nostro sistema solare ha la luna chiamata Titano?",
           "risposte": [
             {
-              "testo": "A. Argento",
-              "corretta": false
-            },
-            {
-              "testo": "B. Alluminio",
-              "corretta": false
-            },
-            {
-              "testo": "C. Oro",
-              "corretta": false
-            },
-            {
-              "testo": "D. Rame",
+              "testo": "A. Saturno",
               "corretta": true
+            },
+            {
+              "testo": "B. Giove",
+              "corretta": false
+            },
+            {
+              "testo": "C. Urano",
+              "corretta": false
+            },
+            {
+              "testo": "D. Nettuno",
+              "corretta": false
             }
           ]
         },
         {
-          "nome": "Arte",
-          "icona": "fa-palette",
+          "nome": "Biologia",
+          "icona": "fa-dna",
           "punti": 3000,
-          "immagine": "assets/images/arte.jpg",
-          "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
+          "immagine": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500",
+          "domanda": "Quale organulo cellulare è noto come la 'centrale elettrica' della cellula?",
           "risposte": [
             {
-              "testo": "A. Leonardo da Vinci",
+              "testo": "A. Ribosoma",
               "corretta": false
             },
             {
-              "testo": "B. Raffaello Sanzio",
+              "testo": "B. Nucleo",
               "corretta": false
             },
             {
-              "testo": "C. Michelangelo Buonarroti",
+              "testo": "C. Mitocondrio",
               "corretta": true
             },
             {
-              "testo": "D. Caravaggio",
+              "testo": "D. Apparato del Golgi",
               "corretta": false
             }
           ]
         },
         {
-          "nome": "Letteratura",
-          "icona": "fa-book-open",
+          "nome": "Matematica",
+          "icona": "fa-calculator",
           "punti": 3000,
-          "immagine": "assets/images/letteratura.jpg",
-          "domanda": "In quale città è ambientato il romanzo capolavoro 'Il Maestro e Margherita' dello scrittore russo Michail Bulgakov?",
+          "immagine": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500",
+          "domanda": "Come si chiama un triangolo che ha tutti e tre i lati di lunghezza diversa?",
           "risposte": [
             {
-              "testo": "A. San Pietroburgo",
+              "testo": "A. Isoscele",
               "corretta": false
             },
             {
-              "testo": "B. Mosca",
+              "testo": "B. Equilatero",
+              "corretta": false
+            },
+            {
+              "testo": "C. Scaleno",
               "corretta": true
             },
             {
-              "testo": "C. Kiev",
-              "corretta": false
-            },
-            {
-              "testo": "D. Volgograd",
+              "testo": "D. Ottusangolo",
               "corretta": false
             }
           ]
         },
         {
-          "nome": "Musica",
-          "icona": "fa-music",
+          "nome": "Fisica",
+          "icona": "fa-atom",
           "punti": 2000,
-          "immagine": "assets/images/musica.jpg",
-          "domanda": "Quale compositore tedesco scrisse le celebri Sinfonie n. 5 e n. 9 pur essendo completamente sordo?",
+          "immagine": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500",
+          "domanda": "Qual è l'unità di misura del Sistema Internazionale per la forza?",
           "risposte": [
             {
-              "testo": "A. Johann Sebastian Bach",
+              "testo": "A. Joule",
               "corretta": false
             },
             {
-              "testo": "B. Wolfgang Amadeus Mozart",
+              "testo": "B. Watt",
               "corretta": false
             },
             {
-              "testo": "C. Ludwig van Beethoven",
+              "testo": "C. Pascal",
+              "corretta": false
+            },
+            {
+              "testo": "D. Newton",
               "corretta": true
-            },
-            {
-              "testo": "D. Franz Schubert",
-              "corretta": false
             }
           ]
         },
         {
-          "nome": "Geografia",
-          "icona": "fa-globe-europe",
+          "nome": "Chimica",
+          "icona": "fa-flask",
           "punti": 2000,
-          "immagine": "assets/images/geografia.jpg",
-          "domanda": "Dopo la Città del Vaticano, qual è il secondo Stato indipendente più piccolo del mondo per estensione territoriale?",
+          "immagine": "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10?w=500",
+          "domanda": "Quale elemento ha come numero atomico 1?",
           "risposte": [
             {
-              "testo": "A. Nauru",
+              "testo": "A. Elio",
               "corretta": false
             },
             {
-              "testo": "B. San Marino",
+              "testo": "B. Ossigeno",
               "corretta": false
             },
             {
-              "testo": "C. Liechtenstein",
-              "corretta": false
-            },
-            {
-              "testo": "D. Principato di Monaco",
+              "testo": "C. Idrogeno",
               "corretta": true
+            },
+            {
+              "testo": "D. Carbonio",
+              "corretta": false
             }
           ]
         }
@@ -161,101 +161,51 @@
       "titolo": "Quante ne Sai? 2",
       "materie": [
         {
-          "nome": "Criminologia",
-          "icona": "fa-fingerprint",
+          "nome": "Letteratura",
+          "icona": "fa-book",
           "punti": 1000,
-          "immagine": "assets/images/criminologia.jpg",
-          "domanda": "Quale composto chimico è utilizzato dalla polizia scientifica per rilevare tracce biologiche invisibili a occhio nudo?",
+          "immagine": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500",
+          "domanda": "Chi è l'autore de 'Il Signore degli Anelli'?",
           "risposte": [
             {
-              "testo": "A. Ninhidrina",
+              "testo": "A. C.S. Lewis",
               "corretta": false
             },
             {
-              "testo": "B. Cianocrilato",
-              "corretta": false
-            },
-            {
-              "testo": "C. Luminol",
+              "testo": "B. J.R.R. Tolkien",
               "corretta": true
             },
             {
-              "testo": "D. Fenolftaleina",
+              "testo": "C. George R.R. Martin",
+              "corretta": false
+            },
+            {
+              "testo": "D. J.K. Rowling",
               "corretta": false
             }
           ]
         },
         {
-          "nome": "Mitologia",
-          "icona": "fa-dragon",
+          "nome": "Geografia",
+          "icona": "fa-globe",
           "punti": 4000,
-          "immagine": "assets/images/mitologia.jpg",
-          "domanda": "Nella mitologia greca, chi era la divinità del focolare domestico, la primogenita tra i figli dei Titani Crono e Rea?",
+          "immagine": "https://images.unsplash.com/photo-1455218873509-8097305ee378?w=500",
+          "domanda": "Qual è il fiume più lungo del mondo?",
           "risposte": [
             {
-              "testo": "A. Demetra",
-              "corretta": false
-            },
-            {
-              "testo": "B. Persefone",
-              "corretta": false
-            },
-            {
-              "testo": "C. Era",
-              "corretta": false
-            },
-            {
-              "testo": "D. Estia",
-              "corretta": true
-            }
-          ]
-        },
-        {
-          "nome": "Cucina",
-          "icona": "fa-utensils",
-          "punti": 3000,
-          "immagine": "assets/images/cucina.jpg",
-          "domanda": "Quale frutta secca si usa tradizionalmente nel pesto alla genovese?",
-          "risposte": [
-            {
-              "testo": "A. Mandorle",
-              "corretta": false
-            },
-            {
-              "testo": "B. Nocciole",
-              "corretta": false
-            },
-            {
-              "testo": "C. Pinoli",
+              "testo": "A. Nilo",
               "corretta": true
             },
             {
-              "testo": "D. Pistacchi",
-              "corretta": false
-            }
-          ]
-        },
-        {
-          "nome": "Animali",
-          "icona": "fa-frog",
-          "punti": 3000,
-          "immagine": "assets/images/animali.jpg",
-          "domanda": "Quale mammifero marino è noto per avere il canto più complesso e melodioso durante le migrazioni e l'accoppiamento?",
-          "risposte": [
-            {
-              "testo": "A. Megattera",
-              "corretta": true
-            },
-            {
-              "testo": "B. Foca monaca",
+              "testo": "B. Rio delle Amazzoni",
               "corretta": false
             },
             {
-              "testo": "C. Tricheco",
+              "testo": "C. Mississippi",
               "corretta": false
             },
             {
-              "testo": "D. Lontra marina",
+              "testo": "D. Fiume Azzurro",
               "corretta": false
             }
           ]
@@ -263,49 +213,99 @@
         {
           "nome": "Cinema",
           "icona": "fa-film",
-          "punti": 2000,
-          "immagine": "assets/images/cinema.jpg",
-          "domanda": "Quale film italiano vinse l'Oscar al miglior film straniero nel 1999, grazie anche alla celebre frase 'Buongiorno, principessa!'?",
+          "punti": 3000,
+          "immagine": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500",
+          "domanda": "Chi ha diretto il film 'Inception'?",
           "risposte": [
             {
-              "testo": "A. Nuovo Cinema Paradiso",
+              "testo": "A. Steven Spielberg",
               "corretta": false
             },
             {
-              "testo": "B. Mediterraneo",
+              "testo": "B. Martin Scorsese",
               "corretta": false
             },
             {
-              "testo": "C. La vita è bella",
+              "testo": "C. Quentin Tarantino",
+              "corretta": false
+            },
+            {
+              "testo": "D. Christopher Nolan",
+              "corretta": true
+            }
+          ]
+        },
+        {
+          "nome": "Musica",
+          "icona": "fa-music",
+          "punti": 3000,
+          "immagine": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=500",
+          "domanda": "Quante corde ha un violino standard?",
+          "risposte": [
+            {
+              "testo": "A. 3",
+              "corretta": false
+            },
+            {
+              "testo": "B. 4",
               "corretta": true
             },
             {
-              "testo": "D. Il postino",
+              "testo": "C. 5",
+              "corretta": false
+            },
+            {
+              "testo": "D. 6",
               "corretta": false
             }
           ]
         },
         {
-          "nome": "Italiano",
-          "icona": "fa-pen-nib",
+          "nome": "Storia",
+          "icona": "fa-landmark",
           "punti": 2000,
-          "immagine": "assets/images/italiano.jpg",
-          "domanda": "Nella frase 'Marco legge un libro', quale funzione logica svolge 'un libro'?",
+          "immagine": "https://images.unsplash.com/photo-1580136608260-4eb11f4b24fe?w=500",
+          "domanda": "In quale anno è iniziata la Prima Guerra Mondiale?",
           "risposte": [
             {
-              "testo": "A. Complemento di termine",
+              "testo": "A. 1912",
               "corretta": false
             },
             {
-              "testo": "B. Complemento oggetto",
+              "testo": "B. 1914",
               "corretta": true
             },
             {
-              "testo": "C. Complemento di modo",
+              "testo": "C. 1916",
               "corretta": false
             },
             {
-              "testo": "D. Predicato nominale",
+              "testo": "D. 1918",
+              "corretta": false
+            }
+          ]
+        },
+        {
+          "nome": "Arte",
+          "icona": "fa-palette",
+          "punti": 2000,
+          "immagine": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500",
+          "domanda": "Chi ha scolpito il David di Firenze?",
+          "risposte": [
+            {
+              "testo": "A. Michelangelo",
+              "corretta": true
+            },
+            {
+              "testo": "B. Donatello",
+              "corretta": false
+            },
+            {
+              "testo": "C. Leonardo da Vinci",
+              "corretta": false
+            },
+            {
+              "testo": "D. Bernini",
               "corretta": false
             }
           ]

@@ -2,61 +2,61 @@
   "titolo": "Correva l'Anno",
   "descrizione": "Quattro anni, dieci domande. Scegli l'anno giusto!",
   "anni": [
-    1946,
-    1966,
-    1986,
-    2006
+    1969,
+    1989,
+    2001,
+    2012
   ],
   "domande": [
     {
-      "testo": "Quando si svolsero i Mondiali di Calcio vinti dall'Italia guidata da Marcello Lippi, con la famosa finale contro la Francia?",
-      "risposta": "2006",
-      "risposta_corretta_tra_anni": "2006"
+      "testo": "Neil Armstrong diventa il primo uomo a camminare sulla superficie della Luna.",
+      "risposta": "1969",
+      "risposta_corretta_tra_anni": "1969"
     },
     {
-      "testo": "Enrico Piaggio presenta ufficialmente il primo esemplare della Vespa, destinata a diventare un'icona italiana nel mondo.",
-      "risposta": "1946",
-      "risposta_corretta_tra_anni": "1946"
+      "testo": "Cade il Muro di Berlino, segnando un momento cruciale verso la fine della Guerra Fredda.",
+      "risposta": "1989",
+      "risposta_corretta_tra_anni": "1989"
     },
     {
-      "testo": "La Spagna e il Portogallo diventano stati membri della CEE, che passano così da dieci a dodici.",
-      "risposta": "1986",
-      "risposta_corretta_tra_anni": "1986"
+      "testo": "Avvengono gli attacchi terroristici alle Torri Gemelle di New York e al Pentagono.",
+      "risposta": "2001",
+      "risposta_corretta_tra_anni": "2001"
     },
     {
-      "testo": "Esce nelle sale italiane il film 'Il Vangelo secondo Matteo' di Pier Paolo Pasolini.",
-      "risposta": "1966",
-      "risposta_corretta_tra_anni": "1966"
+      "testo": "Il rover Curiosity della NASA atterra con successo su Marte per esplorare il cratere Gale.",
+      "risposta": "2012",
+      "risposta_corretta_tra_anni": "2012"
     },
     {
-      "testo": "Viene lanciata la Fiat 500, la mitica utilitaria italiana progettata da Dante Giacosa, simbolo del boom economico.",
-      "risposta": "1946",
-      "risposta_corretta_tra_anni": "1946"
+      "testo": "Si tiene il famoso festival musicale di Woodstock nello stato di New York, che attira quasi mezzo milione di persone.",
+      "risposta": "1969",
+      "risposta_corretta_tra_anni": "1969"
     },
     {
-      "testo": "Google acquisisce YouTube per circa 1,65 miliardi di dollari, in una delle più famose acquisizioni tecnologiche della storia.",
-      "risposta": "2006",
-      "risposta_corretta_tra_anni": "2006"
+      "testo": "Viene lanciata la prima console portatile Game Boy dalla Nintendo in Giappone.",
+      "risposta": "1989",
+      "risposta_corretta_tra_anni": "1989"
     },
     {
-      "testo": "Sophia Loren vince l'Oscar come miglior attrice protagonista per il film 'La Ciociara', prima attrice non anglofona a ottenere questo riconoscimento.",
-      "risposta": "1966",
-      "risposta_corretta_tra_anni": "1966"
+      "testo": "Viene introdotta la prima versione dell'iPod da Apple, rivoluzionando l'industria musicale.",
+      "risposta": "2001",
+      "risposta_corretta_tra_anni": "2001"
     },
     {
-      "testo": "Nintendo lancia la console, chiamata Nintendo Entertainment System (NES), che rivoluziona il mercato dei videogiochi.",
-      "risposta": "1986",
-      "risposta_corretta_tra_anni": "1986"
+      "testo": "Il CERN annuncia la scoperta di una particella compatibile con il bosone di Higgs.",
+      "risposta": "2012",
+      "risposta_corretta_tra_anni": "2012"
     },
     {
-      "testo": "Il parlamento italiano approva la Costituzione Repubblicana, che entrerà in vigore il 1° gennaio dell'anno successivo.",
-      "risposta": "1946",
-      "risposta_corretta_tra_anni": "1946"
+      "testo": "Vola per la prima volta il Boeing 747, il famoso aereo passeggeri a fusoliera larga, conosciuto come 'Jumbo Jet'.",
+      "risposta": "1969",
+      "risposta_corretta_tra_anni": "1969"
     },
     {
-      "testo": "L'isola di Aruba inizia il processo di indipendenza dai Paesi Bassi e viene separata dalle Antille Olandesi.",
-      "risposta": "1986",
-      "risposta_corretta_tra_anni": "1986"
+      "testo": "Wikipedia, l'enciclopedia online libera, viene lanciata ufficialmente da Jimmy Wales e Larry Sanger.",
+      "risposta": "2001",
+      "risposta_corretta_tra_anni": "2001"
     }
   ]
 }
