@@ -545,6 +545,10 @@ function initM4() {
   aggiornaStatisticheM4();
   mostraDomandaM4();
 
+  const sndSuspence = document.getElementById('snd-suspence');
+  if (sndSuspence) sndSuspence.loop = true;
+  suona('snd-suspence');
+
   clearInterval(m4Timer);
   m4Timer = setInterval(() => {
     m4State.secondiRimasti--;
@@ -640,6 +644,7 @@ function terminaM4(messaggio) {
   if (m4State.terminata) return;
   m4State.terminata = true;
   clearInterval(m4Timer);
+  fermaSuono('snd-suspence');
   document.getElementById('m4-question-counter').textContent = messaggio;
   document.getElementById('m4-question-text').textContent =
     `Hai risposto correttamente a ${m4State.corrette} domande. \nTotale manche: ${(m4State.corrette * m4State.puntiPerRisposta).toLocaleString('it-IT')} punti.`;
@@ -672,6 +677,10 @@ function initM5() {
   aggiornaTimerM5();
   aggiornaStatisticheM5();
   mostraDomandaM5();
+
+  const sndSuspence = document.getElementById('snd-suspence');
+  if (sndSuspence) sndSuspence.loop = true;
+  suona('snd-suspence');
 
   clearInterval(m5Timer);
   m5Timer = setInterval(() => {
@@ -767,6 +776,7 @@ function terminaM5(messaggio) {
   if (m5State.terminata) return;
   m5State.terminata = true;
   clearInterval(m5Timer);
+  fermaSuono('snd-suspence');
   document.getElementById('m5-question-counter').textContent = messaggio;
   document.getElementById('m5-question-text').textContent =
     `Hai risposto correttamente a ${m5State.corrette} domande. \nTotale manche: ${(m5State.corrette * m5State.puntiPerRisposta).toLocaleString('it-IT')} punti.`;
