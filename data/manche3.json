@@ -3,7 +3,7 @@
   "descrizione": "Scegli una materia, supera due round di domande e accumula punti!",
   "rounds": [
     {
-      "titolo": "Quante ne Sai? 1",
+      "titolo": "Round 1",
       "materie": [
         {
           "nome": "Storia",
@@ -35,7 +35,7 @@
           "icona": "fa-flask",
           "punti": 4000,
           "immagine": "assets/images/scienza.jpg",
-          "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
+          "domanda": "Quale elemento chimico ha il simbolo 'Au' sulla tavola periodica degli elementi?",
           "risposte": [
             {
               "testo": "A. Argento",
@@ -47,11 +47,11 @@
             },
             {
               "testo": "C. Oro",
-              "corretta": false
+              "corretta": true
             },
             {
               "testo": "D. Rame",
-              "corretta": true
+              "corretta": false
             }
           ]
         },
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "titolo": "Quante ne Sai? 2",
+      "titolo": "Round 2",
       "materie": [
         {
           "nome": "Criminologia",
