@@ -5,178 +5,328 @@
   "punti_per_risposta": 2000,
   "domande": [
     {
-      "testo": "L'acqua bolle sempre a 100°C.",
+      "testo": "L'acqua bolle a 90°C a livello del mare.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "La Grande Muraglia Cinese è visibile dallo spazio a occhio nudo.",
+      "testo": "Il sole sorge a est e tramonta a ovest.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "I pipistrelli sono ciechi.",
+      "testo": "La Luna ha una propria luce.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "I pipistrelli non sono uccelli.",
+      "testo": "I pinguini sanno volare.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "I pomodori sono verdure.",
+      "testo": "L'Italia ha la forma di uno stivale.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "Gli esseri umani usano solo il 10% del loro cervello.",
+      "testo": "L'oro è il metallo più leggero conosciuto.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "L'Everest è la montagna più alta della Terra.",
+      "testo": "Il DNA umano è contenuto nei ribosomi.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "L'oro è un metallo più pesante dell'argento.",
+      "testo": "La velocità della luce è superiore a quella del suono.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
-      ]
-    },
-    {
-      "testo": "Il Monte Bianco supera i 5.000 metri.",
-      "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
-      ]
-    },
-    {
-      "testo": "Le arachidi non sono noci, ma legumi.",
-      "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
-      ]
-    },
-    {
-      "testo": "I camaleonti cambiano colore per mimetizzarsi con l'ambiente.",
-      "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
-      ]
-    },
-    {
-      "testo": "Venere è il pianeta più vicino al Sole.",
-      "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
-      ]
-    },
-    {
-      "testo": "Un ottagono ha 8 lati.",
-      "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
-      ]
-    },
-    {
-      "testo": "La Statua della Libertà è stata un dono della Francia.",
-      "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
       "testo": "Le balene sono pesci.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "Napoleone Bonaparte era molto basso.",
+      "testo": "Il fegato è l'organo interno più grande del corpo umano.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "I pinguini vivono anche al Polo Nord.",
+      "testo": "La Terra è l'unico pianeta del sistema solare ad avere anelli.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "L'alfabeto italiano ha 21 lettere.",
+      "testo": "Un anno bisestile ha 366 giorni.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "Il ghiaccio secco è anidride carbonica solida.",
+      "testo": "La pizza margherita è stata inventata a Milano.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "Leonardo da Vinci ha dipinto la Notte Stellata.",
+      "testo": "Il Polo Sud si trova in Antartide.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "Le fragole crescono sugli alberi.",
+      "testo": "Il ragno ha sei zampe.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "Il Nilo è in Africa.",
+      "testo": "L'ossigeno è l'elemento più abbondante nell'universo.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "Agatha Christie ha scritto anche romanzi rosa.",
+      "testo": "Le api comunicano tra loro danzando.",
       "risposte": [
-        {"testo": "VERO", "corretta": true},
-        {"testo": "FALSO", "corretta": false}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
       ]
     },
     {
-      "testo": "Il bergamotto è un cereale.",
+      "testo": "Il cervello umano smette di crescere dopo i 5 anni di età.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     },
     {
-      "testo": "L'Islanda è coperta principalmente di ghiaccio.",
+      "testo": "I pomodori sono originari delle Americhe.",
       "risposte": [
-        {"testo": "VERO", "corretta": false},
-        {"testo": "FALSO", "corretta": true}
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il sangue umano è blu quando si trova all'interno delle vene.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
+      ]
+    },
+    {
+      "testo": "L'acqua copre circa il 71% della superficie terrestre.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Il Monte Bianco è la montagna più alta del mondo.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
+      ]
+    },
+    {
+      "testo": "Il simbolo chimico del ferro è Fe.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "L'Australia è sia un paese che un continente.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": true
+        },
+        {
+          "testo": "FALSO",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "L'elettrone ha carica positiva.",
+      "risposte": [
+        {
+          "testo": "VERO",
+          "corretta": false
+        },
+        {
+          "testo": "FALSO",
+          "corretta": true
+        }
       ]
     }
   ]

@@ -5,10 +5,166 @@
   "punti_per_risposta": 2000,
   "domande": [
     {
-      "testo": "Quale pianeta è conosciuto come il Pianeta Rosso?",
+      "testo": "Qual è il continente più freddo?",
       "risposte": [
         {
-          "testo": "Marte",
+          "testo": "Antartide",
+          "corretta": true
+        },
+        {
+          "testo": "Artide",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale è noto come il re della giungla?",
+      "risposte": [
+        {
+          "testo": "Leone",
+          "corretta": true
+        },
+        {
+          "testo": "Tigre",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti lati ha un esagono?",
+      "risposte": [
+        {
+          "testo": "6",
+          "corretta": true
+        },
+        {
+          "testo": "8",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "In quale paese si trova la Torre Eiffel?",
+      "risposte": [
+        {
+          "testo": "Francia",
+          "corretta": true
+        },
+        {
+          "testo": "Italia",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale gas respiriamo per vivere?",
+      "risposte": [
+        {
+          "testo": "Ossigeno",
+          "corretta": true
+        },
+        {
+          "testo": "Anidride carbonica",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Chi ha dipinto la Gioconda?",
+      "risposte": [
+        {
+          "testo": "Leonardo da Vinci",
+          "corretta": true
+        },
+        {
+          "testo": "Michelangelo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il metallo più leggero?",
+      "risposte": [
+        {
+          "testo": "Litio",
+          "corretta": true
+        },
+        {
+          "testo": "Alluminio",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quante stagioni ci sono in un anno?",
+      "risposte": [
+        {
+          "testo": "4",
+          "corretta": true
+        },
+        {
+          "testo": "3",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale oceano è il più grande?",
+      "risposte": [
+        {
+          "testo": "Pacifico",
+          "corretta": true
+        },
+        {
+          "testo": "Atlantico",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Che lingua si parla in Messico?",
+      "risposte": [
+        {
+          "testo": "Spagnolo",
+          "corretta": true
+        },
+        {
+          "testo": "Messicano",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è la valuta del Regno Unito?",
+      "risposte": [
+        {
+          "testo": "Sterlina",
+          "corretta": true
+        },
+        {
+          "testo": "Euro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è l'animale terrestre più veloce?",
+      "risposte": [
+        {
+          "testo": "Ghepardo",
+          "corretta": true
+        },
+        {
+          "testo": "Leopardo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale pianeta è più vicino al Sole?",
+      "risposte": [
+        {
+          "testo": "Mercurio",
           "corretta": true
         },
         {
@@ -18,257 +174,49 @@
       ]
     },
     {
-      "testo": "Qual è capitale della Francia?",
+      "testo": "In quale città si trova il Colosseo?",
+      "risposte": [
+        {
+          "testo": "Roma",
+          "corretta": true
+        },
+        {
+          "testo": "Atene",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale elemento chimico ha simbolo O?",
+      "risposte": [
+        {
+          "testo": "Ossigeno",
+          "corretta": true
+        },
+        {
+          "testo": "Oro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è la capitale della Spagna?",
       "risposte": [
         {
           "testo": "Madrid",
-          "corretta": false
-        },
-        {
-          "testo": "Parigi",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale di questi mammiferi bramisce?",
-      "risposte": [
-        {
-          "testo": "Coniglio",
-          "corretta": false
-        },
-        {
-          "testo": "Alce",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Qual è il fiume più lungo d'Europa?",
-      "risposte": [
-        {
-          "testo": "Danubio",
-          "corretta": false
-        },
-        {
-          "testo": "Volga",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale colore si ottiene mescolando blu e giallo?",
-      "risposte": [
-        {
-          "testo": "Verde",
           "corretta": true
         },
         {
-          "testo": "Arancione",
+          "testo": "Barcellona",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quante facce ha un tetraedro?",
+      "testo": "Quanti denti ha un essere umano adulto?",
       "risposte": [
         {
-          "testo": "4",
-          "corretta": true
-        },
-        {
-          "testo": "6",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Dove si trova l'Egitto?",
-      "risposte": [
-        {
-          "testo": "Asia",
-          "corretta": false
-        },
-        {
-          "testo": "Africa",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Al livello del mare, a che temperatura bolle l'acqua?",
-      "risposte": [
-        {
-          "testo": "90° C",
-          "corretta": false
-        },
-        {
-          "testo": "100° C",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Chi ha scritto l'Eneide?",
-      "risposte": [
-        {
-          "testo": "Virgilio",
-          "corretta": true
-        },
-        {
-          "testo": "Omero",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale sport usa il pallone ovale nel Sei Nazioni?",
-      "risposte": [
-        {
-          "testo": "Rugby",
-          "corretta": true
-        },
-        {
-          "testo": "Basket",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Qual è il quarto pianeta del sistema solare?",
-      "risposte": [
-        {
-          "testo": "Terra",
-          "corretta": false
-        },
-        {
-          "testo": "Marte",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale strumento ha tasti bianchi e neri?",
-      "risposte": [
-        {
-          "testo": "Pianoforte",
-          "corretta": true
-        },
-        {
-          "testo": "Violino",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Qual è la capitale dell'Australia?",
-      "risposte": [
-        {
-          "testo": "Adelaide",
-          "corretta": false
-        },
-        {
-          "testo": "Canberra",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale metallo ha simbolo chimico Hg?",
-      "risposte": [
-        {
-          "testo": "Mercurio",
-          "corretta": true
-        },
-        {
-          "testo": "Argento",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "In quale mare si trova la Sardegna?",
-      "risposte": [
-        {
-          "testo": "Mediterraneo",
-          "corretta": true
-        },
-        {
-          "testo": "Baltico",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale organo pompa il sangue?",
-      "risposte": [
-        {
-          "testo": "Cuore",
-          "corretta": true
-        },
-        {
-          "testo": "Fegato",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quanto è alto il Gran Sasso?",
-      "risposte": [
-        {
-          "testo": "3.218 metri,",
-          "corretta": false
-        },
-        {
-          "testo": "2.912 metri,",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale mese viene prima di aprile?",
-      "risposte": [
-        {
-          "testo": "Maggio",
-          "corretta": false
-        },
-        {
-          "testo": "Marzo",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale lingua si parla principalmente in Brasile?",
-      "risposte": [
-        {
-          "testo": "Portoghese",
-          "corretta": true
-        },
-        {
-          "testo": "Spagnolo",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "La Gioconda è esposta agli Uffizi?",
-      "risposte": [
-        {
-          "testo": "Sì",
-          "corretta": false
-        },
-        {
-          "testo": "No",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quanti giorni ha ottobre?",
-      "risposte": [
-        {
-          "testo": "31",
+          "testo": "32",
           "corretta": true
         },
         {
@@ -278,378 +226,430 @@
       ]
     },
     {
-      "testo": "Quale gas è il più diffuso nell'atmosfera?",
+      "testo": "Quale sport si gioca a Wimbledon?",
       "risposte": [
         {
-          "testo": "Ossigeno",
-          "corretta": false
-        },
-        {
-          "testo": "Azoto",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Che tipo di stella è il Sole?",
-      "risposte": [
-        {
-          "testo": "Nana gialla",
+          "testo": "Tennis",
           "corretta": true
         },
         {
-          "testo": "Pulsar",
+          "testo": "Golf",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale città è nota per la Torre degli Asinelli?",
+      "testo": "Chi ha scritto 'Romeo e Giulietta'?",
       "risposte": [
         {
-          "testo": "Ferrara",
-          "corretta": false
-        },
-        {
-          "testo": "Bologna",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Qual è il più grande mammifero vivente?",
-      "risposte": [
-        {
-          "testo": "Balenottera azzurra",
+          "testo": "Shakespeare",
           "corretta": true
         },
         {
-          "testo": "Elefante africano",
+          "testo": "Dante",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale tra questi è un numero primo?",
+      "testo": "In che anno è finita la Seconda Guerra Mondiale?",
       "risposte": [
         {
-          "testo": "15",
-          "corretta": false
+          "testo": "1945",
+          "corretta": true
         },
+        {
+          "testo": "1939",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è l'osso più lungo del corpo umano?",
+      "risposte": [
+        {
+          "testo": "Femore",
+          "corretta": true
+        },
+        {
+          "testo": "Tibia",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il colore del sangue umano?",
+      "risposte": [
+        {
+          "testo": "Rosso",
+          "corretta": true
+        },
+        {
+          "testo": "Blu",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti continenti ci sono?",
+      "risposte": [
         {
           "testo": "7",
           "corretta": true
+        },
+        {
+          "testo": "5",
+          "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale oceano bagna la costa orientale degli Stati Uniti?",
+      "testo": "Quale frutto cade in testa a Newton nella leggenda?",
       "risposte": [
         {
-          "testo": "Atlantico",
+          "testo": "Mela",
           "corretta": true
         },
         {
-          "testo": "Pacifico",
+          "testo": "Pera",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Chi è Michelangelo Merisi?",
+      "testo": "Qual è il fiume che attraversa Roma?",
       "risposte": [
         {
-          "testo": "Giotto",
-          "corretta": false
-        },
-        {
-          "testo": "Caravaggio",
+          "testo": "Tevere",
           "corretta": true
+        },
+        {
+          "testo": "Arno",
+          "corretta": false
         }
       ]
     },
     {
-      "testo": "Qual è il deserto più esteso?",
+      "testo": "Quale strumento misura la temperatura?",
       "risposte": [
         {
-          "testo": "Gobi",
-          "corretta": false
+          "testo": "Termometro",
+          "corretta": true
         },
+        {
+          "testo": "Barometro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il re dei formaggi italiani?",
+      "risposte": [
+        {
+          "testo": "Parmigiano Reggiano",
+          "corretta": true
+        },
+        {
+          "testo": "Gorgonzola",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale produce il miele?",
+      "risposte": [
+        {
+          "testo": "Ape",
+          "corretta": true
+        },
+        {
+          "testo": "Vespa",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il deserto più grande del mondo?",
+      "risposte": [
         {
           "testo": "Sahara",
           "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Qual è l'unità di misura della temperatura nel sistema metrico decimale?",
-      "risposte": [
-        {
-          "testo": "Gradi Celsius",
-          "corretta": true
         },
         {
-          "testo": "Gradi Fahrenheit ",
+          "testo": "Gobi",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale nazionale vinse i Mondiali di calcio nel 2006?",
+      "testo": "Chi è il creatore di Topolino?",
       "risposte": [
         {
-          "testo": "Italia",
+          "testo": "Walt Disney",
           "corretta": true
         },
         {
-          "testo": "Francia",
+          "testo": "Stan Lee",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quanti satellite naturali ha la Terra?",
+      "testo": "Qual è l'isola più grande del mondo?",
       "risposte": [
         {
-          "testo": "1",
+          "testo": "Groenlandia",
           "corretta": true
         },
         {
-          "testo": "2",
+          "testo": "Australia",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale strumento suonava Paganini?",
-      "risposte": [
-        {
-          "testo": "Arpa",
-          "corretta": false
-        },
-        {
-          "testo": "Violino",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quante vocali ha l'alfabeto italiano tradizionale?",
-      "risposte": [
-        {
-          "testo": "5",
-          "corretta": true
-        },
-        {
-          "testo": "7",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Qual è la capitale del Giappone?",
-      "risposte": [
-        {
-          "testo": "Kyoto",
-          "corretta": false
-        },
-        {
-          "testo": "Tokyo",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Dove avviene la fotosintesi?",
-      "risposte": [
-        {
-          "testo": "Nelle foglie",
-          "corretta": true
-        },
-        {
-          "testo": "Nei fiori",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale compositore scrisse le 'Quattro Stagioni'?",
-      "risposte": [
-        {
-          "testo": "Mozart",
-          "corretta": false
-        },
-        {
-          "testo": "Vivaldi",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Dove si trova il Museo del Prado?",
-      "risposte": [
-        {
-          "testo": "Lisbona",
-          "corretta": false
-        },
-        {
-          "testo": "Madrid",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale continente è il più esteso?",
-      "risposte": [
-        {
-          "testo": "Africa",
-          "corretta": false
-        },
-        {
-          "testo": "Asia",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quanti giorni ha un anno bisestile?",
-      "risposte": [
-        {
-          "testo": "364",
-          "corretta": false
-        },
-        {
-          "testo": "366",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Chi ha inventato la dinamite?",
-      "risposte": [
-        {
-          "testo": "Alfred Nobel",
-          "corretta": true
-        },
-        {
-          "testo": "Enrico Fermi",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale città è detta la Serenissima?",
-      "risposte": [
-        {
-          "testo": "Milano",
-          "corretta": false
-        },
-        {
-          "testo": "Venezia",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale città è attraversata dal fiume Tamigi?",
-      "risposte": [
-        {
-          "testo": "Parigi",
-          "corretta": false
-        },
-        {
-          "testo": "Londra",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale pianeta è il più grande del Sistema Solare?",
-      "risposte": [
-        {
-          "testo": "Giove",
-          "corretta": true
-        },
-        {
-          "testo": "Urano",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quanto fa 7x8?",
-      "risposte": [
-        {
-          "testo": "56",
-          "corretta": true
-        },
-        {
-          "testo": "48",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale pittore è associato ai girasoli?",
-      "risposte": [
-        {
-          "testo": "Dalì",
-          "corretta": false
-        },
-        {
-          "testo": "Van Gogh",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quanti giocatori ha in campo una squadra di calcio?",
-      "risposte": [
-        {
-          "testo": "11",
-          "corretta": true
-        },
-        {
-          "testo": "10",
-          "corretta": false
-        }
-      ]
-    },
-    {
-      "testo": "Nell'Iliade, da chi viene ucciso Ettore?",
-      "risposte": [
-        {
-          "testo": "Patroclo",
-          "corretta": false
-        },
-        {
-          "testo": "Achille",
-          "corretta": true
-        }
-      ]
-    },
-    {
-      "testo": "Quale numero viene dopo 99?",
+      "testo": "Quanti anni ha un secolo?",
       "risposte": [
         {
           "testo": "100",
           "corretta": true
         },
         {
-          "testo": "90",
+          "testo": "1000",
           "corretta": false
         }
       ]
     },
     {
-      "testo": "Quale di questi è un vulcano?",
+      "testo": "In quale mare sfocia il fiume Nilo?",
       "risposte": [
         {
-          "testo": "Stromboli",
+          "testo": "Mediterraneo",
           "corretta": true
         },
         {
-          "testo": "Monviso",
+          "testo": "Rosso",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale metallo è liquido a temperatura ambiente?",
+      "risposte": [
+        {
+          "testo": "Mercurio",
+          "corretta": true
+        },
+        {
+          "testo": "Piombo",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Chi fu il primo presidente degli Stati Uniti?",
+      "risposte": [
+        {
+          "testo": "George Washington",
+          "corretta": true
+        },
+        {
+          "testo": "Abraham Lincoln",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale parte del corpo umano pompa il sangue?",
+      "risposte": [
+        {
+          "testo": "Cuore",
+          "corretta": true
+        },
+        {
+          "testo": "Cervello",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Che lingua si parla in Egitto?",
+      "risposte": [
+        {
+          "testo": "Arabo",
+          "corretta": true
+        },
+        {
+          "testo": "Egiziano",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il pianeta più grande del sistema solare?",
+      "risposte": [
+        {
+          "testo": "Giove",
+          "corretta": true
+        },
+        {
+          "testo": "Saturno",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il simbolo chimico dell'acqua?",
+      "risposte": [
+        {
+          "testo": "H2O",
+          "corretta": true
+        },
+        {
+          "testo": "CO2",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti colori ci sono nell'arcobaleno?",
+      "risposte": [
+        {
+          "testo": "7",
+          "corretta": true
+        },
+        {
+          "testo": "6",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Chi ha scoperto l'America nel 1492?",
+      "risposte": [
+        {
+          "testo": "Cristoforo Colombo",
+          "corretta": true
+        },
+        {
+          "testo": "Amerigo Vespucci",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "In quale paese è nato il sushi?",
+      "risposte": [
+        {
+          "testo": "Giappone",
+          "corretta": true
+        },
+        {
+          "testo": "Cina",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale organo filtra il sangue umano?",
+      "risposte": [
+        {
+          "testo": "Reni",
+          "corretta": true
+        },
+        {
+          "testo": "Fegato",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è il monte più alto del Giappone?",
+      "risposte": [
+        {
+          "testo": "Monte Fuji",
+          "corretta": true
+        },
+        {
+          "testo": "Monte Everest",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Che forma ha una palla da basket?",
+      "risposte": [
+        {
+          "testo": "Sfera",
+          "corretta": true
+        },
+        {
+          "testo": "Cilindro",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale materiale è usato per fare il vetro?",
+      "risposte": [
+        {
+          "testo": "Sabbia",
+          "corretta": true
+        },
+        {
+          "testo": "Argilla",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "In quale stato americano si trova Hollywood?",
+      "risposte": [
+        {
+          "testo": "California",
+          "corretta": true
+        },
+        {
+          "testo": "New York",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale stagione viene dopo l'estate?",
+      "risposte": [
+        {
+          "testo": "Autunno",
+          "corretta": true
+        },
+        {
+          "testo": "Primavera",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quanti minuti ci sono in un'ora?",
+      "risposte": [
+        {
+          "testo": "60",
+          "corretta": true
+        },
+        {
+          "testo": "100",
+          "corretta": false
+        }
+      ]
+    },
+    {
+      "testo": "Qual è l'insetto che trasmette la malaria?",
+      "risposte": [
+        {
+          "testo": "Zanzara",
+          "corretta": true
+        },
+        {
+          "testo": "Mosca",
           "corretta": false
         }
       ]
