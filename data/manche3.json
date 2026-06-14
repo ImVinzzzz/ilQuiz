@@ -33,7 +33,7 @@
         {
           "nome": "Scienza",
           "icona": "fa-flask",
-          "punti": 4000,
+          "punti": 3000,
           "immagine": "assets/images/scienza.jpg",
           "domanda": "Quale elemento chimico ha il simbolo 'Au' sulla tavola periodica degli elementi?",
           "risposte": [
@@ -58,7 +58,7 @@
         {
           "nome": "Arte",
           "icona": "fa-palette",
-          "punti": 3000,
+          "punti": 2000,
           "immagine": "assets/images/arte.jpg",
           "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
           "risposte": [
@@ -83,24 +83,24 @@
         {
           "nome": "Letteratura",
           "icona": "fa-book-open",
-          "punti": 3000,
+          "punti": 5000,
           "immagine": "assets/images/letteratura.jpg",
-          "domanda": "In quale città è ambientato il romanzo capolavoro 'Il Maestro e Margherita' dello scrittore russo Michail Bulgakov?",
+          "domanda": "Sotto quale pseudonimo Agatha Christie pubblicò diversi romanzi di genere sentimentale/psicologico?",
           "risposte": [
             {
-              "testo": "A. San Pietroburgo",
+              "testo": "A. Richard Bachman",
               "corretta": false
             },
             {
-              "testo": "B. Mosca",
+              "testo": "B. Mary Westmacott",
               "corretta": true
             },
             {
-              "testo": "C. Kiev",
+              "testo": "C. Ellis Bell",
               "corretta": false
             },
             {
-              "testo": "D. Volgograd",
+              "testo": "D. John Swithen",
               "corretta": false
             }
           ]
