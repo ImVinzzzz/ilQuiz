@@ -3,7 +3,7 @@
   "descrizione": "Scegli una materia, supera due round di domande e accumula punti!",
   "rounds": [
     {
-      "titolo": "Round 1",
+      "titolo": "Quante ne Sai?",
       "materie": [
         {
           "nome": "Storia",
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "titolo": "Round 2",
+      "titolo": "Quante ne Sai?",
       "materie": [
         {
           "nome": "Criminologia",
