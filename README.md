@@ -3,6 +3,39 @@
 
 ---
 
+## 🎮 Regole del Gioco — Come Giocare
+
+Benvenuto a **Il Quiz**! Se vuoi cimentarti in questa sfida e mettere alla prova la tua cultura generale, ecco tutto quello che devi sapere sulle diverse manche che dovrai affrontare per raggiungere la vittoria finale.
+
+Il gioco si sviluppa in **6 manche consecutive**, ciascuna con regole e dinamiche uniche. Il tuo obiettivo è accumulare il maggior numero possibile di punti prima di affrontare la leggendaria **Ghigliottina**.
+
+### 1. Correva l'Anno 📅
+In questa prima manche ti verranno presentate delle domande di cultura generale e storica. Per ogni domanda avrai a disposizione **quattro anni fissi** come opzioni di risposta. Il tuo compito è individuare l'anno esatto in cui è avvenuto l'evento descritto. Ogni risposta corretta aggiunge **5.000 punti** al tuo bottino.
+
+### 2. La Scossa! ⚡
+Sul tabellone compariranno **11 personaggi**. Tra questi, solo uno è l'**intruso** (ad esempio, l'unico a non aver mai vinto un Premio Nobel per la Letteratura). Il tuo obiettivo è selezionare uno alla volta tutti i personaggi "corretti" (quelli che hanno vinto il Nobel), evitando assolutamente l'intruso. Se selezioni l'intruso prenderai la "scossa" (risposta errata). Ogni risposta corretta vale **2.000 punti**.
+
+### 3. Quante ne Sai? 🧠
+Questa manche si divide in **due round**. In ciascun round ti verranno proposte diverse materie con un valore di punteggio crescente (da 1.000 a 5.000 punti). Scegli la materia che preferisci o in cui ti senti più preparato e rispondi alla domanda a scelta multipla per incassare il relativo montepremi.
+
+### 4. Domande a Raffica ⏱️
+Una corsa contro il tempo! Hai **180 secondi** per rispondere a un massimo di **50 domande rapide**. Per ogni domanda avrai solo **due opzioni** di risposta. Ogni risposta corretta ti assegna **2.000 punti**. Rispondi il più velocemente possibile per massimizzare il punteggio prima che il tempo scada!
+
+### 5. Vero o Falso? ❓
+Ancora una manche a tempo: hai **90 secondi** per valutare **25 affermazioni** e decidere se sono vere o false. Ogni risposta corretta aumenta il tuo punteggio di **2.000 punti**.
+
+### 6. La Ghigliottina (Manche Finale) 🗡️
+È il momento della verità. Entri in finale con tutto il bottino accumulato nelle manche precedenti.
+1. Ti verranno presentate **5 coppie di parole**. Per ognuna, dovrai scegliere quella corretta.
+2. Attenzione: se scegli la parola sbagliata, il tuo montepremi accumulato **viene dimezzato**!
+3. Al termine della scelta avrai a disposizione **5 parole indizio** e un timer di **60 secondi**.
+4. Usa il minuto a disposizione per trovare l'unica parola misteriosa che si collega logicamente a tutte e 5 le parole indizio e digitala nella casella di risposta.
+
+Riuscirai a mantenere intatto il tuo bottino e a indovinare la parola finale? Buona fortuna!
+
+---
+
+
 ## 📁 Struttura del Progetto
 
 ```
