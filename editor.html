@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,27 +10,32 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
   <!-- JSZip per la creazione del pacchetto ZIP client-side -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
   <style>
     :root {
-      --blu-notte:   #0a0f2e;
-      --blu-medio:   #0d1a5c;
-      --blu-chiaro:  #1a3a8f;
-      --oro:         #f5c518;
-      --oro-scuro:   #c9a000;
-      --bianco:      #f0f4ff;
-      --rosso:       #c0392b;
-      --verde:       #27ae60;
+      --blu-notte: #0a0f2e;
+      --blu-medio: #0d1a5c;
+      --blu-chiaro: #1a3a8f;
+      --oro: #f5c518;
+      --oro-scuro: #c9a000;
+      --bianco: #f0f4ff;
+      --rosso: #c0392b;
+      --verde: #27ae60;
       --grigio-card: #111b4a;
-      --radius-md:   12px;
-      --radius-sm:   6px;
-      --transition:  .3s ease;
+      --radius-md: 12px;
+      --radius-sm: 6px;
+      --transition: .3s ease;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: "Nunito", sans-serif;
@@ -49,11 +55,11 @@
       font-size: 3.5rem;
       color: var(--oro);
       letter-spacing: .05em;
-      text-shadow: 0 4px 10px rgba(0,0,0,.5);
+      text-shadow: 0 4px 10px rgba(0, 0, 0, .5);
     }
 
     .subtitle {
-      color: rgba(240,244,255,.7);
+      color: rgba(240, 244, 255, .7);
       font-size: 1.1rem;
       margin-top: 0.5rem;
     }
@@ -63,8 +69,8 @@
       margin: 0 auto;
       background: var(--grigio-card);
       border-radius: var(--radius-md);
-      box-shadow: 0 10px 30px rgba(0,0,0,.5);
-      border: 1px solid rgba(245,197,24,.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+      border: 1px solid rgba(245, 197, 24, .2);
       overflow: hidden;
     }
 
@@ -72,7 +78,7 @@
     .config-generale {
       padding: 1.5rem;
       background: var(--blu-medio);
-      border-bottom: 1px solid rgba(245,197,24,.2);
+      border-bottom: 1px solid rgba(245, 197, 24, .2);
       display: flex;
       gap: 1.5rem;
       align-items: center;
@@ -97,7 +103,7 @@
       font-family: inherit;
       font-size: 1rem;
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(240,244,255,.2);
+      border: 1px solid rgba(240, 244, 255, .2);
       background: var(--blu-notte);
       color: var(--bianco);
       outline: none;
@@ -106,14 +112,14 @@
 
     .input-control:focus {
       border-color: var(--oro);
-      box-shadow: 0 0 8px rgba(245,197,24,.3);
+      box-shadow: 0 0 8px rgba(245, 197, 24, .3);
     }
 
     /* TABS */
     .tabs-nav {
       display: flex;
       background: var(--blu-notte);
-      border-bottom: 1px solid rgba(245,197,24,.1);
+      border-bottom: 1px solid rgba(245, 197, 24, .1);
       overflow-x: auto;
     }
 
@@ -124,7 +130,7 @@
       letter-spacing: .05em;
       border: none;
       background: transparent;
-      color: rgba(240,244,255,.6);
+      color: rgba(240, 244, 255, .6);
       cursor: pointer;
       white-space: nowrap;
       transition: var(--transition);
@@ -133,13 +139,13 @@
 
     .tab-btn:hover {
       color: var(--bianco);
-      background: rgba(240,244,255,.05);
+      background: rgba(240, 244, 255, .05);
     }
 
     .tab-btn.active {
       color: var(--oro);
       border-bottom-color: var(--oro);
-      background: rgba(245,197,24,.05);
+      background: rgba(245, 197, 24, .05);
     }
 
     /* CONTENUTO TAB */
@@ -157,15 +163,15 @@
       display: flex;
       gap: 0.5rem;
       margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(240,244,255,.1);
+      border-bottom: 1px solid rgba(240, 244, 255, .1);
       padding-bottom: 0.5rem;
     }
 
     .subtab-btn {
       padding: 0.5rem 1rem;
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(240,244,255,.1);
-      background: rgba(240,244,255,.05);
+      border: 1px solid rgba(240, 244, 255, .1);
+      background: rgba(240, 244, 255, .05);
       color: var(--bianco);
       cursor: pointer;
       font-weight: 600;
@@ -192,7 +198,7 @@
       font-size: 2rem;
       color: var(--oro);
       margin-bottom: 1rem;
-      border-bottom: 1px dashed rgba(245,197,24,.3);
+      border-bottom: 1px dashed rgba(245, 197, 24, .3);
       padding-bottom: 0.5rem;
     }
 
@@ -211,8 +217,8 @@
     }
 
     .card-riga {
-      background: rgba(240,244,255,.03);
-      border: 1px solid rgba(240,244,255,.05);
+      background: rgba(240, 244, 255, .03);
+      border: 1px solid rgba(240, 244, 255, .05);
       padding: 1.5rem;
       border-radius: var(--radius-md);
       margin-bottom: 1.5rem;
@@ -245,14 +251,14 @@
       justify-content: center;
       background: var(--blu-notte);
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(245,197,24,.3);
+      border: 1px solid rgba(245, 197, 24, .3);
     }
 
     /* CONTROLLI AZIONE */
     .controls-bar {
       padding: 1.5rem;
       background: var(--blu-medio);
-      border-top: 1px solid rgba(245,197,24,.2);
+      border-top: 1px solid rgba(245, 197, 24, .2);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -277,27 +283,27 @@
     .btn-save {
       background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
       color: var(--blu-notte);
-      box-shadow: 0 4px 15px rgba(245,197,24,.3);
+      box-shadow: 0 4px 15px rgba(245, 197, 24, .3);
     }
 
     .btn-save:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(245,197,24,.5);
+      box-shadow: 0 6px 20px rgba(245, 197, 24, .5);
     }
 
     .btn-secondary {
-      background: rgba(240,244,255,.1);
+      background: rgba(240, 244, 255, .1);
       color: var(--bianco);
-      border: 1px solid rgba(240,244,255,.2);
+      border: 1px solid rgba(240, 244, 255, .2);
     }
 
     .btn-secondary:hover {
-      background: rgba(240,244,255,.2);
+      background: rgba(240, 244, 255, .2);
     }
 
     .helper-text {
       font-size: 0.85rem;
-      color: rgba(240,244,255,.5);
+      color: rgba(240, 244, 255, .5);
       margin-top: 0.25rem;
     }
 
@@ -327,13 +333,26 @@
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      body { padding: 1rem; }
-      h1 { font-size: 2.5rem; }
-      .controls-bar { flex-direction: column; align-items: stretch; }
-      .btn-action { justify-content: center; }
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-action {
+        justify-content: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -344,24 +363,25 @@
   </header>
 
   <div class="main-container">
-    
+
     <!-- CONFIGURAZIONE GENERALE -->
     <div class="config-generale">
       <div class="input-group">
         <label for="destinatario-nome">Nome Destinatario / Tema</label>
-        <input type="text" id="destinatario-nome" class="input-control" placeholder="Es. noemi" value="noemi" oninput="aggiornaAnteprimePercorsi()" />
+        <input type="text" id="destinatario-nome" class="input-control" placeholder="Es. noemi" value="noemi"
+          oninput="aggiornaAnteprimePercorsi()" />
         <span class="helper-text">Una sola parola in minuscolo (determinerà la cartella in /data e /images).</span>
       </div>
     </div>
 
     <!-- NAVBAR TAB PRINCIPALI -->
     <nav class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab(event, 'tab-m1')">Manche 1 (Anni)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-m2')">Manche 2 (Scossa)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-m3')">Manche 3 (Materie)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-m4')">Manche 4 (Raffica)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-m5')">Manche 5 (V/F)</button>
-      <button class="tab-btn" onclick="switchTab(event, 'tab-m6')">Manche Finale</button>
+      <button class="tab-btn active" onclick="switchTab(event, 'tab-m1')">M 1 (Anni)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m2')">M 2 (Scossa)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m3')">M 3 (Materie)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m4')">M 4 (Raffica)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m5')">M 5 (V/F)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m6')">Finale</button>
       <button class="tab-btn" onclick="switchTab(event, 'tab-esito')">Vittoria/Sconfitta</button>
     </nav>
 
@@ -374,19 +394,23 @@
         <div class="grid-4">
           <div class="input-group">
             <label>Anno 1</label>
-            <input type="number" id="m1-anno-1" class="input-control m1-anno-input" value="1946" onchange="aggiornaSelectAnniM1()" />
+            <input type="number" id="m1-anno-1" class="input-control m1-anno-input" value="1946"
+              onchange="aggiornaSelectAnniM1()" />
           </div>
           <div class="input-group">
             <label>Anno 2</label>
-            <input type="number" id="m1-anno-2" class="input-control m1-anno-input" value="1966" onchange="aggiornaSelectAnniM1()" />
+            <input type="number" id="m1-anno-2" class="input-control m1-anno-input" value="1966"
+              onchange="aggiornaSelectAnniM1()" />
           </div>
           <div class="input-group">
             <label>Anno 3</label>
-            <input type="number" id="m1-anno-3" class="input-control m1-anno-input" value="1986" onchange="aggiornaSelectAnniM1()" />
+            <input type="number" id="m1-anno-3" class="input-control m1-anno-input" value="1986"
+              onchange="aggiornaSelectAnniM1()" />
           </div>
           <div class="input-group">
             <label>Anno 4</label>
-            <input type="number" id="m1-anno-4" class="input-control m1-anno-input" value="2006" onchange="aggiornaSelectAnniM1()" />
+            <input type="number" id="m1-anno-4" class="input-control m1-anno-input" value="2006"
+              onchange="aggiornaSelectAnniM1()" />
           </div>
         </div>
 
@@ -406,12 +430,14 @@
           </div>
           <div class="input-group">
             <label for="m2-descrizione">Descrizione (Home Manche)</label>
-            <input type="text" id="m2-descrizione" class="input-control" value="Hanno tutti vinto il Nobel… tranne uno. Riesci a trovarlo senza dirlo?" />
+            <input type="text" id="m2-descrizione" class="input-control"
+              value="Hanno tutti vinto il Nobel… tranne uno. Riesci a trovarlo senza dirlo?" />
           </div>
         </div>
         <div class="input-group" style="margin-bottom: 2rem;">
           <label for="m2-regola">Testo Regola (Nel Gioco)</label>
-          <input type="text" id="m2-regola" class="input-control" value="Non dire il nome dell'unico tra questi che non ha vinto il premio Nobel per la letteratura." />
+          <input type="text" id="m2-regola" class="input-control"
+            value="Non dire il nome dell'unico tra questi che non ha vinto il premio Nobel per la letteratura." />
         </div>
 
         <div class="form-section-title">Gli 11 Soggetti (Manche 2)</div>
@@ -463,9 +489,10 @@
         <div class="form-section-title">Manche Finale - La Ghigliottina</div>
         <div class="card-riga">
           <div class="card-riga-header">Accoppiamenti parole</div>
-          
+
           <!-- COPPIA 1 -->
-          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+          <div class="card-coppia-m6"
+            style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
             <div class="grid-2" style="margin-bottom: 0.5rem;">
               <div class="input-group">
                 <label>Coppia 1: Parola Sinistra</label>
@@ -490,7 +517,8 @@
           </div>
 
           <!-- COPPIA 2 -->
-          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+          <div class="card-coppia-m6"
+            style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
             <div class="grid-2" style="margin-bottom: 0.5rem;">
               <div class="input-group">
                 <label>Coppia 2: Parola Sinistra</label>
@@ -515,7 +543,8 @@
           </div>
 
           <!-- COPPIA 3 -->
-          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+          <div class="card-coppia-m6"
+            style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
             <div class="grid-2" style="margin-bottom: 0.5rem;">
               <div class="input-group">
                 <label>Coppia 3: Parola Sinistra</label>
@@ -540,7 +569,8 @@
           </div>
 
           <!-- COPPIA 4 -->
-          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+          <div class="card-coppia-m6"
+            style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
             <div class="grid-2" style="margin-bottom: 0.5rem;">
               <div class="input-group">
                 <label>Coppia 4: Parola Sinistra</label>
@@ -590,8 +620,11 @@
           </div>
 
           <div class="input-group">
-            <label for="m6-parola-corretta" style="color: var(--oro); font-size: 1.1rem;">Parola Finale Corretta (Soluzione)</label>
-            <input type="text" id="m6-parola-corretta" class="input-control" style="border-color: var(--oro); font-size: 1.2rem; font-weight: 700; text-transform: uppercase;" value="LIBRO" />
+            <label for="m6-parola-corretta" style="color: var(--oro); font-size: 1.1rem;">Parola Finale Corretta
+              (Soluzione)</label>
+            <input type="text" id="m6-parola-corretta" class="input-control"
+              style="border-color: var(--oro); font-size: 1.2rem; font-weight: 700; text-transform: uppercase;"
+              value="LIBRO" />
             <span class="helper-text">La parola che accomuna tutti e cinque gli indizi corretti selezionati.</span>
           </div>
         </div>
@@ -609,7 +642,8 @@
             </div>
             <div class="input-group">
               <label for="esito-msg-vittoria">Messaggio Vittoria</label>
-              <input type="text" id="esito-msg-vittoria" class="input-control" value="Hai dimostrato di essere una campionessa!" required />
+              <input type="text" id="esito-msg-vittoria" class="input-control"
+                value="Hai dimostrato di essere una campionessa!" required />
             </div>
           </div>
         </div>
@@ -622,7 +656,8 @@
             </div>
             <div class="input-group">
               <label for="esito-msg-sconfitta">Messaggio Sconfitta</label>
-              <input type="text" id="esito-msg-sconfitta" class="input-control" value="Non è andata, ma ci vuole coraggio anche solo ad arrivare fin qui!" required />
+              <input type="text" id="esito-msg-sconfitta" class="input-control"
+                value="Non è andata, ma ci vuole coraggio anche solo ad arrivare fin qui!" required />
             </div>
           </div>
         </div>
@@ -664,7 +699,7 @@
 
     function aggiornaAnteprimePercorsi() {
       const destinatario = ottieniNomeDestinatario();
-      
+
       // Aggiorna anteprime Manche 2
       document.querySelectorAll(".m2-img-preview-label").forEach(label => {
         const inputNome = label.closest(".card-riga").querySelector(".m2-nome-soggetto");
@@ -695,7 +730,7 @@
       parent.querySelectorAll(".subtab-btn").forEach(btn => btn.classList.remove("active"));
       const tabContent = parent.parentNode;
       tabContent.querySelectorAll(".subtab-content").forEach(content => content.classList.remove("active"));
-      
+
       document.getElementById(subtabId).classList.add("active");
       evt.currentTarget.classList.add("active");
     }
@@ -724,17 +759,17 @@
       for (let i = 0; i < 10; i++) {
         const card = document.createElement("div");
         card.className = "card-riga";
-        card.innerHTML = 
+        card.innerHTML =
           "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
           "<div class=\"grid-2\">" +
-            "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
-              "<label>Testo della Domanda</label>" +
-              "<input type=\"text\" class=\"input-control m1-domanda-testo\" placeholder=\"Inserisci la domanda...\" required />" +
-            "</div>" +
-            "<div class=\"input-group\">" +
-              "<label>Risposta Corretta (Anno)</label>" +
-              "<select class=\"input-control m1-select-risposta\"></select>" +
-            "</div>" +
+          "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
+          "<label>Testo della Domanda</label>" +
+          "<input type=\"text\" class=\"input-control m1-domanda-testo\" placeholder=\"Inserisci la domanda...\" required />" +
+          "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Risposta Corretta (Anno)</label>" +
+          "<select class=\"input-control m1-select-risposta\"></select>" +
+          "</div>" +
           "</div>";
         container.appendChild(card);
       }
@@ -747,28 +782,28 @@
       for (let i = 0; i < 11; i++) {
         const card = document.createElement("div");
         card.className = "card-riga";
-        card.innerHTML = 
+        card.innerHTML =
           "<div class=\"card-riga-header\">Soggetto " + (i + 1) + "</div>" +
           "<div class=\"grid-2\">" +
-            "<div class=\"input-group\">" +
-              "<label>Nome Soggetto</label>" +
-              "<input type=\"text\" class=\"input-control m2-nome-soggetto\" placeholder=\"Es. Bob Dylan\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
-            "</div>" +
-            "<div class=\"input-group\" style=\"justify-content: center;\">" +
-              "<label class=\"btn-checkbox\">" +
-                "<input type=\"checkbox\" class=\"m2-check-nobel\" checked />" +
-                "Risposta Corretta (Ha il requisito / non è l'intruso)" +
-              "</label>" +
-              "<span class=\"helper-text\">Togli la spunta all'unico intruso (l'elemento \"Scossa\").</span>" +
-            "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Nome Soggetto</label>" +
+          "<input type=\"text\" class=\"input-control m2-nome-soggetto\" placeholder=\"Es. Bob Dylan\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
+          "</div>" +
+          "<div class=\"input-group\" style=\"justify-content: center;\">" +
+          "<label class=\"btn-checkbox\">" +
+          "<input type=\"checkbox\" class=\"m2-check-nobel\" checked />" +
+          "Risposta Corretta (Ha il requisito / non è l'intruso)" +
+          "</label>" +
+          "<span class=\"helper-text\">Togli la spunta all'unico intruso (l'elemento \"Scossa\").</span>" +
+          "</div>" +
           "</div>" +
           "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
-            "<label>Biografia / Descrizione aggiuntiva</label>" +
-            "<textarea class=\"input-control m2-bio-soggetto\" rows=\"2\" placeholder=\"Inserisci una breve biografia o descrizione...\" required></textarea>" +
+          "<label>Biografia / Descrizione aggiuntiva</label>" +
+          "<textarea class=\"input-control m2-bio-soggetto\" rows=\"2\" placeholder=\"Inserisci una breve biografia o descrizione...\" required></textarea>" +
           "</div>" +
           "<div class=\"input-group\">" +
-            "<label>Percorso immagine autogenerato</label>" +
-            "<span class=\"riferimento-immagine m2-img-preview-label\">assets/images/noemi/m2_soggetto.jpg</span>" +
+          "<label>Percorso immagine autogenerato</label>" +
+          "<span class=\"riferimento-immagine m2-img-preview-label\">assets/images/noemi/m2_soggetto.jpg</span>" +
           "</div>";
         container.appendChild(card);
       }
@@ -788,61 +823,61 @@
         for (let i = 0; i < 6; i++) {
           const card = document.createElement("div");
           card.className = "card-riga";
-          card.innerHTML = 
+          card.innerHTML =
             "<div class=\"card-riga-header\">Materia " + (i + 1) + "</div>" +
             "<div class=\"grid-4\">" +
-              "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
-                "<label>Nome Materia / Argomento</label>" +
-                "<input type=\"text\" class=\"input-control m3-nome-materia\" placeholder=\"Es. Geografia\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Punteggio (Punti)</label>" +
-                "<input type=\"number\" class=\"input-control m3-punti\" value=\"" + (2000 + i * 1000) + "\" required />" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Icona FontAwesome</label>" +
-                "<div class=\"preview-icon-wrap\">" +
-                  "<div class=\"preview-icon\"><i class=\"fa-solid fa-book\"></i></div>" +
-                  "<input type=\"text\" class=\"input-control m3-icona\" value=\"fa-book\" style=\"width: 100%;\" oninput=\"aggiornaAnteprimaIcona(this)\" required />" +
-                "</div>" +
-              "</div>" +
+            "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
+            "<label>Nome Materia / Argomento</label>" +
+            "<input type=\"text\" class=\"input-control m3-nome-materia\" placeholder=\"Es. Geografia\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Punteggio (Punti)</label>" +
+            "<input type=\"number\" class=\"input-control m3-punti\" value=\"" + (2000 + i * 1000) + "\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Icona FontAwesome</label>" +
+            "<div class=\"preview-icon-wrap\">" +
+            "<div class=\"preview-icon\"><i class=\"fa-solid fa-book\"></i></div>" +
+            "<input type=\"text\" class=\"input-control m3-icona\" value=\"fa-book\" style=\"width: 100%;\" oninput=\"aggiornaAnteprimaIcona(this)\" required />" +
+            "</div>" +
+            "</div>" +
             "</div>" +
             "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
-              "<label>Testo della Domanda</label>" +
-              "<input type=\"text\" class=\"input-control m3-domanda\" placeholder=\"Inserisci la domanda per questa materia...\" required />" +
+            "<label>Testo della Domanda</label>" +
+            "<input type=\"text\" class=\"input-control m3-domanda\" placeholder=\"Inserisci la domanda per questa materia...\" required />" +
             "</div>" +
             "<div class=\"grid-4\" style=\"margin-bottom: 1rem;\">" +
-              "<div class=\"input-group\">" +
-                "<label>Opzione A</label>" +
-                "<input type=\"text\" class=\"input-control m3-opzione-a\" placeholder=\"Risposta A\" required />" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Opzione B</label>" +
-                "<input type=\"text\" class=\"input-control m3-opzione-b\" placeholder=\"Risposta B\" required />" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Opzione C</label>" +
-                "<input type=\"text\" class=\"input-control m3-opzione-c\" placeholder=\"Risposta C\" required />" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Opzione D</label>" +
-                "<input type=\"text\" class=\"input-control m3-opzione-d\" placeholder=\"Risposta D\" required />" +
-              "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Opzione A</label>" +
+            "<input type=\"text\" class=\"input-control m3-opzione-a\" placeholder=\"Risposta A\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Opzione B</label>" +
+            "<input type=\"text\" class=\"input-control m3-opzione-b\" placeholder=\"Risposta B\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Opzione C</label>" +
+            "<input type=\"text\" class=\"input-control m3-opzione-c\" placeholder=\"Risposta C\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Opzione D</label>" +
+            "<input type=\"text\" class=\"input-control m3-opzione-d\" placeholder=\"Risposta D\" required />" +
+            "</div>" +
             "</div>" +
             "<div class=\"grid-2\">" +
-              "<div class=\"input-group\">" +
-                "<label>Risposta Corretta</label>" +
-                "<select class=\"input-control m3-risposta-corretta\">" +
-                  "<option value=\"A\">Opzione A</option>" +
-                  "<option value=\"B\">Opzione B</option>" +
-                  "<option value=\"C\">Opzione C</option>" +
-                  "<option value=\"D\">Opzione D</option>" +
-                "</select>" +
-              "</div>" +
-              "<div class=\"input-group\">" +
-                "<label>Percorso immagine di sfondo autogenerato</label>" +
-                "<span class=\"riferimento-immagine m3-img-preview-label\">assets/images/noemi/m3_materia.jpg</span>" +
-              "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Risposta Corretta</label>" +
+            "<select class=\"input-control m3-risposta-corretta\">" +
+            "<option value=\"A\">Opzione A</option>" +
+            "<option value=\"B\">Opzione B</option>" +
+            "<option value=\"C\">Opzione C</option>" +
+            "<option value=\"D\">Opzione D</option>" +
+            "</select>" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+            "<label>Percorso immagine di sfondo autogenerato</label>" +
+            "<span class=\"riferimento-immagine m3-img-preview-label\">assets/images/noemi/m3_materia.jpg</span>" +
+            "</div>" +
             "</div>";
           container.appendChild(card);
         }
@@ -857,28 +892,28 @@
       for (let i = 0; i < 50; i++) {
         const card = document.createElement("div");
         card.className = "card-riga";
-        card.innerHTML = 
+        card.innerHTML =
           "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
           "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
-            "<label>Domanda</label>" +
-            "<input type=\"text\" class=\"input-control m4-domanda-testo\" placeholder=\"Scrivi la domanda...\" required />" +
+          "<label>Domanda</label>" +
+          "<input type=\"text\" class=\"input-control m4-domanda-testo\" placeholder=\"Scrivi la domanda...\" required />" +
           "</div>" +
           "<div class=\"grid-4\">" +
-            "<div class=\"input-group\">" +
-              "<label>Opzione A</label>" +
-              "<input type=\"text\" class=\"input-control m4-opzione-a\" placeholder=\"Opzione A\" required />" +
-            "</div>" +
-            "<div class=\"input-group\">" +
-              "<label>Opzione B</label>" +
-              "<input type=\"text\" class=\"input-control m4-opzione-b\" placeholder=\"Opzione B\" required />" +
-            "</div>" +
-            "<div class=\"input-group\">" +
-              "<label>Risposta Corretta</label>" +
-              "<select class=\"input-control m4-corretta\">" +
-                "<option value=\"A\">Opzione A</option>" +
-                "<option value=\"B\">Opzione B</option>" +
-              "</select>" +
-            "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Opzione A</label>" +
+          "<input type=\"text\" class=\"input-control m4-opzione-a\" placeholder=\"Opzione A\" required />" +
+          "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Opzione B</label>" +
+          "<input type=\"text\" class=\"input-control m4-opzione-b\" placeholder=\"Opzione B\" required />" +
+          "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Risposta Corretta</label>" +
+          "<select class=\"input-control m4-corretta\">" +
+          "<option value=\"A\">Opzione A</option>" +
+          "<option value=\"B\">Opzione B</option>" +
+          "</select>" +
+          "</div>" +
           "</div>";
         container.appendChild(card);
       }
@@ -890,20 +925,20 @@
       for (let i = 0; i < 25; i++) {
         const card = document.createElement("div");
         card.className = "card-riga";
-        card.innerHTML = 
+        card.innerHTML =
           "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
           "<div class=\"grid-2\">" +
-            "<div class=\"input-group\">" +
-              "<label>Domanda</label>" +
-              "<input type=\"text\" class=\"input-control m5-domanda-testo\" placeholder=\"Scrivi l'affermazione Vero/Falso...\" required />" +
-            "</div>" +
-            "<div class=\"input-group\">" +
-              "<label>Risposta Corretta</label>" +
-              "<select class=\"input-control m5-corretta\">" +
-                "<option value=\"Vero\">Vero</option>" +
-                "<option value=\"Falso\">Falso</option>" +
-              "</select>" +
-            "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Domanda</label>" +
+          "<input type=\"text\" class=\"input-control m5-domanda-testo\" placeholder=\"Scrivi l'affermazione Vero/Falso...\" required />" +
+          "</div>" +
+          "<div class=\"input-group\">" +
+          "<label>Risposta Corretta</label>" +
+          "<select class=\"input-control m5-corretta\">" +
+          "<option value=\"Vero\">Vero</option>" +
+          "<option value=\"Falso\">Falso</option>" +
+          "</select>" +
+          "</div>" +
           "</div>";
         container.appendChild(card);
       }
@@ -915,7 +950,7 @@
     function prepopolaEsempio() {
       // Esempio basico per test veloci
       document.getElementById("destinatario-nome").value = "test";
-      
+
       // M1
       const m1Testi = [
         "In che anno è nato l'agente 007?", "Quando l'uomo è sbarcato sulla Luna?",
@@ -925,15 +960,15 @@
         "Fondazione di Roma?", "Anno di pubblicazione dei Promessi Sposi?"
       ];
       document.querySelectorAll(".m1-domanda-testo").forEach((input, i) => {
-        input.value = m1Testi[i] || "Domanda di test " + (i+1);
+        input.value = m1Testi[i] || "Domanda di test " + (i + 1);
       });
 
       // M2
       document.querySelectorAll(".m2-nome-soggetto").forEach((input, i) => {
-        input.value = "Soggetto Esempio " + (i+1);
+        input.value = "Soggetto Esempio " + (i + 1);
       });
       document.querySelectorAll(".m2-bio-soggetto").forEach((textarea, i) => {
-        textarea.value = "Questa è una biografia di esempio per il soggetto numero " + (i+1) + ".";
+        textarea.value = "Questa è una biografia di esempio per il soggetto numero " + (i + 1) + ".";
       });
       // Metti uno scossa (es. il quinto)
       const chekboxes = document.querySelectorAll(".m2-check-nobel");
@@ -941,10 +976,10 @@
 
       // M3
       document.querySelectorAll(".m3-nome-materia").forEach((input, i) => {
-        input.value = "Materia " + (i+1);
+        input.value = "Materia " + (i + 1);
       });
       document.querySelectorAll(".m3-domanda").forEach((input, i) => {
-        input.value = "Domanda per la materia " + (i+1) + "?";
+        input.value = "Domanda per la materia " + (i + 1) + "?";
       });
       document.querySelectorAll(".m3-opzione-a").forEach(input => input.value = "Risposta A");
       document.querySelectorAll(".m3-opzione-b").forEach(input => input.value = "Risposta B");
@@ -953,14 +988,14 @@
 
       // M4
       document.querySelectorAll(".m4-domanda-testo").forEach((input, i) => {
-        input.value = "Raffica Domanda di esempio numero " + (i+1) + "?";
+        input.value = "Raffica Domanda di esempio numero " + (i + 1) + "?";
       });
       document.querySelectorAll(".m4-opzione-a").forEach(input => input.value = "Scelta A");
       document.querySelectorAll(".m4-opzione-b").forEach(input => input.value = "Scelta B");
 
       // M5
       document.querySelectorAll(".m5-domanda-testo").forEach((input, i) => {
-        input.value = "Affermazione Vero o Falso numero " + (i+1) + ".";
+        input.value = "Affermazione Vero o Falso numero " + (i + 1) + ".";
       });
 
       document.getElementById("esito-titolo-vittoria").value = "BRAVISSIMA!";
@@ -1023,7 +1058,7 @@
 
     function generaJsonManche3() {
       const destinatario = ottieniNomeDestinatario();
-      
+
       const esportaRound = (containerId) => {
         return Array.from(document.querySelectorAll("#" + containerId + " .card-riga")).map(card => {
           const nome = card.querySelector(".m3-nome-materia").value;
@@ -1111,7 +1146,7 @@
       for (let i = 1; i <= 5; i++) {
         const sxVal = document.getElementById("m6-coppia" + i + "-sx").value;
         const dxVal = document.getElementById("m6-coppia" + i + "-dx").value;
-        
+
         sx.push(sxVal);
         dx.push(dxVal);
 
@@ -1160,7 +1195,7 @@
       }
 
       const zip = new JSZip();
-      
+
       // Aggiunge i 6 JSON delle manche
       zip.file("manche1.json", JSON.stringify(generaJsonManche1(), null, 2));
       zip.file("manche2.json", JSON.stringify(generaJsonManche2(), null, 2));
@@ -1170,7 +1205,7 @@
       zip.file("finale.json", JSON.stringify(generaJsonFinale(), null, 2));
 
       // Genera il file zip client-side
-      zip.generateAsync({ type: "blob" }).then(function(content) {
+      zip.generateAsync({ type: "blob" }).then(function (content) {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(content);
         link.download = "quiz_" + destinatario + ".zip";
@@ -1194,4 +1229,5 @@
   </script>
 
 </body>
+
 </html>
