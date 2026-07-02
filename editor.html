@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor di Partita - IL QUIZ</title>
+  <!-- FontAwesome per le icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- JSZip per la creazione del pacchetto ZIP client-side -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <style>
+    :root {
+      --blu-notte:   #0a0f2e;
+      --blu-medio:   #0d1a5c;
+      --blu-chiaro:  #1a3a8f;
+      --oro:         #f5c518;
+      --oro-scuro:   #c9a000;
+      --bianco:      #f0f4ff;
+      --rosso:       #c0392b;
+      --verde:       #27ae60;
+      --grigio-card: #111b4a;
+      --radius-md:   12px;
+      --radius-sm:   6px;
+      --transition:  .3s ease;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      background: var(--blu-notte);
+      color: var(--bianco);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3.5rem;
+      color: var(--oro);
+      letter-spacing: .05em;
+      text-shadow: 0 4px 10px rgba(0,0,0,.5);
+    }
+
+    .subtitle {
+      color: rgba(240,244,255,.7);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--grigio-card);
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+      border: 1px solid rgba(245,197,24,.2);
+      overflow: hidden;
+    }
+
+    /* CONFIGURAZIONE GENERALE */
+    .config-generale {
+      padding: 1.5rem;
+      background: var(--blu-medio);
+      border-bottom: 1px solid rgba(245,197,24,.2);
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .input-group label {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--oro);
+    }
+
+    .input-control {
+      padding: 0.75rem 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(240,244,255,.2);
+      background: var(--blu-notte);
+      color: var(--bianco);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .input-control:focus {
+      border-color: var(--oro);
+      box-shadow: 0 0 8px rgba(245,197,24,.3);
+    }
+
+    /* TABS */
+    .tabs-nav {
+      display: flex;
+      background: var(--blu-notte);
+      border-bottom: 1px solid rgba(245,197,24,.1);
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      padding: 1rem 1.5rem;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: .05em;
+      border: none;
+      background: transparent;
+      color: rgba(240,244,255,.6);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition);
+      border-bottom: 3px solid transparent;
+    }
+
+    .tab-btn:hover {
+      color: var(--bianco);
+      background: rgba(240,244,255,.05);
+    }
+
+    .tab-btn.active {
+      color: var(--oro);
+      border-bottom-color: var(--oro);
+      background: rgba(245,197,24,.05);
+    }
+
+    /* CONTENUTO TAB */
+    .tab-content {
+      display: none;
+      padding: 2rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* SCHEDE INTERNE (M3) */
+    .subtabs-nav {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(240,244,255,.1);
+      padding-bottom: 0.5rem;
+    }
+
+    .subtab-btn {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(240,244,255,.1);
+      background: rgba(240,244,255,.05);
+      color: var(--bianco);
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .subtab-btn.active {
+      background: var(--oro);
+      color: var(--blu-notte);
+      border-color: var(--oro);
+    }
+
+    .subtab-content {
+      display: none;
+    }
+
+    .subtab-content.active {
+      display: block;
+    }
+
+    /* STRUTTURA FORM */
+    .form-section-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      color: var(--oro);
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed rgba(245,197,24,.3);
+      padding-bottom: 0.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-riga {
+      background: rgba(240,244,255,.03);
+      border: 1px solid rgba(240,244,255,.05);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .card-riga-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: var(--oro);
+      font-size: 1.1rem;
+    }
+
+    .preview-icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .preview-icon {
+      font-size: 1.5rem;
+      color: var(--oro);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blu-notte);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(245,197,24,.3);
+    }
+
+    /* CONTROLLI AZIONE */
+    .controls-bar {
+      padding: 1.5rem;
+      background: var(--blu-medio);
+      border-top: 1px solid rgba(245,197,24,.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-action {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: .05em;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-save {
+      background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
+      color: var(--blu-notte);
+      box-shadow: 0 4px 15px rgba(245,197,24,.3);
+    }
+
+    .btn-save:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245,197,24,.5);
+    }
+
+    .btn-secondary {
+      background: rgba(240,244,255,.1);
+      color: var(--bianco);
+      border: 1px solid rgba(240,244,255,.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(240,244,255,.2);
+    }
+
+    .helper-text {
+      font-size: 0.85rem;
+      color: rgba(240,244,255,.5);
+      margin-top: 0.25rem;
+    }
+
+    .btn-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+    }
+
+    .btn-checkbox input {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    /* RIFERIMENTI RAPIDI */
+    .riferimento-immagine {
+      font-size: 0.85rem;
+      color: var(--oro);
+      font-style: italic;
+      margin-top: 0.25rem;
+      display: block;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      body { padding: 1rem; }
+      h1 { font-size: 2.5rem; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .btn-action { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <h1>IL QUIZ - Editor Partite</h1>
+      <p class="subtitle">Configura e scarica un nuovo pacchetto di domande per una persona o un tema specifico.</p>
+    </div>
+  </header>
+
+  <div class="main-container">
+    
+    <!-- CONFIGURAZIONE GENERALE -->
+    <div class="config-generale">
+      <div class="input-group">
+        <label for="destinatario-nome">Nome Destinatario / Tema</label>
+        <input type="text" id="destinatario-nome" class="input-control" placeholder="Es. noemi" value="noemi" oninput="aggiornaAnteprimePercorsi()" />
+        <span class="helper-text">Una sola parola in minuscolo (determinerà la cartella in /data e /images).</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR TAB PRINCIPALI -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab(event, 'tab-m1')">Manche 1 (Anni)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m2')">Manche 2 (Scossa)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m3')">Manche 3 (Materie)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m4')">Manche 4 (Raffica)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m5')">Manche 5 (V/F)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-m6')">Manche Finale</button>
+    </nav>
+
+    <!-- CONTENUTI TAB -->
+    <form id="editor-form" onsubmit="event.preventDefault();">
+
+      <!-- TAB MANCHE 1 -->
+      <div id="tab-m1" class="tab-content active">
+        <div class="form-section-title">Anni Risposta (Manche 1)</div>
+        <div class="grid-4">
+          <div class="input-group">
+            <label>Anno 1</label>
+            <input type="number" id="m1-anno-1" class="input-control m1-anno-input" value="1946" onchange="aggiornaSelectAnniM1()" />
+          </div>
+          <div class="input-group">
+            <label>Anno 2</label>
+            <input type="number" id="m1-anno-2" class="input-control m1-anno-input" value="1966" onchange="aggiornaSelectAnniM1()" />
+          </div>
+          <div class="input-group">
+            <label>Anno 3</label>
+            <input type="number" id="m1-anno-3" class="input-control m1-anno-input" value="1986" onchange="aggiornaSelectAnniM1()" />
+          </div>
+          <div class="input-group">
+            <label>Anno 4</label>
+            <input type="number" id="m1-anno-4" class="input-control m1-anno-input" value="2006" onchange="aggiornaSelectAnniM1()" />
+          </div>
+        </div>
+
+        <div class="form-section-title">Le 10 Domande (Manche 1)</div>
+        <div id="m1-domande-container">
+          <!-- Generato via JS -->
+        </div>
+      </div>
+
+      <!-- TAB MANCHE 2 -->
+      <div id="tab-m2" class="tab-content">
+        <div class="form-section-title">Regole Manche 2</div>
+        <div class="grid-2">
+          <div class="input-group">
+            <label for="m2-titolo">Titolo</label>
+            <input type="text" id="m2-titolo" class="input-control" value="Scossa!" />
+          </div>
+          <div class="input-group">
+            <label for="m2-descrizione">Descrizione (Home Manche)</label>
+            <input type="text" id="m2-descrizione" class="input-control" value="Hanno tutti vinto il Nobel… tranne uno. Riesci a trovarlo senza dirlo?" />
+          </div>
+        </div>
+        <div class="input-group" style="margin-bottom: 2rem;">
+          <label for="m2-regola">Testo Regola (Nel Gioco)</label>
+          <input type="text" id="m2-regola" class="input-control" value="Non dire il nome dell'unico tra questi che non ha vinto il premio Nobel per la letteratura." />
+        </div>
+
+        <div class="form-section-title">Gli 11 Soggetti (Manche 2)</div>
+        <div id="m2-personaggi-container">
+          <!-- Generato via JS -->
+        </div>
+      </div>
+
+      <!-- TAB MANCHE 3 -->
+      <div id="tab-m3" class="tab-content">
+        <div class="subtabs-nav">
+          <button type="button" class="subtab-btn active" onclick="switchSubTab(event, 'm3-round-1')">Round 1</button>
+          <button type="button" class="subtab-btn" onclick="switchSubTab(event, 'm3-round-2')">Round 2</button>
+        </div>
+
+        <div id="m3-round-1" class="subtab-content active">
+          <div class="form-section-title">Round 1 - Materie (Manche 3)</div>
+          <div id="m3-r1-container">
+            <!-- Generato via JS -->
+          </div>
+        </div>
+
+        <div id="m3-round-2" class="subtab-content">
+          <div class="form-section-title">Round 2 - Materie (Manche 3)</div>
+          <div id="m3-r2-container">
+            <!-- Generato via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB MANCHE 4 -->
+      <div id="tab-m4" class="tab-content">
+        <div class="form-section-title">Le 50 Domande a scelta multipla (Manche 4)</div>
+        <div id="m4-domande-container">
+          <!-- Generato via JS -->
+        </div>
+      </div>
+
+      <!-- TAB MANCHE 5 -->
+      <div id="tab-m5" class="tab-content">
+        <div class="form-section-title">Le 25 Domande Vero o Falso (Manche 5)</div>
+        <div id="m5-domande-container">
+          <!-- Generato via JS -->
+        </div>
+      </div>
+
+      <!-- TAB MANCHE 6 -->
+      <div id="tab-m6" class="tab-content">
+        <div class="form-section-title">Manche Finale - La Ghigliottina</div>
+        <div class="card-riga">
+          <div class="card-riga-header">Accoppiamenti parole</div>
+          
+          <!-- COPPIA 1 -->
+          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+            <div class="grid-2" style="margin-bottom: 0.5rem;">
+              <div class="input-group">
+                <label>Coppia 1: Parola Sinistra</label>
+                <input type="text" id="m6-coppia1-sx" class="input-control" value="PUNTO" />
+              </div>
+              <div class="input-group">
+                <label>Coppia 1: Parola Destra</label>
+                <input type="text" id="m6-coppia1-dx" class="input-control" value="LINEA" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label style="color: var(--oro);">Quale parola è corretta?</label>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia1-corretta" value="sx" /> Sinistra
+                </label>
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia1-corretta" value="dx" checked /> Destra
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- COPPIA 2 -->
+          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+            <div class="grid-2" style="margin-bottom: 0.5rem;">
+              <div class="input-group">
+                <label>Coppia 2: Parola Sinistra</label>
+                <input type="text" id="m6-coppia2-sx" class="input-control" value="CARTA" />
+              </div>
+              <div class="input-group">
+                <label>Coppia 2: Parola Destra</label>
+                <input type="text" id="m6-coppia2-dx" class="input-control" value="CARTONE" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label style="color: var(--oro);">Quale parola è corretta?</label>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia2-corretta" value="sx" checked /> Sinistra
+                </label>
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia2-corretta" value="dx" /> Destra
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- COPPIA 3 -->
+          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+            <div class="grid-2" style="margin-bottom: 0.5rem;">
+              <div class="input-group">
+                <label>Coppia 3: Parola Sinistra</label>
+                <input type="text" id="m6-coppia3-sx" class="input-control" value="CORSA" />
+              </div>
+              <div class="input-group">
+                <label>Coppia 3: Parola Destra</label>
+                <input type="text" id="m6-coppia3-dx" class="input-control" value="PASSO" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label style="color: var(--oro);">Quale parola è corretta?</label>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia3-corretta" value="sx" /> Sinistra
+                </label>
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia3-corretta" value="dx" checked /> Destra
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- COPPIA 4 -->
+          <div class="card-coppia-m6" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed rgba(245,197,24,.2);">
+            <div class="grid-2" style="margin-bottom: 0.5rem;">
+              <div class="input-group">
+                <label>Coppia 4: Parola Sinistra</label>
+                <input type="text" id="m6-coppia4-sx" class="input-control" value="CIELO" />
+              </div>
+              <div class="input-group">
+                <label>Coppia 4: Parola Destra</label>
+                <input type="text" id="m6-coppia4-dx" class="input-control" value="TERRA" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label style="color: var(--oro);">Quale parola è corretta?</label>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia4-corretta" value="sx" checked /> Sinistra
+                </label>
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia4-corretta" value="dx" /> Destra
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- COPPIA 5 -->
+          <div class="card-coppia-m6" style="margin-bottom: 1.5rem;">
+            <div class="grid-2" style="margin-bottom: 0.5rem;">
+              <div class="input-group">
+                <label>Coppia 5: Parola Sinistra</label>
+                <input type="text" id="m6-coppia5-sx" class="input-control" value="SCRIVERE" />
+              </div>
+              <div class="input-group">
+                <label>Coppia 5: Parola Destra</label>
+                <input type="text" id="m6-coppia5-dx" class="input-control" value="LEGGERE" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label style="color: var(--oro);">Quale parola è corretta?</label>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia5-corretta" value="sx" /> Sinistra
+                </label>
+                <label class="btn-checkbox">
+                  <input type="radio" name="m6-coppia5-corretta" value="dx" checked /> Destra
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="m6-parola-corretta" style="color: var(--oro); font-size: 1.1rem;">Parola Finale Corretta (Soluzione)</label>
+            <input type="text" id="m6-parola-corretta" class="input-control" style="border-color: var(--oro); font-size: 1.2rem; font-weight: 700; text-transform: uppercase;" value="LIBRO" />
+            <span class="helper-text">La parola che accomuna tutti e cinque gli indizi corretti selezionati.</span>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- CONTROLLI AZIONE -->
+    <div class="controls-bar">
+      <div>
+        <p class="subtitle" style="margin: 0;">Dopo aver compilato, scarica lo zip.</p>
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <button type="button" class="btn-action btn-secondary" onclick="prepopolaEsempio()">Carica Esempio</button>
+        <button type="button" class="btn-action btn-save" onclick="scaricaPacchettoZip()">
+          <i class="fa-solid fa-file-zipper"></i> Scarica Pacchetto Partita (ZIP)
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    /* ====================================================
+       GESTIONE SLUGGING NOMI PER IMMAGINI
+       ==================================================== */
+    function generaSlug(testo) {
+      if (!testo) return "";
+      return testo.toString().toLowerCase().trim()
+        .replace(/[^a-z0-9\s-]/g, "") // rimuove caratteri speciali ed accenti
+        .replace(/[\s-]+/g, "_")      // sostituisce spazi e trattini con underscore
+        .replace(/^_+|_+$/g, "");     // rimuove underscore all'inizio o alla fine
+    }
+
+    function ottieniNomeDestinatario() {
+      const input = document.getElementById("destinatario-nome");
+      return generaSlug(input ? input.value : "noemi");
+    }
+
+    function aggiornaAnteprimePercorsi() {
+      const destinatario = ottieniNomeDestinatario();
+      
+      // Aggiorna anteprime Manche 2
+      document.querySelectorAll(".m2-img-preview-label").forEach(label => {
+        const inputNome = label.closest(".card-riga").querySelector(".m2-nome-soggetto");
+        const slug = generaSlug(inputNome ? inputNome.value : "soggetto");
+        label.textContent = "assets/images/" + destinatario + "/m2_" + slug + ".jpg";
+      });
+
+      // Aggiorna anteprime Manche 3
+      document.querySelectorAll(".m3-img-preview-label").forEach(label => {
+        const inputNome = label.closest(".card-riga").querySelector(".m3-nome-materia");
+        const slug = generaSlug(inputNome ? inputNome.value : "materia");
+        label.textContent = "assets/images/" + destinatario + "/m3_" + slug + ".jpg";
+      });
+    }
+
+    /* ====================================================
+       GESTIONE SCHEDE (TAB)
+       ==================================================== */
+    function switchTab(evt, tabId) {
+      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    function switchSubTab(evt, subtabId) {
+      const parent = evt.currentTarget.parentNode;
+      parent.querySelectorAll(".subtab-btn").forEach(btn => btn.classList.remove("active"));
+      const tabContent = parent.parentNode;
+      tabContent.querySelectorAll(".subtab-content").forEach(content => content.classList.remove("active"));
+      
+      document.getElementById(subtabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    /* ====================================================
+       POPOLAMENTO DINAMICO DEI FORM
+       ==================================================== */
+    function aggiornaSelectAnniM1() {
+      const anni = Array.from(document.querySelectorAll(".m1-anno-input")).map(input => input.value || "0");
+      document.querySelectorAll(".m1-select-risposta").forEach(select => {
+        const valoreSelezionato = select.value;
+        select.innerHTML = "";
+        anni.forEach(anno => {
+          const option = document.createElement("option");
+          option.value = anno;
+          option.textContent = anno;
+          select.appendChild(option);
+        });
+        select.value = valoreSelezionato;
+      });
+    }
+
+    function generaFormM1() {
+      const container = document.getElementById("m1-domande-container");
+      container.innerHTML = "";
+      for (let i = 0; i < 10; i++) {
+        const card = document.createElement("div");
+        card.className = "card-riga";
+        card.innerHTML = 
+          "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
+          "<div class=\"grid-2\">" +
+            "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
+              "<label>Testo della Domanda</label>" +
+              "<input type=\"text\" class=\"input-control m1-domanda-testo\" placeholder=\"Inserisci la domanda...\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+              "<label>Risposta Corretta (Anno)</label>" +
+              "<select class=\"input-control m1-select-risposta\"></select>" +
+            "</div>" +
+          "</div>";
+        container.appendChild(card);
+      }
+      aggiornaSelectAnniM1();
+    }
+
+    function generaFormM2() {
+      const container = document.getElementById("m2-personaggi-container");
+      container.innerHTML = "";
+      for (let i = 0; i < 11; i++) {
+        const card = document.createElement("div");
+        card.className = "card-riga";
+        card.innerHTML = 
+          "<div class=\"card-riga-header\">Soggetto " + (i + 1) + "</div>" +
+          "<div class=\"grid-2\">" +
+            "<div class=\"input-group\">" +
+              "<label>Nome Soggetto</label>" +
+              "<input type=\"text\" class=\"input-control m2-nome-soggetto\" placeholder=\"Es. Bob Dylan\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
+            "</div>" +
+            "<div class=\"input-group\" style=\"justify-content: center;\">" +
+              "<label class=\"btn-checkbox\">" +
+                "<input type=\"checkbox\" class=\"m2-check-nobel\" checked />" +
+                "Risposta Corretta (Ha il requisito / non è l'intruso)" +
+              "</label>" +
+              "<span class=\"helper-text\">Togli la spunta all'unico intruso (l'elemento \"Scossa\").</span>" +
+            "</div>" +
+          "</div>" +
+          "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
+            "<label>Biografia / Descrizione aggiuntiva</label>" +
+            "<textarea class=\"input-control m2-bio-soggetto\" rows=\"2\" placeholder=\"Inserisci una breve biografia o descrizione...\" required></textarea>" +
+          "</div>" +
+          "<div class=\"input-group\">" +
+            "<label>Percorso immagine autogenerato</label>" +
+            "<span class=\"riferimento-immagine m2-img-preview-label\">assets/images/noemi/m2_soggetto.jpg</span>" +
+          "</div>";
+        container.appendChild(card);
+      }
+    }
+
+    function aggiornaAnteprimaIcona(input) {
+      const preview = input.closest(".preview-icon-wrap").querySelector(".preview-icon i");
+      if (preview) {
+        preview.className = "fa-solid " + (input.value || "fa-question");
+      }
+    }
+
+    function generaFormM3() {
+      const generator = (containerId, roundLabel) => {
+        const container = document.getElementById(containerId);
+        container.innerHTML = "";
+        for (let i = 0; i < 6; i++) {
+          const card = document.createElement("div");
+          card.className = "card-riga";
+          card.innerHTML = 
+            "<div class=\"card-riga-header\">Materia " + (i + 1) + "</div>" +
+            "<div class=\"grid-4\">" +
+              "<div class=\"input-group\" style=\"grid-column: span 2;\">" +
+                "<label>Nome Materia / Argomento</label>" +
+                "<input type=\"text\" class=\"input-control m3-nome-materia\" placeholder=\"Es. Geografia\" oninput=\"aggiornaAnteprimePercorsi()\" required />" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Punteggio (Punti)</label>" +
+                "<input type=\"number\" class=\"input-control m3-punti\" value=\"" + (2000 + i * 1000) + "\" required />" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Icona FontAwesome</label>" +
+                "<div class=\"preview-icon-wrap\">" +
+                  "<div class=\"preview-icon\"><i class=\"fa-solid fa-book\"></i></div>" +
+                  "<input type=\"text\" class=\"input-control m3-icona\" value=\"fa-book\" style=\"width: 100%;\" oninput=\"aggiornaAnteprimaIcona(this)\" required />" +
+                "</div>" +
+              "</div>" +
+            "</div>" +
+            "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
+              "<label>Testo della Domanda</label>" +
+              "<input type=\"text\" class=\"input-control m3-domanda\" placeholder=\"Inserisci la domanda per questa materia...\" required />" +
+            "</div>" +
+            "<div class=\"grid-4\" style=\"margin-bottom: 1rem;\">" +
+              "<div class=\"input-group\">" +
+                "<label>Opzione A</label>" +
+                "<input type=\"text\" class=\"input-control m3-opzione-a\" placeholder=\"Risposta A\" required />" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Opzione B</label>" +
+                "<input type=\"text\" class=\"input-control m3-opzione-b\" placeholder=\"Risposta B\" required />" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Opzione C</label>" +
+                "<input type=\"text\" class=\"input-control m3-opzione-c\" placeholder=\"Risposta C\" required />" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Opzione D</label>" +
+                "<input type=\"text\" class=\"input-control m3-opzione-d\" placeholder=\"Risposta D\" required />" +
+              "</div>" +
+            "</div>" +
+            "<div class=\"grid-2\">" +
+              "<div class=\"input-group\">" +
+                "<label>Risposta Corretta</label>" +
+                "<select class=\"input-control m3-risposta-corretta\">" +
+                  "<option value=\"A\">Opzione A</option>" +
+                  "<option value=\"B\">Opzione B</option>" +
+                  "<option value=\"C\">Opzione C</option>" +
+                  "<option value=\"D\">Opzione D</option>" +
+                "</select>" +
+              "</div>" +
+              "<div class=\"input-group\">" +
+                "<label>Percorso immagine di sfondo autogenerato</label>" +
+                "<span class=\"riferimento-immagine m3-img-preview-label\">assets/images/noemi/m3_materia.jpg</span>" +
+              "</div>" +
+            "</div>";
+          container.appendChild(card);
+        }
+      };
+      generator("m3-r1-container", "R1");
+      generator("m3-r2-container", "R2");
+    }
+
+    function generaFormM4() {
+      const container = document.getElementById("m4-domande-container");
+      container.innerHTML = "";
+      for (let i = 0; i < 50; i++) {
+        const card = document.createElement("div");
+        card.className = "card-riga";
+        card.innerHTML = 
+          "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
+          "<div class=\"input-group\" style=\"margin-bottom: 1rem;\">" +
+            "<label>Domanda</label>" +
+            "<input type=\"text\" class=\"input-control m4-domanda-testo\" placeholder=\"Scrivi la domanda...\" required />" +
+          "</div>" +
+          "<div class=\"grid-4\">" +
+            "<div class=\"input-group\">" +
+              "<label>Opzione A</label>" +
+              "<input type=\"text\" class=\"input-control m4-opzione-a\" placeholder=\"Opzione A\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+              "<label>Opzione B</label>" +
+              "<input type=\"text\" class=\"input-control m4-opzione-b\" placeholder=\"Opzione B\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+              "<label>Risposta Corretta</label>" +
+              "<select class=\"input-control m4-corretta\">" +
+                "<option value=\"A\">Opzione A</option>" +
+                "<option value=\"B\">Opzione B</option>" +
+              "</select>" +
+            "</div>" +
+          "</div>";
+        container.appendChild(card);
+      }
+    }
+
+    function generaFormM5() {
+      const container = document.getElementById("m5-domande-container");
+      container.innerHTML = "";
+      for (let i = 0; i < 25; i++) {
+        const card = document.createElement("div");
+        card.className = "card-riga";
+        card.innerHTML = 
+          "<div class=\"card-riga-header\">Domanda " + (i + 1) + "</div>" +
+          "<div class=\"grid-2\">" +
+            "<div class=\"input-group\">" +
+              "<label>Domanda</label>" +
+              "<input type=\"text\" class=\"input-control m5-domanda-testo\" placeholder=\"Scrivi l'affermazione Vero/Falso...\" required />" +
+            "</div>" +
+            "<div class=\"input-group\">" +
+              "<label>Risposta Corretta</label>" +
+              "<select class=\"input-control m5-corretta\">" +
+                "<option value=\"Vero\">Vero</option>" +
+                "<option value=\"Falso\">Falso</option>" +
+              "</select>" +
+            "</div>" +
+          "</div>";
+        container.appendChild(card);
+      }
+    }
+
+    /* ====================================================
+       POPOLAMENTO DATI ESEMPIO
+       ==================================================== */
+    function prepopolaEsempio() {
+      // Esempio basico per test veloci
+      document.getElementById("destinatario-nome").value = "test";
+      
+      // M1
+      const m1Testi = [
+        "In che anno è nato l'agente 007?", "Quando l'uomo è sbarcato sulla Luna?",
+        "Anno di uscita del film Matrix?", "Quando è crollato il muro di Berlino?",
+        "Inizio della prima guerra mondiale?", "Scoperta dell'America?",
+        "Nascita della Repubblica Italiana?", "Anno di lancio dell'Euro?",
+        "Fondazione di Roma?", "Anno di pubblicazione dei Promessi Sposi?"
+      ];
+      document.querySelectorAll(".m1-domanda-testo").forEach((input, i) => {
+        input.value = m1Testi[i] || "Domanda di test " + (i+1);
+      });
+
+      // M2
+      document.querySelectorAll(".m2-nome-soggetto").forEach((input, i) => {
+        input.value = "Soggetto Esempio " + (i+1);
+      });
+      document.querySelectorAll(".m2-bio-soggetto").forEach((textarea, i) => {
+        textarea.value = "Questa è una biografia di esempio per il soggetto numero " + (i+1) + ".";
+      });
+      // Metti uno scossa (es. il quinto)
+      const chekboxes = document.querySelectorAll(".m2-check-nobel");
+      if (chekboxes[4]) chekboxes[4].checked = false;
+
+      // M3
+      document.querySelectorAll(".m3-nome-materia").forEach((input, i) => {
+        input.value = "Materia " + (i+1);
+      });
+      document.querySelectorAll(".m3-domanda").forEach((input, i) => {
+        input.value = "Domanda per la materia " + (i+1) + "?";
+      });
+      document.querySelectorAll(".m3-opzione-a").forEach(input => input.value = "Risposta A");
+      document.querySelectorAll(".m3-opzione-b").forEach(input => input.value = "Risposta B");
+      document.querySelectorAll(".m3-opzione-c").forEach(input => input.value = "Risposta C");
+      document.querySelectorAll(".m3-opzione-d").forEach(input => input.value = "Risposta D");
+
+      // M4
+      document.querySelectorAll(".m4-domanda-testo").forEach((input, i) => {
+        input.value = "Raffica Domanda di esempio numero " + (i+1) + "?";
+      });
+      document.querySelectorAll(".m4-opzione-a").forEach(input => input.value = "Scelta A");
+      document.querySelectorAll(".m4-opzione-b").forEach(input => input.value = "Scelta B");
+
+      // M5
+      document.querySelectorAll(".m5-domanda-testo").forEach((input, i) => {
+        input.value = "Affermazione Vero o Falso numero " + (i+1) + ".";
+      });
+
+      aggiornaAntepremePercorsi();
+    }
+
+    /* ====================================================
+       GENERAZIONE JSON E ZIP
+       ==================================================== */
+    function generaJsonManche1() {
+      const anni = Array.from(document.querySelectorAll(".m1-anno-input")).map(input => parseInt(input.value) || 0);
+      const domande = Array.from(document.querySelectorAll("#m1-domande-container .card-riga")).map(card => {
+        const testo = card.querySelector(".m1-domanda-testo").value;
+        const risposta = card.querySelector(".m1-select-risposta").value;
+        return {
+          testo: testo,
+          risposta: risposta,
+          risposta_corretta_tra_anni: risposta
+        };
+      });
+
+      return {
+        titolo: "Correva l'Anno",
+        descrizione: "Quattro anni, dieci domande. Scegli l'anno giusto!",
+        anni: anni,
+        domande: domande
+      };
+    }
+
+    function generaJsonManche2() {
+      const destinatario = ottieniNomeDestinatario();
+      const titolo = document.getElementById("m2-titolo").value;
+      const descrizione = document.getElementById("m2-descrizione").value;
+      const regola = document.getElementById("m2-regola").value;
+
+      const personaggi = Array.from(document.querySelectorAll("#m2-personaggi-container .card-riga")).map(card => {
+        const nome = card.querySelector(".m2-nome-soggetto").value;
+        const haVintoNobel = card.querySelector(".m2-check-nobel").checked;
+        const bio = card.querySelector(".m2-bio-soggetto").value;
+        const slug = generaSlug(nome);
+        return {
+          nome: nome,
+          ha_vinto_nobel: haVintoNobel,
+          immagine: "assets/images/" + destinatario + "/m2_" + slug + ".jpg",
+          bio: bio
+        };
+      });
+
+      return {
+        titolo: titolo,
+        descrizione: descrizione,
+        regola: regola,
+        personaggi: personaggi
+      };
+    }
+
+    function generaJsonManche3() {
+      const destinatario = ottieniNomeDestinatario();
+      
+      const esportaRound = (containerId) => {
+        return Array.from(document.querySelectorAll("#" + containerId + " .card-riga")).map(card => {
+          const nome = card.querySelector(".m3-nome-materia").value;
+          const punti = parseInt(card.querySelector(".m3-punti").value) || 0;
+          const icona = card.querySelector(".m3-icona").value;
+          const domanda = card.querySelector(".m3-domanda").value;
+          const risposte = [
+            card.querySelector(".m3-opzione-a").value,
+            card.querySelector(".m3-opzione-b").value,
+            card.querySelector(".m3-opzione-c").value,
+            card.querySelector(".m3-opzione-d").value
+          ];
+          const rispostaCorretta = card.querySelector(".m3-risposta-corretta").value;
+          const slug = generaSlug(nome);
+
+          return {
+            nome: nome,
+            punti: punti,
+            icona: icona,
+            immagine: "assets/images/" + destinatario + "/m3_" + slug + ".jpg",
+            domanda: domanda,
+            risposte: risposte,
+            risposta_corretta: rispostaCorretta
+          };
+        });
+      };
+
+      const r1 = esportaRound("m3-r1-container");
+      const r2 = esportaRound("m3-r2-container");
+
+      return {
+        titolo: "Quante ne Sai?",
+        descrizione: "Due round, dodici domande. Accumula più punti possibile!",
+        rounds: [
+          { titolo: "Round 1", materie: r1 },
+          { titolo: "Round 2", materie: r2 }
+        ]
+      };
+    }
+
+    function generaJsonManche4() {
+      const domande = Array.from(document.querySelectorAll("#m4-domande-container .card-riga")).map(card => {
+        const testo = card.querySelector(".m4-domanda-testo").value;
+        const opzioneA = card.querySelector(".m4-opzione-a").value;
+        const opzioneB = card.querySelector(".m4-opzione-b").value;
+        const corretta = card.querySelector(".m4-corretta").value;
+
+        return {
+          testo: testo,
+          risposte: [opzioneA, opzioneB],
+          risposta_corretta: corretta === "A" ? opzioneA : opzioneB
+        };
+      });
+
+      return {
+        titolo: "Domande a Raffica",
+        descrizione: "Hai 180 secondi per rispondere a 50 domande. Ogni risposta corretta vale 2.000 punti!",
+        domande: domande
+      };
+    }
+
+    function generaJsonManche5() {
+      const domande = Array.from(document.querySelectorAll("#m5-domande-container .card-riga")).map(card => {
+        const testo = card.querySelector(".m5-domanda-testo").value;
+        const corretta = card.querySelector(".m5-corretta").value;
+
+        return {
+          testo: testo,
+          risposta_corretta: corretta
+        };
+      });
+
+      return {
+        titolo: "Vero o Falso?",
+        descrizione: "90 secondi per rispondere a 25 domande Vero o Falso. Ogni risposta corretta vale 2.000 punti!",
+        domande: domande
+      };
+    }
+
+    function generaJsonFinale() {
+      const sx = [];
+      const dx = [];
+      const scelteCorrette = [];
+
+      for (let i = 1; i <= 5; i++) {
+        const sxVal = document.getElementById("m6-coppia" + i + "-sx").value;
+        const dxVal = document.getElementById("m6-coppia" + i + "-dx").value;
+        
+        sx.push(sxVal);
+        dx.push(dxVal);
+
+        const scelta = document.querySelector("input[name='m6-coppia" + i + "-corretta']:checked").value;
+        if (scelta === "sx") {
+          scelteCorrette.push(sxVal);
+        } else {
+          scelteCorrette.push(dxVal);
+        }
+      }
+
+      const soluzione = document.getElementById("m6-parola-corretta").value.trim().toUpperCase();
+
+      return {
+        titolo: "Ghigliottina",
+        descrizione: "Il momento della verità. Scegli gli indizi giusti e indovina la parola che li lega!",
+        paroleSx: sx,
+        paroleDx: dx,
+        scelteCorrette: scelteCorrette,
+        soluzione: soluzione
+      };
+    }
+
+    function scaricaPacchettoZip() {
+      // Validazione base
+      const form = document.getElementById("editor-form");
+      if (!form.checkValidity()) {
+        alert("Attenzione: Compila correttamente tutti i campi obbligatori prima di esportare!");
+        form.reportValidity();
+        return;
+      }
+
+      const destinatario = ottieniNomeDestinatario();
+      if (!destinatario) {
+        alert("Inserisci un nome destinatario valido!");
+        return;
+      }
+
+      const zip = new JSZip();
+      
+      // Aggiunge i 6 JSON delle manche
+      zip.file("manche1.json", JSON.stringify(generaJsonManche1(), null, 2));
+      zip.file("manche2.json", JSON.stringify(generaJsonManche2(), null, 2));
+      zip.file("manche3.json", JSON.stringify(generaJsonManche3(), null, 2));
+      zip.file("manche4.json", JSON.stringify(generaJsonManche4(), null, 2));
+      zip.file("manche5.json", JSON.stringify(generaJsonManche5(), null, 2));
+      zip.file("finale.json", JSON.stringify(generaJsonFinale(), null, 2));
+
+      // Genera il file zip client-side
+      zip.generateAsync({ type: "blob" }).then(function(content) {
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(content);
+        link.download = "quiz_" + destinatario + ".zip";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    }
+
+    /* ====================================================
+       INIZIALIZZAZIONE ALL'AVVIO
+       ==================================================== */
+    window.addEventListener("DOMContentLoaded", () => {
+      generaFormM1();
+      generaFormM2();
+      generaFormM3();
+      generaFormM4();
+      generaFormM5();
+      aggiornaAnteprimePercorsi();
+    });
+  </script>
+
+</body>
+</html>
