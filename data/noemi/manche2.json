@@ -6,67 +6,67 @@
     {
       "nome": "Gabriel García Márquez",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/marquez.jpg",
+      "immagine": "assets/images/noemi/marquez.jpg",
       "bio": "Scrittore colombiano (1927–2014), padre del realismo magico. Vinse il Premio Nobel nel 1982 con motivazione: 'Per i suoi romanzi e racconti brevi, in cui il fantastico e il reale si combinano in un mondo riccamente composto di immaginazione.'"
     },
     {
       "nome": "Toni Morrison",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/morrison.jpg",
+      "immagine": "assets/images/noemi/morrison.jpg",
       "bio": "Scrittrice americana (1931–2019). Prima donna afroamericana a vincere il Nobel (1993). La sua opera esplora l'eredità della schiavitù e l'identità afroamericana con potenza poetica incomparabile."
     },
     {
       "nome": "Bob Dylan",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/dylan.jpg",
+      "immagine": "assets/images/noemi/dylan.jpg",
       "bio": "Cantautore e musicista statunitense, vincitore del premio Nobel per la letteratura nel 2016 con la seguente motivazione: per aver creato nuove espressioni poetiche all'interno della grande tradizione della canzone americana."
     },
     {
       "nome": "Doris Lessing",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/lessing.jpg",
+      "immagine": "assets/images/noemi/lessing.jpg",
       "bio": "Scrittrice britannica di origini iraniane (1919–2013). Vinse il Nobel nel 2007. Nota per il romanzo 'Il Taccuino d'Oro', esplorazione radicale della vita delle donne e della politica."
     },
     {
       "nome": "Umberto Eco",
       "ha_vinto_nobel": false,
-      "immagine": "assets/images/eco.jpg",
+      "immagine": "assets/images/noemi/eco.jpg",
       "bio": "Semiologo e scrittore italiano (1932–2016), autore di 'Il Nome della Rosa'. Nonostante la fama mondiale e candidature ricorrenti, non ricevette mai il Premio Nobel per la letteratura."
     },
     {
       "nome": "Pablo Neruda",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/neruda.jpg",
+      "immagine": "assets/images/noemi/neruda.jpg",
       "bio": "Poeta cileno (1904–1973), tra i più grandi del Novecento. Vinse il Nobel nel 1971 per una 'poesia che, con l'azione di una forza elementare, dà vita al destino e ai sogni di un continente.'"
     },
     {
       "nome": "Rudyard Kipling",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/kipling.jpg",
+      "immagine": "assets/images/noemi/kipling.jpg",
       "bio": "Scrittore, poeta e giornalista britannico (1865–1936), vincitore del Premio Nobel per la letteratura nel 1907, a 41 anni, il più giovane e il primo scrittore di lingua inglese, in considerazione del potere dell'osservazione, dell'originalità dell'immaginazione, la forza delle idee ed il notevole talento per la narrazione che caratterizzano le creazioni di questo autore famoso nel mondo."
     },
     {
       "nome": "Orhan Pamuk",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/pamuk.jpg",
+      "immagine": "assets/images/noemi/pamuk.jpg",
       "bio": "Scrittore turco (1952). Nobel nel 2006 per aver scoperto 'nuovi simboli per lo scontro e l'intreccio di culture' nella ricerca dell'anima malinconica della sua città natale, Istanbul."
     },
     {
       "nome": "Elfriede Jelinek",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/jelinek.jpg",
+      "immagine": "assets/images/noemi/jelinek.jpg",
       "bio": "Scrittrice austriaca (1946). Premio Nobel 2004, noto per il romanzo 'La Pianista'. Le sue opere analizzano con ironia feroce le strutture di potere e di genere nella società austriaca."
     },
     {
       "nome": "Herta Müller",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/muller.jpg",
+      "immagine": "assets/images/noemi/muller.jpg",
       "bio": "Scrittrice rumena di etnia tedesca (1953). Nobel nel 2009 per aver ritratto con 'concentrazione della poesia e franchezza della prosa' il paesaggio dei poveri."
     },
     {
       "nome": "Wole Soyinka",
       "ha_vinto_nobel": true,
-      "immagine": "assets/images/soyinka.jpg",
+      "immagine": "assets/images/noemi/soyinka.jpg",
       "bio": "Drammaturgo e poeta nigeriano (1934). Primo africano a vincere il Nobel (1986). Le sue opere mescolano tradizione yoruba e teatro occidentale in un unicum di rara potenza."
     }
   ]

@@ -9,7 +9,7 @@
           "nome": "Storia",
           "icona": "fa-landmark",
           "punti": 1000,
-          "immagine": "assets/images/storia.jpg",
+          "immagine": "assets/images/noemi/storia.jpg",
           "domanda": "Nel 1789 la Rivoluzione Francese iniziò con l'occupazione di quale luogo simbolo del dispotismo reale?",
           "risposte": [
             {
@@ -34,7 +34,7 @@
           "nome": "Scienza",
           "icona": "fa-flask",
           "punti": 4000,
-          "immagine": "assets/images/scienza.jpg",
+          "immagine": "assets/images/noemi/scienza.jpg",
           "domanda": "Quale elemento chimico ha il simbolo 'Cu' sulla tavola periodica degli elementi?",
           "risposte": [
             {
@@ -59,7 +59,7 @@
           "nome": "Arte",
           "icona": "fa-palette",
           "punti": 3000,
-          "immagine": "assets/images/arte.jpg",
+          "immagine": "assets/images/noemi/arte.jpg",
           "domanda": "Chi ha dipinto la Cappella Sistina nel Vaticano, considerata uno dei capolavori assoluti dell'arte mondiale?",
           "risposte": [
             {
@@ -84,7 +84,7 @@
           "nome": "Letteratura",
           "icona": "fa-book-open",
           "punti": 3000,
-          "immagine": "assets/images/letteratura.jpg",
+          "immagine": "assets/images/noemi/letteratura.jpg",
           "domanda": "In quale città è ambientato il romanzo capolavoro 'Il Maestro e Margherita' dello scrittore russo Michail Bulgakov?",
           "risposte": [
             {
@@ -109,7 +109,7 @@
           "nome": "Musica",
           "icona": "fa-music",
           "punti": 2000,
-          "immagine": "assets/images/musica.jpg",
+          "immagine": "assets/images/noemi/musica.jpg",
           "domanda": "Quale compositore tedesco scrisse le celebri Sinfonie n. 5 e n. 9 pur essendo completamente sordo?",
           "risposte": [
             {
@@ -134,7 +134,7 @@
           "nome": "Geografia",
           "icona": "fa-globe-europe",
           "punti": 2000,
-          "immagine": "assets/images/geografia.jpg",
+          "immagine": "assets/images/noemi/geografia.jpg",
           "domanda": "Dopo la Città del Vaticano, qual è il secondo Stato indipendente più piccolo del mondo per estensione territoriale?",
           "risposte": [
             {
@@ -164,7 +164,7 @@
           "nome": "Criminologia",
           "icona": "fa-fingerprint",
           "punti": 1000,
-          "immagine": "assets/images/criminologia.jpg",
+          "immagine": "assets/images/noemi/criminologia.jpg",
           "domanda": "Quale composto chimico è utilizzato dalla polizia scientifica per rilevare tracce biologiche invisibili a occhio nudo?",
           "risposte": [
             {
@@ -189,7 +189,7 @@
           "nome": "Mitologia",
           "icona": "fa-dragon",
           "punti": 4000,
-          "immagine": "assets/images/mitologia.jpg",
+          "immagine": "assets/images/noemi/mitologia.jpg",
           "domanda": "Nella mitologia greca, chi era la divinità del focolare domestico, la primogenita tra i figli dei Titani Crono e Rea?",
           "risposte": [
             {
@@ -214,7 +214,7 @@
           "nome": "Cucina",
           "icona": "fa-utensils",
           "punti": 3000,
-          "immagine": "assets/images/cucina.jpg",
+          "immagine": "assets/images/noemi/cucina.jpg",
           "domanda": "Quale frutta secca si usa tradizionalmente nel pesto alla genovese?",
           "risposte": [
             {
@@ -239,7 +239,7 @@
           "nome": "Animali",
           "icona": "fa-frog",
           "punti": 3000,
-          "immagine": "assets/images/animali.jpg",
+          "immagine": "assets/images/noemi/animali.jpg",
           "domanda": "Quale mammifero marino è noto per avere il canto più complesso e melodioso durante le migrazioni e l'accoppiamento?",
           "risposte": [
             {
@@ -264,7 +264,7 @@
           "nome": "Cinema",
           "icona": "fa-film",
           "punti": 2000,
-          "immagine": "assets/images/cinema.jpg",
+          "immagine": "assets/images/noemi/cinema.jpg",
           "domanda": "Quale film italiano vinse l'Oscar al miglior film straniero nel 1999, grazie anche alla celebre frase 'Buongiorno, principessa!'?",
           "risposte": [
             {
@@ -289,7 +289,7 @@
           "nome": "Italiano",
           "icona": "fa-pen-nib",
           "punti": 2000,
-          "immagine": "assets/images/italiano.jpg",
+          "immagine": "assets/images/noemi/italiano.jpg",
           "domanda": "Nella frase 'Marco legge un libro', quale funzione logica svolge 'un libro'?",
           "risposte": [
             {
