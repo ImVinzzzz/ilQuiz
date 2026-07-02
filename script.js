@@ -239,14 +239,28 @@ function initM1() {
   };
   aggiornaPunteggio(punteggioTotale);
   mostraSchermata('screen-m1');
+  const anni = dati.manche1.anni;
+  const containerAnni = document.getElementById("m1-year-buttons");
+  const nuovoContainer = containerAnni.cloneNode(false);
+  containerAnni.parentNode.replaceChild(nuovoContainer, containerAnni);
+
+  if (anni) {
+    anni.forEach(anno => {
+      const btn = document.createElement("button");
+      btn.className = "btn-year";
+      btn.dataset.year = anno;
+      btn.textContent = anno;
+      nuovoContainer.appendChild(btn);
+    });
+  }
+
+  nuovoContainer.addEventListener("click", onClickAnno);
+
   abilitaBottoniAnno(true);
-  document.getElementById('m1-btn-next').classList.add('hidden');
-  document.getElementById('m1-next-bar').classList.add('hidden');
+  document.getElementById("m1-btn-next").classList.add("hidden");
+  document.getElementById("m1-next-bar").classList.add("hidden");
   rimuoviClassiAnno();
   mostraDomandaM1();
-
-  // Collega bottoni anno (una volta sola, poi si usa delegazione)
-  document.getElementById('m1-year-buttons').addEventListener('click', onClickAnno);
 
   // Bottone "Domanda successiva"
   document.getElementById('m1-btn-next').addEventListener('click', () => {
@@ -338,6 +352,12 @@ function initM2() {
   };
   aggiornaPunteggio(punteggioTotale);
   mostraSchermata('screen-m2');
+  
+  const regolaText = document.getElementById("m2-rule-text");
+  if (regolaText && dati.manche2.regola) {
+    regolaText.textContent = dati.manche2.regola;
+  }
+
   document.getElementById('m2-next-bar').classList.add('hidden');
   document.getElementById('m2-bio-box').classList.add('hidden');
 
