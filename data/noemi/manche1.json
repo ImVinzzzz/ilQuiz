@@ -1,0 +1,62 @@
+{
+  "titolo": "Correva l'Anno",
+  "descrizione": "Quattro anni, dieci domande. Scegli l'anno giusto!",
+  "anni": [
+    1946,
+    1966,
+    1986,
+    2006
+  ],
+  "domande": [
+    {
+      "testo": "Quando si svolsero i Mondiali di Calcio vinti dall'Italia guidata da Marcello Lippi, con la famosa finale contro la Francia?",
+      "risposta": "2006",
+      "risposta_corretta_tra_anni": "2006"
+    },
+    {
+      "testo": "Enrico Piaggio presenta ufficialmente il primo esemplare della Vespa, destinata a diventare un'icona italiana nel mondo.",
+      "risposta": "1946",
+      "risposta_corretta_tra_anni": "1946"
+    },
+    {
+      "testo": "La Spagna e il Portogallo diventano stati membri della CEE, che passano così da dieci a dodici.",
+      "risposta": "1986",
+      "risposta_corretta_tra_anni": "1986"
+    },
+    {
+      "testo": "Esce nelle sale italiane il film 'Il Vangelo secondo Matteo' di Pier Paolo Pasolini.",
+      "risposta": "1966",
+      "risposta_corretta_tra_anni": "1966"
+    },
+    {
+      "testo": "Viene lanciata la Fiat 500, la mitica utilitaria italiana progettata da Dante Giacosa, simbolo del boom economico.",
+      "risposta": "1946",
+      "risposta_corretta_tra_anni": "1946"
+    },
+    {
+      "testo": "Google acquisisce YouTube per circa 1,65 miliardi di dollari, in una delle più famose acquisizioni tecnologiche della storia.",
+      "risposta": "2006",
+      "risposta_corretta_tra_anni": "2006"
+    },
+    {
+      "testo": "Sophia Loren vince l'Oscar come miglior attrice protagonista per il film 'La Ciociara', prima attrice non anglofona a ottenere questo riconoscimento.",
+      "risposta": "1966",
+      "risposta_corretta_tra_anni": "1966"
+    },
+    {
+      "testo": "Nintendo lancia la console, chiamata Nintendo Entertainment System (NES), che rivoluziona il mercato dei videogiochi.",
+      "risposta": "1986",
+      "risposta_corretta_tra_anni": "1986"
+    },
+    {
+      "testo": "Il parlamento italiano approva la Costituzione Repubblicana, che entrerà in vigore il 1° gennaio dell'anno successivo.",
+      "risposta": "1946",
+      "risposta_corretta_tra_anni": "1946"
+    },
+    {
+      "testo": "L'isola di Aruba inizia il processo di indipendenza dai Paesi Bassi e viene separata dalle Antille Olandesi.",
+      "risposta": "1986",
+      "risposta_corretta_tra_anni": "1986"
+    }
+  ]
+}
