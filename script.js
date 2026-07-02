@@ -98,12 +98,12 @@ function fadeIn(el, delay = 0) {
 /* -------------------------------------------------- */
 async function caricaDati() {
   const percorsi = {
-    manche1: 'data/manche1.json',
-    manche2: 'data/manche2.json',
-    manche3: 'data/manche3.json',
-    manche4: 'data/manche4.json',
-    manche5: 'data/manche5.json',
-    finale: 'data/finale.json'
+    manche1: "data/noemi/manche1.json",
+    manche2: "data/noemi/manche2.json",
+    manche3: "data/noemi/manche3.json",
+    manche4: "data/noemi/manche4.json",
+    manche5: "data/noemi/manche5.json",
+    finale: "data/noemi/finale.json"
   };
 
   const entries = await Promise.all(
