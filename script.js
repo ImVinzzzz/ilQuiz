@@ -8,6 +8,8 @@
 /* -------------------------------------------------- */
 let dati = null;          // dati JSON caricati
 let punteggioTotale = 0;  // accumulato tra tutte le manche
+let sessioneSelezionata = "";
+let sessioniDisponibili = [];
 
 /* -------------------------------------------------- */
 /* UTILITÀ                                             */
@@ -96,25 +98,42 @@ function fadeIn(el, delay = 0) {
 /* -------------------------------------------------- */
 /* CARICAMENTO DATI JSON                               */
 /* -------------------------------------------------- */
-async function caricaDati() {
+async function caricaDati(sessioneId) {
   const percorsi = {
-    manche1: "data/noemi/manche1.json",
-    manche2: "data/noemi/manche2.json",
-    manche3: "data/noemi/manche3.json",
-    manche4: "data/noemi/manche4.json",
-    manche5: "data/noemi/manche5.json",
-    finale: "data/noemi/finale.json"
+    manche1: "data/" + sessioneId + "/manche1.json",
+    manche2: "data/" + sessioneId + "/manche2.json",
+    manche3: "data/" + sessioneId + "/manche3.json",
+    manche4: "data/" + sessioneId + "/manche4.json",
+    manche5: "data/" + sessioneId + "/manche5.json",
+    finale: "data/" + sessioneId + "/finale.json"
   };
 
   const entries = await Promise.all(
     Object.entries(percorsi).map(async ([chiave, percorso]) => {
       const res = await fetch(percorso);
-      if (!res.ok) throw new Error(`Impossibile caricare ${percorso}`);
+      if (!res.ok) throw new Error("Impossibile caricare " + percorso);
       return [chiave, await res.json()];
     })
   );
 
   dati = Object.fromEntries(entries);
+}
+
+async function caricaElencoSessioni() {
+  const res = await fetch("data/index.json");
+  if (!res.ok) throw new Error("Impossibile caricare l'elenco delle sessioni");
+  sessioniDisponibili = await res.json();
+
+  const select = document.getElementById("select-sessione");
+  if (select) {
+    select.innerHTML = "";
+    sessioniDisponibili.forEach(sessione => {
+      const option = document.createElement("option");
+      option.value = sessione.id;
+      option.textContent = sessione.nome;
+      select.appendChild(option);
+    });
+  }
 }
 
 /* ====================================================
@@ -123,8 +142,31 @@ async function caricaDati() {
 function initHome() {
   const home = document.getElementById('screen-home');
   home.addEventListener('click', () => {
-    mostraIntroManche(1);
+    mostraSchermata('screen-config');
   }, { once: true });
+}
+
+function initConfig() {
+  const btnConferma = document.getElementById("btn-conferma-config");
+  if (btnConferma) {
+    btnConferma.addEventListener("click", async () => {
+      const select = document.getElementById("select-sessione");
+      if (select) {
+        sessioneSelezionata = select.value;
+        try {
+          btnConferma.disabled = true;
+          btnConferma.innerHTML = "<i class=\"fa-solid fa-spinner fa-spin\"></i> Caricamento...";
+          await caricaDati(sessioneSelezionata);
+          mostraIntroManche(1);
+        } catch (err) {
+          alert("Errore nel caricamento dei dati di gioco!");
+          console.error(err);
+          btnConferma.disabled = false;
+          btnConferma.innerHTML = "<i class=\"fa-solid fa-play\"></i> Conferma e Inizia";
+        }
+      }
+    });
+  }
 }
 
 /* ====================================================
@@ -977,11 +1019,12 @@ function fineGhigliottina(vittoria) {
    ==================================================== */
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    await caricaDati();
+    await caricaElencoSessioni();
     initHome();
+    initConfig();
     mostraSchermata('screen-home');
   } catch (err) {
-    console.error('Errore nel caricamento dei dati:', err);
+    console.error('Errore nel caricamento delle sessioni:', err);
     // Fallback: mostra comunque la home
     mostraSchermata('screen-home');
   }

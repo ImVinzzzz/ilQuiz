@@ -181,6 +181,74 @@ html, body {
 }
 
 /* ================================================
+   CONFIGURAZIONE PARTITA
+   ================================================ */
+#screen-config {
+  background: linear-gradient(160deg, #04071a 0%, #0a1545 100%);
+  justify-content: center;
+  align-items: center;
+}
+.config-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  max-width: 600px;
+  padding: 2rem;
+  animation: fadeInUp .6s ease forwards;
+}
+.config-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--bianco);
+  letter-spacing: .04em;
+  line-height: 1;
+  text-shadow: 0 4px 24px rgba(0,0,0,.5);
+}
+.config-subtitle {
+  font-size: 1.15rem;
+  color: rgba(240,244,255,.65);
+  max-width: 420px;
+  line-height: 1.6;
+}
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+#select-sessione {
+  width: 100%;
+  padding: .8rem 1.2rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--bianco);
+  background: var(--blu-medio);
+  border: 2px solid rgba(245,197,24,.4);
+  border-radius: var(--radius-md);
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+}
+#select-sessione:focus {
+  border-color: var(--oro);
+  box-shadow: var(--shadow-oro);
+}
+.select-wrapper::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--oro);
+  pointer-events: none;
+}
+
+/* ================================================
    BOTTONI GLOBALI
    ================================================ */
 .btn-primary {
