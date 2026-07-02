@@ -1024,13 +1024,34 @@ function mostraSoluzione() {
 
 /* FASE 4: esito */
 function fineGhigliottina(vittoria) {
+  const titoloVittoria = dati.finale.titoloVittoria || "BRAVISSIMA!";
+  const messaggioVittoria = dati.finale.messaggioVittoria || "Hai dimostrato di essere una campionessa!";
+  const titoloSconfitta = dati.finale.titoloSconfitta || "C'eri quasi…!";
+  const messaggioSconfitta = dati.finale.messaggioSconfitta || "Non è andata, ma ci vuole coraggio anche solo ad arrivare fin qui!";
+
   if (vittoria) {
-    suona('snd-winner');
-    document.getElementById('win-score').textContent = punteggioTotale.toLocaleString('it-IT');
-    mostraSchermata('screen-win');
+    suona("snd-winner");
+    const winTitleEl = document.getElementById("win-title");
+    const winMsgEl = document.getElementById("win-msg");
+    if (winTitleEl) {
+      winTitleEl.textContent = titoloVittoria;
+    }
+    if (winMsgEl) {
+      winMsgEl.textContent = messaggioVittoria;
+    }
+    document.getElementById("win-score").textContent = punteggioTotale.toLocaleString("it-IT");
+    mostraSchermata("screen-win");
   } else {
-    document.getElementById('lose-score').textContent = punteggioTotale.toLocaleString('it-IT');
-    mostraSchermata('screen-lose');
+    const loseTitleEl = document.getElementById("lose-title");
+    const loseMsgEl = document.getElementById("lose-msg");
+    if (loseTitleEl) {
+      loseTitleEl.textContent = titoloSconfitta;
+    }
+    if (loseMsgEl) {
+      loseMsgEl.textContent = messaggioSconfitta;
+    }
+    document.getElementById("lose-score").textContent = punteggioTotale.toLocaleString("it-IT");
+    mostraSchermata("screen-lose");
   }
 }
 

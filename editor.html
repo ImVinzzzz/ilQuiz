@@ -362,6 +362,7 @@
       <button class="tab-btn" onclick="switchTab(event, 'tab-m4')">Manche 4 (Raffica)</button>
       <button class="tab-btn" onclick="switchTab(event, 'tab-m5')">Manche 5 (V/F)</button>
       <button class="tab-btn" onclick="switchTab(event, 'tab-m6')">Manche Finale</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-esito')">Vittoria/Sconfitta</button>
     </nav>
 
     <!-- CONTENUTI TAB -->
@@ -592,6 +593,37 @@
             <label for="m6-parola-corretta" style="color: var(--oro); font-size: 1.1rem;">Parola Finale Corretta (Soluzione)</label>
             <input type="text" id="m6-parola-corretta" class="input-control" style="border-color: var(--oro); font-size: 1.2rem; font-weight: 700; text-transform: uppercase;" value="LIBRO" />
             <span class="helper-text">La parola che accomuna tutti e cinque gli indizi corretti selezionati.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB VITTORIA/SCONFITTA -->
+      <div id="tab-esito" class="tab-content">
+        <div class="form-section-title">Schermate Finali (Vittoria / Sconfitta)</div>
+        <div class="card-riga">
+          <div class="card-riga-header">Schermata di Vittoria</div>
+          <div class="grid-2">
+            <div class="input-group">
+              <label for="esito-titolo-vittoria">Titolo Vittoria</label>
+              <input type="text" id="esito-titolo-vittoria" class="input-control" value="BRAVISSIMA!" required />
+            </div>
+            <div class="input-group">
+              <label for="esito-msg-vittoria">Messaggio Vittoria</label>
+              <input type="text" id="esito-msg-vittoria" class="input-control" value="Hai dimostrato di essere una campionessa!" required />
+            </div>
+          </div>
+        </div>
+        <div class="card-riga">
+          <div class="card-riga-header">Schermata di Sconfitta</div>
+          <div class="grid-2">
+            <div class="input-group">
+              <label for="esito-titolo-sconfitta">Titolo Sconfitta</label>
+              <input type="text" id="esito-titolo-sconfitta" class="input-control" value="C'eri quasi…!" required />
+            </div>
+            <div class="input-group">
+              <label for="esito-msg-sconfitta">Messaggio Sconfitta</label>
+              <input type="text" id="esito-msg-sconfitta" class="input-control" value="Non è andata, ma ci vuole coraggio anche solo ad arrivare fin qui!" required />
+            </div>
           </div>
         </div>
       </div>
@@ -931,6 +963,11 @@
         input.value = "Affermazione Vero o Falso numero " + (i+1) + ".";
       });
 
+      document.getElementById("esito-titolo-vittoria").value = "BRAVISSIMA!";
+      document.getElementById("esito-msg-vittoria").value = "Hai dimostrato di essere una campionessa!";
+      document.getElementById("esito-titolo-sconfitta").value = "C'eri quasi…!";
+      document.getElementById("esito-msg-sconfitta").value = "Non è andata, ma ci vuole coraggio anche solo ad arrivare fin qui!";
+
       aggiornaAntepremePercorsi();
     }
 
@@ -1088,13 +1125,22 @@
 
       const soluzione = document.getElementById("m6-parola-corretta").value.trim().toUpperCase();
 
+      const titoloVittoria = document.getElementById("esito-titolo-vittoria").value;
+      const messaggioVittoria = document.getElementById("esito-msg-vittoria").value;
+      const titoloSconfitta = document.getElementById("esito-titolo-sconfitta").value;
+      const messaggioSconfitta = document.getElementById("esito-msg-sconfitta").value;
+
       return {
         titolo: "Ghigliottina",
         descrizione: "Il momento della verità. Scegli gli indizi giusti e indovina la parola che li lega!",
         paroleSx: sx,
         paroleDx: dx,
         scelteCorrette: scelteCorrette,
-        soluzione: soluzione
+        soluzione: soluzione,
+        titoloVittoria: titoloVittoria,
+        messaggioVittoria: messaggioVittoria,
+        titoloSconfitta: titoloSconfitta,
+        messaggioSconfitta: messaggioSconfitta
       };
     }
 
